@@ -31,7 +31,7 @@ public sealed class ConditionViewModel
         CodexCondition             => "",
         ItemTypeCondition it       => $"{it.TypeIds.Count} type{(it.TypeIds.Count == 1 ? "" : "s")}",
         AffixCondition a           => $"min {a.MinimumCount} of {a.AffixIds.Count}",
-        OptionalAffixCondition oa  => $"any of {oa.AffixIds.Count}",
+        OptionalAffixCondition oa  => oa.MinimumCount > 0 ? $"min {oa.MinimumCount} of {oa.AffixIds.Count}" : $"any of {oa.AffixIds.Count}",
         SpecificUniqueCondition su => $"{su.UniqueIds.Count} unique{(su.UniqueIds.Count == 1 ? "" : "s")}",
         UnknownCondition u         => $"{u.RawBytes.Length} raw byte(s)",
         _                          => ""

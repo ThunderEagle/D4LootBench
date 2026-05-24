@@ -127,9 +127,11 @@ public sealed class FilterCodecTests
     {
         uint[] affixIds = [AffixDatabase.ByName["Critical Strike Chance"], AffixDatabase.ByName["Maximum Life"]];
         var decoded = RoundTripRule(new FilterRule("Test", Visibility.Show, FilterColors.Blue,
-            [new OptionalAffixCondition(affixIds)]));
+            [new OptionalAffixCondition(affixIds, 2)]));
 
-        decoded.Conditions[0].ShouldBeOfType<OptionalAffixCondition>().AffixIds.ShouldBe(affixIds);
+        var result = decoded.Conditions[0].ShouldBeOfType<OptionalAffixCondition>();
+        result.AffixIds.ShouldBe(affixIds);
+        result.MinimumCount.ShouldBe(2);
     }
 
     [Fact]
@@ -214,6 +216,40 @@ public sealed class FilterCodecTests
         var original = BuildGenericCritRuleset();
         var code1 = FilterCodec.Encode(original);
         FilterCodec.Encode(FilterCodec.Decode(code1)).ShouldBe(code1);
+    }
+
+    // ── JSON round-trip ──────────────────────────────────────────────────
+
+    [Fact]
+    public void JsonRoundTrip_PreservesOptionalAffixCondition()
+    {
+        var original = new OptionalAffixCondition(
+            [AffixDatabase.ByName["Critical Strike Chance"]], 2)
+        {
+            GreaterEntries = [new GreaterAffixEntry(0x001beace, 1)],
+            Field5 = 3
+        };
+        var rule = new FilterRule("Test", Visibility.Show, FilterColors.Blue, [original]);
+        var json = System.Text.Json.JsonSerializer.Serialize(rule, Serialization.FilterJsonOptions.Default);
+        var restored = System.Text.Json.JsonSerializer.Deserialize<FilterRule>(json, Serialization.FilterJsonOptions.Default);
+        restored.ShouldNotBeNull();
+        var cond = restored.Conditions[0].ShouldBeOfType<OptionalAffixCondition>();
+        cond.AffixIds.ShouldBe(original.AffixIds);
+        cond.MinimumCount.ShouldBe(original.MinimumCount);
+        cond.GreaterEntries.Count.ShouldBe(original.GreaterEntries.Count);
+        cond.Field5.ShouldBe(original.Field5);
+    }
+
+    [Fact]
+    public void JsonDeserialize_OldOptionalAffix_WithoutMinCount()
+    {
+        var json = """{"$type":"optionalAffix","AffixIds":["0x001beace"]}""";
+        var cond = System.Text.Json.JsonSerializer.Deserialize<Condition>(json, Serialization.FilterJsonOptions.Default);
+        cond.ShouldBeOfType<OptionalAffixCondition>();
+        cond.ShouldNotBeNull();
+        var oa = (OptionalAffixCondition)cond;
+        oa.MinimumCount.ShouldBe(0);
+        oa.AffixIds.Count.ShouldBe(1);
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────

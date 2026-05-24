@@ -44,7 +44,11 @@ public sealed record AffixCondition(IReadOnlyList<uint> AffixIds, int MinimumCou
 }
 
 /// <summary>Type 7 — affix hash IDs with OR semantics: matches if the item has any of the listed affixes.</summary>
-public sealed record OptionalAffixCondition(IReadOnlyList<uint> AffixIds) : Condition;
+public sealed record OptionalAffixCondition(IReadOnlyList<uint> AffixIds, int MinimumCount) : Condition
+{
+    public IReadOnlyList<GreaterAffixEntry> GreaterEntries { get; init; } = [];
+    public int Field5 { get; init; }
+}
 
 /// <summary>Type 8 — matches specific named Unique items by sno ID.</summary>
 public sealed record SpecificUniqueCondition(IReadOnlyList<uint> UniqueIds) : Condition;
