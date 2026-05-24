@@ -1,0 +1,158 @@
+using System.IO;
+using System.Text.Json;
+using System.Windows;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using D4Loot.Core.Codec;
+using D4Loot.Core.Models;
+using D4Loot.Core.Serialization;
+using Microsoft.Win32;
+
+namespace D4Loot.App.ViewModels;
+
+public partial class MainWindowViewModel : ObservableObject
+{
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(CopyCodeCommand))]
+    [NotifyCanExecuteChangedFor(nameof(SaveJsonCommand))]
+    [NotifyCanExecuteChangedFor(nameof(OpenRawEditorCommand))]
+    private VisualEditorViewModel? _editor;
+
+    [ObservableProperty]
+    private string _statusMessage = "Import a filter code or open a JSON file to get started.";
+
+    [ObservableProperty]
+    private bool _hasError;
+
+    /// <summary>Raised when the Raw Editor window should be opened. Handler must show the window.</summary>
+    public event Action<RawEditorViewModel>? ShowRawEditorRequested;
+
+    // ── Filter lifecycle ──────────────────────────────────────────────────
+
+    [RelayCommand]
+    private void NewFilter()
+    {
+        Editor = new VisualEditorViewModel(new FilterRuleset("New Filter", []));
+        SetStatus("New filter created.", error: false);
+    }
+
+    // ── Import ────────────────────────────────────────────────────────────
+
+    [RelayCommand]
+    private void PasteCode()
+    {
+        var text = Clipboard.GetText()?.Trim();
+        if (string.IsNullOrEmpty(text)) { SetStatus("Clipboard is empty.", error: true); return; }
+        TryLoadCode(text);
+    }
+
+    [RelayCommand]
+    private void OpenJson()
+    {
+        var dlg = new OpenFileDialog
+        {
+            Title      = "Open Filter JSON",
+            Filter     = "Filter JSON|*.json|All Files|*.*",
+            DefaultExt = ".json",
+        };
+        if (dlg.ShowDialog() != true) return;
+
+        try
+        {
+            var json    = File.ReadAllText(dlg.FileName);
+            var ruleset = JsonSerializer.Deserialize<FilterRuleset>(json, FilterJsonOptions.Default)
+                          ?? throw new InvalidOperationException("File deserialised to null.");
+            Editor = new VisualEditorViewModel(ruleset);
+            SetStatus($"Opened \"{Path.GetFileName(dlg.FileName)}\".", error: false);
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"Open failed: {ex.Message}", error: true);
+        }
+    }
+
+    // ── Export ────────────────────────────────────────────────────────────
+
+    [RelayCommand(CanExecute = nameof(HasEditor))]
+    private void CopyCode()
+    {
+        try
+        {
+            var ruleset = Editor!.BuildRuleset();
+            if (ruleset.Rules.Count > 25)
+            {
+                SetStatus($"Filter has {ruleset.Rules.Count} rules — maximum is 25. Remove {ruleset.Rules.Count - 25} rule(s) before exporting.", error: true);
+                return;
+            }
+            Clipboard.SetText(FilterCodec.Encode(ruleset));
+            SetStatus("Filter code copied to clipboard.", error: false);
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"Export failed: {ex.Message}", error: true);
+        }
+    }
+
+    [RelayCommand(CanExecute = nameof(HasEditor))]
+    private void SaveJson()
+    {
+        var dlg = new SaveFileDialog
+        {
+            Title      = "Save Filter JSON",
+            Filter     = "Filter JSON|*.json|All Files|*.*",
+            DefaultExt = ".json",
+            FileName   = Editor!.FilterName,
+        };
+        if (dlg.ShowDialog() != true) return;
+
+        try
+        {
+            var json = JsonSerializer.Serialize(Editor.BuildRuleset(), FilterJsonOptions.Default);
+            File.WriteAllText(dlg.FileName, json);
+            SetStatus($"Saved \"{Path.GetFileName(dlg.FileName)}\".", error: false);
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"Save failed: {ex.Message}", error: true);
+        }
+    }
+
+    // ── Raw Editor ────────────────────────────────────────────────────────
+
+    [RelayCommand(CanExecute = nameof(HasEditor))]
+    private void OpenRawEditor()
+    {
+        var json = JsonSerializer.Serialize(Editor!.BuildRuleset(), FilterJsonOptions.Default);
+        ShowRawEditorRequested?.Invoke(new RawEditorViewModel(json, ApplyFromRawEditor));
+    }
+
+    private void ApplyFromRawEditor(FilterRuleset ruleset)
+    {
+        Editor = new VisualEditorViewModel(ruleset);
+        SetStatus("Filter updated from Raw Editor.", error: false);
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────
+
+    private void TryLoadCode(string code)
+    {
+        try
+        {
+            var ruleset = FilterCodec.Decode(code);
+            Editor = new VisualEditorViewModel(ruleset);
+            SetStatus($"Loaded \"{ruleset.Name}\" — {ruleset.Rules.Count} rule(s).", error: false);
+        }
+        catch (Exception ex)
+        {
+            SetStatus($"Invalid filter code: {ex.Message}", error: true);
+        }
+    }
+
+    private void SetStatus(string message, bool error)
+    {
+        StatusMessage = message;
+        HasError      = error;
+    }
+
+    private bool HasEditor() => Editor is not null;
+}

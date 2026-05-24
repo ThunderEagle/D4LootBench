@@ -1,9 +1,5 @@
 using System.ComponentModel;
-using System.Globalization;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Media;
 using D4Loot.App.ViewModels;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Folding;
@@ -11,17 +7,16 @@ using ICSharpCode.AvalonEdit.Search;
 
 namespace D4Loot.App.Views;
 
-public partial class JsonEditorView : UserControl
+public partial class RawEditorWindow : Window
 {
     private bool _editorChanging;
     private readonly FoldingManager _foldingManager;
 
-    public JsonEditorView()
+    public RawEditorWindow()
     {
         InitializeComponent();
 
         SearchPanel.Install(Editor);
-
         _foldingManager = FoldingManager.Install(Editor.TextArea);
 
         DataContextChanged += OnDataContextChanged;
@@ -30,36 +25,45 @@ public partial class JsonEditorView : UserControl
 
     private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
     {
-        if (e.OldValue is JsonEditorViewModel old)
+        if (e.OldValue is RawEditorViewModel old)
             old.PropertyChanged -= OnViewModelPropertyChanged;
 
-        if (e.NewValue is JsonEditorViewModel vm)
+        if (e.NewValue is RawEditorViewModel vm)
+        {
             vm.PropertyChanged += OnViewModelPropertyChanged;
+            // Populate editor with initial JSON
+            _editorChanging = true;
+            Editor.Text = vm.JsonText;
+            JsonFoldingStrategy.UpdateFoldings(_foldingManager, Editor.Document);
+            _editorChanging = false;
+        }
     }
 
     private void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName != nameof(JsonEditorViewModel.JsonText)) return;
-        if (_editorChanging) return;
+        if (e.PropertyName != nameof(RawEditorViewModel.JsonText) || _editorChanging) return;
 
-        var vm = (JsonEditorViewModel)sender!;
-        Editor.Text = vm.JsonText;
+        _editorChanging = true;
+        Editor.Text = ((RawEditorViewModel)sender!).JsonText;
         JsonFoldingStrategy.UpdateFoldings(_foldingManager, Editor.Document);
+        _editorChanging = false;
     }
 
     private void OnEditorTextChanged(object? sender, EventArgs e)
     {
         if (_editorChanging) return;
         _editorChanging = true;
-        if (DataContext is JsonEditorViewModel vm)
+
+        if (DataContext is RawEditorViewModel vm)
             vm.JsonText = Editor.Text;
-        _editorChanging = false;
 
         JsonFoldingStrategy.UpdateFoldings(_foldingManager, Editor.Document);
+        _editorChanging = false;
     }
+
+    private void OnCloseClick(object sender, RoutedEventArgs e) => Close();
 }
 
-/// <summary>Folding strategy for brace/bracket pairs — covers JSON objects and arrays.</summary>
 internal sealed class JsonFoldingStrategy
 {
     public static void UpdateFoldings(FoldingManager manager, TextDocument document)
@@ -68,7 +72,7 @@ internal sealed class JsonFoldingStrategy
     private static List<NewFolding> CreateFoldings(string text)
     {
         var result = new List<NewFolding>();
-        var stack = new Stack<int>();
+        var stack  = new Stack<int>();
 
         for (var i = 0; i < text.Length; i++)
         {
@@ -88,13 +92,4 @@ internal sealed class JsonFoldingStrategy
         result.Sort((a, b) => a.StartOffset.CompareTo(b.StartOffset));
         return result;
     }
-}
-
-public sealed class BoolToBrushConverter : IValueConverter
-{
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        => value is true ? Brushes.Red : SystemColors.ControlTextBrush;
-
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        => throw new NotSupportedException();
 }

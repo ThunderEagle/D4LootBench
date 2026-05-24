@@ -1,0 +1,211 @@
+<UserControl
+    x:Class="D4Loot.App.Views.VisualEditorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:D4Loot.App.ViewModels"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=vm:VisualEditorViewModel, IsDesignTimeCreatable=False}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" MinWidth="160" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="*" MinWidth="340" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ── Rule List (left panel) ───────────────────────────────── -->
+        <DockPanel Grid.Column="0">
+
+            <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
+                <ToolBar>
+                    <Button Content="+"  Command="{Binding AddRuleCommand}"    ToolTip="Add rule"   Width="26" />
+                    <Button Content="−"  Command="{Binding DeleteRuleCommand}" ToolTip="Delete rule" Width="26" />
+                    <Separator />
+                    <Button Content="↑"  Command="{Binding MoveUpCommand}"     ToolTip="Move up"    Width="26" />
+                    <Button Content="↓"  Command="{Binding MoveDownCommand}"   ToolTip="Move down"  Width="26" />
+                </ToolBar>
+            </ToolBarTray>
+
+            <ListBox ItemsSource="{Binding Rules}"
+                     SelectedItem="{Binding SelectedRule}"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     BorderThickness="0,1,1,0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:FilterRuleViewModel}">
+                        <DockPanel Margin="4,2" LastChildFill="True">
+                            <Rectangle Width="10" Height="10" Margin="0,0,5,0"
+                                       Fill="{Binding WpfBrush}"
+                                       Stroke="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+                                       StrokeThickness="0.5"
+                                       DockPanel.Dock="Left" VerticalAlignment="Center" />
+                            <CheckBox IsChecked="{Binding IsEnabled}"
+                                      DockPanel.Dock="Left" Margin="0,0,5,0"
+                                      VerticalAlignment="Center" />
+                            <TextBlock Text="{Binding Name}"
+                                       TextTrimming="CharacterEllipsis"
+                                       VerticalAlignment="Center" />
+                        </DockPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+
+        <!-- ── Splitter ──────────────────────────────────────────────── -->
+        <GridSplitter Grid.Column="1"
+                      HorizontalAlignment="Stretch"
+                      Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" />
+
+        <!-- ── Rule Editor (right panel) ────────────────────────────── -->
+        <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+            <ContentControl Content="{Binding SelectedRule}">
+
+                <!-- No-selection placeholder -->
+                <ContentControl.Style>
+                    <Style TargetType="ContentControl">
+                        <Style.Triggers>
+                            <Trigger Property="Content" Value="{x:Null}">
+                                <Setter Property="ContentTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <TextBlock Text="Select a rule to edit."
+                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"
+                                                       Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ContentControl.Style>
+
+                <!-- Rule editor template (DataContext = FilterRuleViewModel) -->
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type vm:FilterRuleViewModel}">
+                        <StackPanel Margin="14,10" MaxWidth="580">
+
+                            <!-- Name -->
+                            <Label Content="Name" Padding="0,0,0,2" />
+                            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                     Margin="0,0,0,10" />
+
+                            <!-- Enabled + Visibility -->
+                            <DockPanel Margin="0,0,0,10">
+                                <CheckBox Content="Enabled"
+                                          IsChecked="{Binding IsEnabled}"
+                                          VerticalAlignment="Center"
+                                          Margin="0,0,20,0"
+                                          DockPanel.Dock="Left" />
+                                <Label Content="Visibility"
+                                       VerticalAlignment="Center"
+                                       Padding="0,0,6,0"
+                                       DockPanel.Dock="Left" />
+                                <ComboBox ItemsSource="{x:Static vm:FilterRuleViewModel.VisibilityValues}"
+                                          SelectedItem="{Binding Visibility}"
+                                          Width="120"
+                                          HorizontalAlignment="Left" />
+                            </DockPanel>
+
+                            <!-- Color label -->
+                            <Label Content="Color" Padding="0,0,0,2" />
+
+                            <!-- Swatch palette + Suggest button -->
+                            <WrapPanel Margin="0,0,0,6">
+                                <ItemsControl ItemsSource="{x:Static vm:FilterRuleViewModel.StandardColors}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate DataType="{x:Type vm:NamedColor}">
+                                            <Button Command="{Binding DataContext.SelectColorCommand,
+                                                              RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                    CommandParameter="{Binding Abgr}"
+                                                    ToolTip="{Binding Name}"
+                                                    Padding="2" Margin="0,0,3,0"
+                                                    Width="30" Height="30">
+                                                <Rectangle Fill="{Binding Brush}" />
+                                            </Button>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                                <Button Content="Suggest"
+                                        Command="{Binding GenerateDistinctColorCommand}"
+                                        ToolTip="Generate a color visually distinct from all other rule colors"
+                                        Padding="8,2" Margin="6,0,0,0"
+                                        VerticalAlignment="Center" />
+                            </WrapPanel>
+
+                            <!-- Current color preview + ABGR hex -->
+                            <DockPanel Margin="0,0,0,14">
+                                <Rectangle Width="28" Height="28"
+                                           Fill="{Binding WpfBrush}"
+                                           Stroke="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+                                           StrokeThickness="0.5"
+                                           DockPanel.Dock="Left" Margin="0,0,8,0" />
+                                <Label Content="ABGR hex:"
+                                       VerticalAlignment="Center"
+                                       Padding="0,0,6,0"
+                                       DockPanel.Dock="Left" />
+                                <TextBox Text="{Binding ColorHex, UpdateSourceTrigger=LostFocus}"
+                                         FontFamily="Cascadia Code, Consolas, Courier New"
+                                         MaxLength="8" Width="90"
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Left" />
+                            </DockPanel>
+
+                            <Separator Margin="0,0,0,10" />
+
+                            <!-- Conditions header -->
+                            <DockPanel Margin="0,0,0,6">
+                                <TextBlock Text="Conditions"
+                                           FontWeight="SemiBold"
+                                           VerticalAlignment="Center"
+                                           DockPanel.Dock="Left" />
+                                <Button Content="+ Add"
+                                        IsEnabled="False"
+                                        HorizontalAlignment="Right"
+                                        Padding="8,2"
+                                        ToolTip="Condition editing coming in Phase 3 — use Raw Editor for now" />
+                            </DockPanel>
+
+                            <!-- Condition rows -->
+                            <ItemsControl ItemsSource="{Binding Conditions}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate DataType="{x:Type vm:ConditionViewModel}">
+                                        <Border BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"
+                                                BorderThickness="1" CornerRadius="3"
+                                                Margin="0,0,0,4" Padding="8,5">
+                                            <DockPanel>
+                                                <Button DockPanel.Dock="Right"
+                                                        Content="✕"
+                                                        Command="{Binding DataContext.DeleteConditionCommand,
+                                                                  RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                        CommandParameter="{Binding}"
+                                                        Padding="6,0"
+                                                        ToolTip="Remove condition" />
+                                                <TextBlock Text="{Binding TypeName}"
+                                                           FontWeight="SemiBold"
+                                                           Margin="0,0,10,0"
+                                                           DockPanel.Dock="Left"
+                                                           VerticalAlignment="Center"
+                                                           MinWidth="120" />
+                                                <TextBlock Text="{Binding Summary}"
+                                                           VerticalAlignment="Center"
+                                                           Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
+                                                           TextTrimming="CharacterEllipsis" />
+                                            </DockPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

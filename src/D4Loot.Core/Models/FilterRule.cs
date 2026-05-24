@@ -2,14 +2,25 @@ using System.Text.Json.Serialization;
 
 namespace D4Loot.Core.Models;
 
-public sealed record FilterRule(
-    string Name,
-    Visibility Visibility,
-    uint Color,
-    IReadOnlyList<Condition> Conditions,
-    bool IsEnabled = true
-)
+public sealed class FilterRule
 {
+    public FilterRule() { }
+
+    public FilterRule(string name, Visibility visibility, uint color, IEnumerable<Condition> conditions, bool isEnabled = true)
+    {
+        Name       = name;
+        Visibility = visibility;
+        Color      = color;
+        Conditions = conditions.ToList();
+        IsEnabled  = isEnabled;
+    }
+
+    public string          Name       { get; set; } = "";
+    public Visibility      Visibility { get; set; } = Visibility.Show;
+    public uint            Color      { get; set; }
+    public List<Condition> Conditions { get; set; } = [];
+    public bool            IsEnabled  { get; set; } = true;
+
     /// <summary>Deconstructs the packed ABGR uint into individual channels.</summary>
     [JsonIgnore]
     public (byte R, byte G, byte B, byte A) ColorChannels => (
