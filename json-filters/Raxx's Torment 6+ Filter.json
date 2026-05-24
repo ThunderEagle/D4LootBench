@@ -1,0 +1,264 @@
+{
+  "Name": "Raxx\u0027s Torment 6\u002B Filter",
+  "Rules": [
+    {
+      "Name": "Every Mythic Unique",
+      "Visibility": "Show",
+      "Color": "0xffa822e8",
+      "Conditions": [
+        {
+          "$type": "rarity",
+          "Mask": "Mythic"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "All Codex Upgrades",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "codex"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Leg/Unique/Mythic Charms",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x0022ed05"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "Legendary, Unique, Mythic"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Set Charms (SELECT)",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "unknown",
+          "ConditionType": 9,
+          "RawBytes": "CAk="
+        },
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x0022ed05"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "Talisman"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "All Set Charms",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x0022ed05"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "Talisman"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Leg/Unique/Mythic Seals",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x00237e80"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "LegendaryPlus"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Salvage Seals \u0026 Charms",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x00237e80",
+            "0x0022ed05"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "Rare"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Uniques (SELECT)",
+      "Visibility": "Recolor",
+      "Color": "0xff22e8ae",
+      "Conditions": [
+        {
+          "$type": "unknown",
+          "ConditionType": 8,
+          "RawBytes": "CAg="
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "All Uniques",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "rarity",
+          "Mask": "Unique"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Specific GAs (SELECT)",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "affix",
+          "AffixIds": [
+            "0x00270af7"
+          ],
+          "MinimumCount": 1
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Main Stat GAs",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "affix",
+          "AffixIds": [
+            "0x001beac2",
+            "0x001beac6",
+            "0x001beaba",
+            "0x001beabe"
+          ],
+          "MinimumCount": 1
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Universal GAs",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "affix",
+          "AffixIds": [
+            "0x001d6e31",
+            "0x001beace",
+            "0x001bfd38",
+            "0x001beab8",
+            "0x001beade",
+            "0x001beab2",
+            "0x00273c0a",
+            "0x001beab4",
+            "0x001bfc80",
+            "0x0027fc93",
+            "0x001d6e63",
+            "0x001bead8",
+            "0x001bead4",
+            "0x001bead2"
+          ],
+          "MinimumCount": 1
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "All Greater Affixes",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "greaterAffix",
+          "MinimumCount": 1
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "All Ancestrals",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemProperties",
+          "PropertyMask": 4
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": "Whites To Cube (SELECT)",
+      "Visibility": "Show",
+      "Color": "0xffff0000",
+      "Conditions": [
+        {
+          "$type": "itemPower",
+          "Minimum": 850,
+          "Maximum": 0
+        },
+        {
+          "$type": "itemType",
+          "TypeIds": [
+            "0x0006d159"
+          ]
+        },
+        {
+          "$type": "rarity",
+          "Mask": "Common"
+        }
+      ],
+      "IsEnabled": true
+    },
+    {
+      "Name": " ",
+      "Visibility": "HideAll",
+      "Color": "0xffff0000",
+      "Conditions": [],
+      "IsEnabled": true
+    }
+  ]
+}

@@ -104,14 +104,14 @@ public static class FilterCodec
                 buf.AddRange(ProtoWriter.VarintField(1, 2));
                 buf.AddRange(ProtoWriter.VarintField(4, (ulong)ip2.PropertyMask));
                 break;
-            case GreaterAffixCondition ga:
-                buf.AddRange(ProtoWriter.VarintField(1, 3));
-                buf.AddRange(ProtoWriter.VarintField(6, (ulong)ga.MinimumCount));
-                break;
             case CodexCondition:
+                buf.AddRange(ProtoWriter.VarintField(1, 3));
+                buf.AddRange(ProtoWriter.VarintField(6, 1));
+                break;
+            case GreaterAffixCondition ga:
                 buf.AddRange(ProtoWriter.VarintField(1, 4));
                 buf.AddRange(ProtoWriter.VarintField(4, 1));
-                buf.AddRange(ProtoWriter.VarintField(6, 1));
+                buf.AddRange(ProtoWriter.VarintField(6, (ulong)ga.MinimumCount));
                 break;
             case ItemTypeCondition it:
                 buf.AddRange(ProtoWriter.VarintField(1, 5));
@@ -165,8 +165,8 @@ public static class FilterCodec
             0 => new ItemPowerCondition((int)field4, (int)field5),
             1 => new RarityCondition((RarityFlags)field4),
             2 => new ItemPropertiesCondition((int)field4),
-            3 => new GreaterAffixCondition((int)field6),
-            4 => new CodexCondition(),
+            3 => new CodexCondition(),
+            4 => new GreaterAffixCondition((int)field6),
             5 => new ItemTypeCondition(ids),
             6 => new AffixCondition(ids, (int)field4),
             7 => new OptionalAffixCondition(ids),

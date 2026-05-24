@@ -110,13 +110,21 @@ The condition type discriminator is field 1. The complete enum (from
 | 0 | Item Power Range | `ItemPowerCondition` | ✅ fully modelled |
 | 1 | Item Rarity Match | `RarityCondition` | ✅ fully modelled |
 | 2 | Item Properties | `ItemPropertiesCondition` | ✅ fully modelled (1=None, 4=Ancestral) |
-| 3 | Greater Affix Check | `GreaterAffixCondition` | ✅ fully modelled |
-| 4 | Codex Upgrade Check | `CodexCondition` | ✅ fully modelled |
+| 3 | Codex Upgrade Check | `CodexCondition` | ✅ fully modelled |
+| 4 | Greater Affix Check | `GreaterAffixCondition` | ✅ fully modelled |
 | 5 | Item Type Match | `ItemTypeCondition` | ✅ fully modelled |
 | 6 | Has Required Affixes | `AffixCondition` | ✅ fully modelled (params2 not decoded) |
 | 7 | Has Optional Affixes | `OptionalAffixCondition` | ✅ fully modelled |
 | 8 | Is Specific Unique | `UnknownCondition` | Field layout known; Unique item IDs not catalogued |
 | 9 | Talisman Set Bonus | `UnknownCondition` | Field layout known; set/item IDs not catalogued |
+
+> **Correction — fnuecke type mapping reversed for types 3 and 4.** The original
+> [fnuecke/diablo4-loot-filter-viewer](https://github.com/fnuecke/diablo4-loot-filter-viewer)
+> proto mapped type 3 to Greater Affix Check and type 4 to Codex Upgrade Check.
+> Real-world validation against Raxx's Torment 6+ filter export showed these are
+> **swapped in the game's actual encoding**: type 3 is Codex Upgrade Check and
+> type 4 is Greater Affix Check. Both are fully modelled but the codec uses the
+> game-corrected mapping (`FilterCodec.cs` — `EncodeCondition`/`DecodeCondition`).
 
 **Condition message fields** (same set regardless of type):
 ```
@@ -175,19 +183,19 @@ Model class pending; codec preserves as `UnknownCondition`.
 
 ---
 
-### Type 3 — Greater Affix Check
+### Type 3 — Codex Upgrade Check
 ```
 field 1 (varint) = 3
-field 6 (varint) = minimum_count
+field 6 (varint) = 1
 ```
 
 ---
 
-### Type 4 — Codex Upgrade Check
+### Type 4 — Greater Affix Check
 ```
 field 1 (varint) = 4
 field 4 (varint) = 1   (always)
-field 6 (varint) = 1   (always)
+field 6 (varint) = minimum_count
 ```
 
 ---
