@@ -1,10 +1,22 @@
 namespace D4Loot.Core.Data;
 
-public sealed record UniqueItemEntry(string Name, uint SnoId, string InternalName);
+/// <param name="Name">Player-facing display name.</param>
+/// <param name="SnoId">SNO ID used in the filter wire format.</param>
+/// <param name="InternalName">CoreTOC internal asset name.</param>
+/// <param name="IsReleased">
+/// False for items whose display name is a placeholder (prefix "[PH]") or whose
+/// name could not be resolved (equals the internal name). These are cut or
+/// unreleased items in the game files and should be excluded from UI pickers.
+/// </param>
+public sealed record UniqueItemEntry(string Name, uint SnoId, string InternalName, bool IsReleased);
 
 public static class UniqueItemDatabase
 {
     public static IReadOnlyList<UniqueItemEntry> All { get; }
+
+    /// <summary>Only entries where <see cref="UniqueItemEntry.IsReleased"/> is true.</summary>
+    public static IReadOnlyList<UniqueItemEntry> Released { get; }
+
     public static IReadOnlyDictionary<uint, UniqueItemEntry> BySnoId { get; }
 
     static UniqueItemDatabase()
@@ -14,16 +26,20 @@ public static class UniqueItemDatabase
         var arr = FilterDataStore.Root.GetProperty("uniques");
         foreach (var el in arr.EnumerateArray())
         {
-            var name = el.GetProperty("displayName").GetString()!;
-            var snoIdHex = el.GetProperty("snoId").GetString()!;
-            var snoId = Convert.ToUInt32(snoIdHex[2..], 16);
+            var name         = el.GetProperty("displayName").GetString()!;
+            var snoIdHex     = el.GetProperty("snoId").GetString()!;
+            var snoId        = Convert.ToUInt32(snoIdHex[2..], 16);
             var internalName = el.GetProperty("internalName").GetString()!;
 
-            all.Add(new UniqueItemEntry(name, snoId, internalName));
+            var isReleased = !name.StartsWith("[PH]", StringComparison.Ordinal)
+                          && !string.Equals(name, internalName, StringComparison.Ordinal);
+
+            all.Add(new UniqueItemEntry(name, snoId, internalName, isReleased));
         }
 
-        All = all.AsReadOnly();
-        BySnoId = all.ToDictionary(e => e.SnoId);
+        All      = all.AsReadOnly();
+        Released = all.Where(e => e.IsReleased).ToList().AsReadOnly();
+        BySnoId  = all.ToDictionary(e => e.SnoId);
     }
 
     public static string GetDisplayName(uint snoId)
