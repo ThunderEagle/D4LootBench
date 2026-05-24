@@ -36,6 +36,26 @@ The protobuf encoding is hand-rolled (not using a generated .proto file in the o
 | FIXED32   | 5     | 32-bit hash IDs (little-endian) |
 | LEN       | 2     | strings, nested messages |
 
+### Hash IDs
+
+**Critical finding:** Hash IDs in the filter format are **not computed hashes** — they are **the hexadecimal representation of SNO IDs** (game asset identifiers from CoreTOC).
+
+```
+hash_id = sno_id_as_uint32
+```
+
+**Examples:**
+| Asset | SNO ID (decimal) | Hash ID (hex) | Wire format (little-endian) |
+|-------|-----------------|---------------|--------------------------|
+| Axe (item type) | 446801 | 0x0006D151 | `51 d1 06 00` |
+| Fists of Fate (unique) | 223287 | 0x00036837 | `37 68 03 00` |
+| Charm (item type) | 2288901 | 0x0022ED05 | `05 ed 22 00` |
+
+This means:
+- All item type IDs (affixes, uniques, item types, skills) are stored and transmitted as their SNO IDs
+- No hash function is applied; the value is used directly in FIXED32 wire format
+- Community databases (fnuecke, DiabloTools/d4data) that map SNO IDs to names can be used directly to decode filter conditions
+
 ---
 
 ## Top-Level Message: Filter
