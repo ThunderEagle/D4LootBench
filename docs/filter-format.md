@@ -116,7 +116,7 @@ The condition type discriminator is field 1. The complete enum (from
 | 6 | Has Required Affixes | `AffixCondition` | ✅ fully modelled (GA pairs decoded; Field5 semantics unknown) |
 | 7 | Has Optional Affixes | `OptionalAffixCondition` | ✅ fully modelled (GA pairs decoded; Field5 semantics unknown) |
 | 8 | Is Specific Unique | `SpecificUniqueCondition` | ✅ modelled (~900 IDs, all internal names — no player-friendly labels) |
-| 9 | Talisman Set Bonus | `UnknownCondition` | Field layout known; set/item IDs not catalogued |
+| 9 | Talisman Set Bonus | `TalismanSetCondition` | ✅ modelled (SetIds + SetEntries decoded; no set ID database yet) |
 
 > **Correction — fnuecke type mapping reversed for types 3 and 4.** The original
 > [fnuecke/diablo4-loot-filter-viewer](https://github.com/fnuecke/diablo4-loot-filter-viewer)
@@ -264,13 +264,14 @@ names requires cross-referencing against community databases or in-game data.
 ### Type 9 — Talisman Set Bonus
 ```
 field 1  (varint)           = 9
-field 2  (fixed32, repeated) = set_hash_id
-field 3  (LEN, repeated)    = params2  — { fixed32 set_id, fixed32 item_id } pairs
+field 2  (fixed32, repeated) = set_hash_id       → TalismanSetCondition.SetIds
+field 3  (LEN, repeated)    = { fixed32 set_id, fixed32 item_id }  → TalismanSetCondition.SetEntries
 ```
 
-Set IDs and per-set item IDs are in fnuecke's `names.json` (entries prefixed `Talisman_`).
-An empty selection (`CAk=` → type=9, no IDs) matches no items.
-Codec preserves as `UnknownCondition`.
+Model class: `TalismanSetCondition` with `SetIds` (field 2) and `SetEntries` (field 3 pairs).
+An empty selection (`CAk=` → type=9, no IDs) matches no items; round-trips as an empty
+`TalismanSetCondition`. Set IDs not yet catalogued — display as hex until a set database
+is built. fnuecke's `names.json` has matching entries prefixed `Talisman_`.
 
 ---
 

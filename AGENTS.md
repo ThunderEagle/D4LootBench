@@ -26,7 +26,7 @@ D4Loot.slnx
 │   │   ├── SkillDatabase.cs            # ~200 skill entries for all 9 classes, mixed verified/datamined
 │   │   └── UniqueItemDatabase.cs       # ~900 unique entries (internal names only, no player-friendly names)
 │   ├── Models/
-│   │   ├── Condition.cs                # 9 concrete records + UnknownCondition, GreaterAffixEntry
+│   │   ├── Condition.cs                # 10 concrete records + UnknownCondition, GreaterAffixEntry, TalismanSetEntry
 │   │   ├── Enums.cs                    # Visibility (Show/Recolor/HideAll), RarityFlags [Flags]
 │   │   ├── FilterRule.cs               # Name, Visibility, Color, Conditions list, IsEnabled
 │   │   └── FilterRuleset.cs            # Rules list, Name, Count, Version=1
@@ -91,7 +91,7 @@ Full spec is in `docs/filter-format.md`. Key points:
 - **Filter** → repeated Rule messages (field 1) + name (field 2) + count (field 3) + version=1 (field 4)
 - **Rule** → name (1), visibility/enum (2), color/ABGR-uint32 (3), repeated Condition (4), enabled (5)
 - **Condition** types (all 10 known): Item Power (0), Rarity (1), Item Properties (2), Greater Affix (3), Codex (4), Item Type (5), Required Affixes (6), Optional Affixes (7), Specific Unique (8), Talisman Set (9)
-- Types 0–8 are fully modelled; type 9 round-trips as `UnknownCondition` (set/item IDs not catalogued)
+- All 10 condition types are modelled; `UnknownCondition` is now a pure defensive fallback for future game patches
 - Color format: packed ABGR `uint32` little-endian — `makeColor(r,g,b)` = `(a<<24)|(b<<16)|(g<<8)|r`
 - Rules are written in **reverse display order** (lowest-priority rule first in binary)
 - **Maximum 25 rules per filter** — game-enforced limit; editor must validate on export
@@ -111,7 +111,7 @@ Sources: Upsilon72/d4-filter-generator (Season 13), fnuecke/diablo4-loot-filter-
 ## What's Done
 - **Phase 0** ✅ — Format fully reverse-engineered; `docs/filter-format.md` written; all 10 condition types documented
 - **Phase 1** ✅ — Core library complete:
-  - Domain models (`FilterRuleset`, `FilterRule`, full `Condition` hierarchy — 10 types)
+  - Domain models (`FilterRuleset`, `FilterRule`, full `Condition` hierarchy — all 10 types)
   - `FilterCodec.Encode()` / `FilterCodec.Decode()` — bidirectional, lossless round-trip for all condition types
   - `AffixDatabase` (63 entries), `SkillDatabase` (all 9 classes, ~200 entries), `ItemTypeDatabase` (27 types), `FilterColors`, `UniqueItemDatabase` (~900 internal names)
   - 15 unit tests passing, 0 warnings

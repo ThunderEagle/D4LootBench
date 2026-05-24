@@ -6042,5 +6042,15 @@
       "snoId": "0x002806E1",
       "internalName": "Ring_Unique_Generic_106_x2"
     }
+  ],
+  "talismanSets": [
+    {
+      "displayName": "Berserker's Crucible",
+      "hash": "0x0022fb41",
+      "internalName": "Berserkers_Crucible",
+      "items": [
+        { "displayName": "Berú of the Crucible", "hash": "0x002506e2", "internalName": "Beru_of_the_Crucible" }
+      ]
+    }
   ]
 }
