@@ -88,3 +88,6 @@ dotnet test           # 12 tests in D4Loot.Core.Tests
 ```powershell
 dotnet publish src/D4Loot.App -r win-x64 -p:PublishSingleFile=true --self-contained true
 ```
+
+## README (not yet created) — Doc reminders for initial write
+When creating the repo's README.md, include a troubleshooting section noting that if a share code imported from an external source fails to decode or produces unexpected results, the user should re-export the filter from the in-game UI and use that fresh code instead. Older tool exports or manually-shared codes may have subtle encoding differences (e.g. the GitHub copy of Raxx's filter has 13 greater entries per condition instead of the game's 14).

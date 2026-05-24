@@ -36,10 +36,19 @@ public static class FilterCodec
                     if (wire == 2)
                     {
                         var ruleBytes = reader.ReadLenBytes();
-                        var fixedBytes = FixOverflow(ruleBytes);
-                        if (fixedBytes.Length < ruleBytes.Length)
+                        var rule = DecodeRule(ruleBytes);
+
+                        var hasOverflow = rule.Conditions.Any(c => c is AffixCondition { Field5: not 0 });
+                        if (hasOverflow)
+                        {
+                            var fixedConds = rule.Conditions
+                                .Select(c => c is AffixCondition ac ? ac with { Field5 = 0 } : c).ToList();
+                            rule = new FilterRule(rule.Name, rule.Visibility, rule.Color, fixedConds, rule.IsEnabled);
+                            var fixedBytes = EncodeRule(rule);
                             reader.Seek(reader.Position - (ruleBytes.Length - fixedBytes.Length));
-                        rules.Add(DecodeRule(fixedBytes));
+                        }
+
+                        rules.Add(rule);
                         break;
                     }
                     goto default;
@@ -72,62 +81,6 @@ public static class FilterCodec
             buf.AddRange(ProtoWriter.LenField(4, EncodeCondition(cond)));
         buf.AddRange(ProtoWriter.VarintField(5, rule.IsEnabled ? 1UL : 0UL));
         return [.. buf];
-    }
-
-    private static byte[] FixOverflow(byte[] ruleBytes)
-    {
-        if (!HasConditionOverflow(ruleBytes))
-            return ruleBytes;
-        var rule = DecodeRule(ruleBytes);
-        for (var i = 0; i < rule.Conditions.Count; i++)
-            if (rule.Conditions[i] is AffixCondition ac)
-                rule.Conditions[i] = ac with { Field5 = 0 };
-        return EncodeRule(rule);
-    }
-
-    private static bool HasConditionOverflow(byte[] ruleBytes)
-    {
-        var reader = new ProtoReader(ruleBytes);
-        while (reader.HasData)
-        {
-            var (field, wire) = reader.ReadTag();
-            if (field == 4 && wire == 2)
-            {
-                var condBytes = reader.ReadLenBytes();
-                return GetConditionEndPosition(condBytes) < condBytes.Length;
-            }
-            reader.Skip(wire);
-        }
-        return false;
-    }
-
-    private static int GetConditionEndPosition(byte[] condBytes)
-    {
-        var reader = new ProtoReader(condBytes);
-        var condType = -1;
-
-        while (reader.HasData)
-        {
-            var pos = reader.Position;
-            var (field, wire) = reader.ReadTag();
-            switch (field)
-            {
-                case 1:
-                    if (condType == -1)
-                        condType = (int)reader.ReadVarint();
-                    else
-                        return pos;
-                    break;
-                case 2: reader.ReadFixed32(); break;
-                case 3: reader.ReadLenBytes(); break;
-                case 4: reader.ReadVarint(); break;
-                case 5: reader.ReadVarint(); break;
-                case 6: reader.ReadVarint(); break;
-                default: reader.Skip(wire); break;
-            }
-        }
-
-        return condBytes.Length;
     }
 
     private static FilterRule DecodeRule(byte[] ruleBytes)
@@ -249,7 +202,7 @@ public static class FilterCodec
                     if (condType == -1)
                         condType = (int)reader.ReadVarint();
                     else
-                        goto done;
+                        return BuildCondition(condType, field4, field5, field6, ids, greaterEntries, condBytes);
                     break;
                 case 2: ids.Add(reader.ReadFixed32()); break;
                 case 3:
@@ -278,7 +231,12 @@ public static class FilterCodec
             }
         }
 
-        done:
+        return BuildCondition(condType, field4, field5, field6, ids, greaterEntries, condBytes);
+    }
+
+    private static Condition BuildCondition(int condType, ulong field4, ulong field5, ulong field6,
+        List<uint> ids, List<GreaterAffixEntry> greaterEntries, byte[] condBytes)
+    {
         return condType switch
         {
             0 => new ItemPowerCondition((int)field4, (int)field5),

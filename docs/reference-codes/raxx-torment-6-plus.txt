@@ -1,0 +1,27 @@
+Raxx's Torment 6+ Filter — game-exported share code (May 2026)
+
+Source: Exported in-game by Raxxanterax via D4's built-in loot filter share feature.
+Validated: 16 rules, all 14 greater entries on Universal GAs condition, no Field5 artifact.
+Length: 996 bytes (base64), 747 bytes (raw binary).
+Versus GitHub copy (981 bytes): game export adds the 14th greater entry that the GitHub
+copy was missing, likely due to an older game version or different export tool.
+
+CiQKE0V2ZXJ5IE15dGhpYyBVbmlxdWUQAB3oIqj/IgQIASAgKAEKIwoSQWxsIENvZGV4IFVw
+Z3JhZGVzEAAdAAD//yIECAMwASgBCjIKGExlZy9VbmlxdWUvTXl0aGljIENoYXJtcxAAHQAA
+//8iBwgFFQXtIgAiBAgBIDgoAQoxChNTZXQgQ2hhcm1zIChTRUxFQ1QpEAAdAAD//yICCAki
+BwgFFQXtIgAiBAgBIEAoAQooCg5BbGwgU2V0IENoYXJtcxAAHQAA//8iBwgFFQXtIgAiBAgB
+IEAoAQoxChdMZWcvVW5pcXVlL015dGhpYyBTZWFscxAAHQAA//8iBwgFFYB+IwAiBAgBIHgo
+AQo1ChZTYWx2YWdlIFNlYWxzICYgQ2hhcm1zEAAdAAD//yIMCAUVgH4jABUF7SIAIgQIASAE
+KAEKHwoQVW5pcXVlcyAoU0VMRUNUKRACHa7oIv8iAggIKAEKHAoLQWxsIFVuaXF1ZXMQAB0A
+AP//IgQIASAQKAEKNwoVU3BlY2lmaWMgR0FzIChTRUxFQ1QpEAAdAAD//yIVCAYV9wonABoK
+DfcKJwAV9wonACABKAEKYgoNTWFpbiBTdGF0IEdBcxAAHQAA//8iSAgGFcLqGwAVxuobABW6
+6hsAFb7qGwAaCg3C6hsAFcLqGwAaCg3G6hsAFcbqGwAaCg266hsAFbrqGwAaCg2+6hsAFb7q
+GwAgASgBCo0CCg1Vbml2ZXJzYWwgR0FzEAAdAAD//yLyAQgGFTFuHQAVzuobABU4/RsAFbjq
+GwAV3uobABWy6hsAFQo8JwAVtOobABWA/BsAFZP8JwAVY24dABXY6hsAFdTqGwAV0uobABoK
+DTFuHQAVMW4dABoKDTj9GwAVOP0bABoKDc7qGwAVzuobABoKDbjqGwAVuOobABoKDbLqGwAV
+suobABoKDd7qGwAV3uobABoKDbTqGwAVtOobABoKDQo8JwAVCjwnABoKDWNuHQAVY24dABoK
+DZP8JwAVk/wnABoKDYD8GwAVgPwbABoKDdjqGwAV2OobABoKDdTqGwAV1OobABoKDdLqGwAV
+0uobACABKAEKJgoTQWxsIEdyZWF0ZXIgQWZmaXhlcxAAHQAA//8iBggEIAEwASgBCh8KDkFs
+bCBBbmNlc3RyYWxzEAAdAAD//yIECAIgBCgBCjsKF1doaXRlcyBUbyBDdWJlIChTRUxFQ1Qp
+EAAdAAD//yIICAAg0gYohAciBwgFFVnRBgAiBAgBIAEoAQoMCgEgEAMdAAD//ygBEhhSYXh4
+J3MgVG9ybWVudCA2KyBGaWx0ZXIYASAC
