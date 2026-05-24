@@ -66,11 +66,12 @@ public sealed class ConditionViewModel
         return $"0x{id:x8}";
     }
 
-    private static string LookupUniqueName(uint snoId)
+    private static string LookupUniqueName(uint hash)
     {
-        if (UniqueItemDatabase.BySnoId.TryGetValue(snoId, out var entry))
+        // In the filter wire format, unique item IDs are hash values that equal their SNO IDs
+        if (UniqueItemDatabase.ByHash.TryGetValue(hash, out var entry))
             return entry.Name;
-        return $"0x{snoId:x8}";
+        return $"0x{hash:x8}";
     }
 
     private static string FormatRarityFlags(RarityFlags flags)
