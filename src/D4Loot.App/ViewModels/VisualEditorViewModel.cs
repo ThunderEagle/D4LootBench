@@ -79,6 +79,16 @@ public partial class VisualEditorViewModel : ObservableObject
         MoveDownCommand.NotifyCanExecuteChanged();
     }
 
-    private FilterRuleViewModel MakeRuleVm(FilterRule rule) =>
-        new(rule, self => Rules.Where(r => r != self).Select(r => r.Color));
+    partial void OnSelectedClassChanged(PlayerClass value)
+    {
+        foreach (var rule in Rules)
+            rule.ApplyClassFilter(value);
+    }
+
+    private FilterRuleViewModel MakeRuleVm(FilterRule rule)
+    {
+        var vm = new FilterRuleViewModel(rule, self => Rules.Where(r => r != self).Select(r => r.Color));
+        vm.ApplyClassFilter(SelectedClass);
+        return vm;
+    }
 }

@@ -21,6 +21,19 @@ public sealed partial class ItemTypeConditionViewModel : ConditionViewModel
             Picker.Selected.Add(new PickerEntry(id, ItemTypeDatabase.GetDisplayName(id)));
     }
 
+    public override void ApplyClassFilter(PlayerClass playerClass)
+    {
+        if (playerClass == PlayerClass.All)
+            Picker.SourceFilter = null;
+        else
+        {
+            var allowed = ItemTypeDatabase.ForClass(playerClass.ToString())
+                .Select(e => e.Hash)
+                .ToHashSet();
+            Picker.SourceFilter = e => allowed.Contains(e.Hash);
+        }
+    }
+
     public override string TypeName => "Item Type";
     public override string Summary =>
         $"{Picker.Selected.Count} type{(Picker.Selected.Count == 1 ? "" : "s")}";

@@ -3,7 +3,7 @@ namespace D4Loot.Core.Data;
 public sealed record TalismanSetItemEntry(string Name, uint Hash, string InternalName);
 
 public sealed record TalismanSetInfo(string Name, uint Hash, string InternalName,
-    IReadOnlyList<TalismanSetItemEntry> Items);
+    IReadOnlyList<TalismanSetItemEntry> Items, IReadOnlyList<string> Classes);
 
 public static class TalismanSetDatabase
 {
@@ -13,9 +13,12 @@ public static class TalismanSetDatabase
     /// <summary>Flat lookup of all item hashes across every set.</summary>
     public static IReadOnlyDictionary<uint, TalismanSetItemEntry> ItemsByHash { get; }
 
+    private static readonly Dictionary<string, List<TalismanSetInfo>> _byClass;
+
     static TalismanSetDatabase()
     {
         var all = new List<TalismanSetInfo>();
+        _byClass = new Dictionary<string, List<TalismanSetInfo>>();
 
         var arr = FilterDataStore.Root.GetProperty("talismanSets");
         foreach (var el in arr.EnumerateArray())
@@ -28,6 +31,12 @@ public static class TalismanSetDatabase
                 continue;
             var hash = Convert.ToUInt32(hashEl.GetString()![2..], 16);
 
+            var classes = el.GetProperty("classes")
+                            .EnumerateArray()
+                            .Select(c => c.GetString()!)
+                            .ToList()
+                            .AsReadOnly();
+
             var items = new List<TalismanSetItemEntry>();
             foreach (var item in el.GetProperty("items").EnumerateArray())
             {
@@ -39,7 +48,18 @@ public static class TalismanSetDatabase
                 items.Add(new TalismanSetItemEntry(iName, iHash, iInternal));
             }
 
-            all.Add(new TalismanSetInfo(name, hash, internalName, items.AsReadOnly()));
+            var entry = new TalismanSetInfo(name, hash, internalName, items.AsReadOnly(), classes);
+            all.Add(entry);
+
+            foreach (var cls in classes)
+            {
+                if (!_byClass.TryGetValue(cls, out var list))
+                {
+                    list = new List<TalismanSetInfo>();
+                    _byClass[cls] = list;
+                }
+                list.Add(entry);
+            }
         }
 
         All = all.AsReadOnly();
@@ -47,6 +67,13 @@ public static class TalismanSetDatabase
         ItemsByHash = all
             .SelectMany(s => s.Items)
             .ToDictionary(i => i.Hash);
+    }
+
+    public static IReadOnlyList<TalismanSetInfo> ForClass(string className)
+    {
+        var specific = _byClass.TryGetValue(className, out var list) ? list : [];
+        var all = _byClass.TryGetValue("All", out var allList) ? allList : [];
+        return [.. specific, .. all];
     }
 
     public static string GetSetName(uint hash)

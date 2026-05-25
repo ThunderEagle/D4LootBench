@@ -23,6 +23,7 @@ public partial class FilterRuleViewModel : ObservableObject
 {
     private readonly Func<FilterRuleViewModel, IEnumerable<uint>> _getPeerColors;
     private SolidColorBrush? _wpfBrush;
+    private PlayerClass _classFilter = PlayerClass.All;
 
     [ObservableProperty] private string _name;
 
@@ -102,6 +103,13 @@ public partial class FilterRuleViewModel : ObservableObject
             Conditions.Add(FromModel(condition));
     }
 
+    public void ApplyClassFilter(PlayerClass playerClass)
+    {
+        _classFilter = playerClass;
+        foreach (var condition in Conditions)
+            condition.ApplyClassFilter(playerClass);
+    }
+
     public FilterRule BuildRule() =>
         new(Name, Visibility, Color, Conditions.Select(c => c.BuildModel()).ToList(), IsEnabled);
 
@@ -138,6 +146,7 @@ public partial class FilterRuleViewModel : ObservableObject
             ConditionType.TalismanSet     => new TalismanSetConditionViewModel(),
             _                             => throw new InvalidOperationException()
         };
+        vm.ApplyClassFilter(_classFilter);
         Conditions.Add(vm);
     }
 

@@ -27,6 +27,19 @@ public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
             Picker.Selected.Add(new PickerEntry(id, TalismanSetDatabase.GetSetName(id)));
     }
 
+    public override void ApplyClassFilter(PlayerClass playerClass)
+    {
+        if (playerClass == PlayerClass.All)
+            Picker.SourceFilter = null;
+        else
+        {
+            var allowed = TalismanSetDatabase.ForClass(playerClass.ToString())
+                .Select(e => e.Hash)
+                .ToHashSet();
+            Picker.SourceFilter = e => allowed.Contains(e.Hash);
+        }
+    }
+
     public override string TypeName => "Talisman Set";
     public override string Summary => Picker.Selected.Count == 0
         ? "any set"

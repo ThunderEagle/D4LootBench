@@ -37,6 +37,19 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
     private static PickerViewModel MakePicker() =>
         new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)));
 
+    public override void ApplyClassFilter(PlayerClass playerClass)
+    {
+        if (playerClass == PlayerClass.All)
+            Picker.SourceFilter = null;
+        else
+        {
+            var allowed = AffixDatabase.ForClass(playerClass.ToString())
+                .Select(e => e.Hash)
+                .ToHashSet();
+            Picker.SourceFilter = e => allowed.Contains(e.Hash);
+        }
+    }
+
     public override string TypeName => "Required Affixes";
     public override string Summary => $"min {MinimumCount} of {Picker.Selected.Count}";
 

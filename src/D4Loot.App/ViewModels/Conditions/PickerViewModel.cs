@@ -9,8 +9,19 @@ public sealed record PickerEntry(uint Hash, string DisplayName);
 public sealed partial class PickerViewModel : ObservableObject
 {
     private readonly IReadOnlyList<PickerEntry> _source;
+    private Func<PickerEntry, bool>? _sourceFilter;
 
     public ObservableCollection<PickerEntry> Selected { get; } = [];
+
+    public Func<PickerEntry, bool>? SourceFilter
+    {
+        get => _sourceFilter;
+        set
+        {
+            _sourceFilter = value;
+            OnPropertyChanged(nameof(FilteredAvailable));
+        }
+    }
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FilteredAvailable))]
@@ -36,6 +47,8 @@ public sealed partial class PickerViewModel : ObservableObject
         {
             var selectedHashes = Selected.Select(e => e.Hash).ToHashSet();
             var q = _source.Where(e => !selectedHashes.Contains(e.Hash));
+            if (SourceFilter is not null)
+                q = q.Where(e => SourceFilter(e));
             if (!string.IsNullOrWhiteSpace(SearchText))
                 q = q.Where(e => e.DisplayName.Contains(SearchText, StringComparison.OrdinalIgnoreCase));
             return q;

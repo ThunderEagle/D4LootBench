@@ -35,6 +35,19 @@ public sealed partial class SpecificUniqueConditionViewModel : ConditionViewMode
         }
     }
 
+    public override void ApplyClassFilter(PlayerClass playerClass)
+    {
+        if (playerClass == PlayerClass.All)
+            Picker.SourceFilter = null;
+        else
+        {
+            var allowed = UniqueItemDatabase.ForClass(playerClass.ToString())
+                .Select(e => e.SnoId)
+                .ToHashSet();
+            Picker.SourceFilter = e => allowed.Contains(e.Hash);
+        }
+    }
+
     public override string TypeName => "Specific Unique";
     public override string Summary =>
         $"{Picker.Selected.Count} unique{(Picker.Selected.Count == 1 ? "" : "s")}";
