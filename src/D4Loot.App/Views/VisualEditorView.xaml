@@ -193,6 +193,23 @@
                                            FontWeight="SemiBold"
                                            VerticalAlignment="Center"
                                            DockPanel.Dock="Left" />
+                                <Button Content="↶ Undo Delete"
+                                        Command="{Binding UndoDeleteConditionCommand}"
+                                        ToolTip="{Binding LastDeletedConditionTypeName, StringFormat=Restore the {0} condition you just removed}"
+                                        Padding="8,2"
+                                        Margin="0,0,12,0"
+                                        DockPanel.Dock="Right">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding HasUndoableDelete}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                                 <Button Content="+ Add"
                                         Command="{Binding AddConditionCommand}"
                                         HorizontalAlignment="Right"

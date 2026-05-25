@@ -156,5 +156,33 @@ public partial class FilterRuleViewModel : ObservableObject
         Color = ColorUtility.GenerateDistinctColor(_getPeerColors(this));
 
     [RelayCommand]
-    private void DeleteCondition(ConditionViewModel condition) => Conditions.Remove(condition);
+    private void DeleteCondition(ConditionViewModel condition)
+    {
+        var idx = Conditions.IndexOf(condition);
+        if (idx < 0) return;
+        _lastDeletedCondition = condition;
+        _lastDeletedIndex     = idx;
+        Conditions.RemoveAt(idx);
+        UndoDeleteConditionCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(LastDeletedConditionTypeName));
+    }
+
+    private ConditionViewModel? _lastDeletedCondition;
+    private int _lastDeletedIndex;
+
+    public bool HasUndoableDelete => _lastDeletedCondition is not null;
+
+    public string LastDeletedConditionTypeName => _lastDeletedCondition?.TypeName ?? "";
+
+    [RelayCommand(CanExecute = nameof(HasUndoableDelete))]
+    private void UndoDeleteCondition()
+    {
+        if (_lastDeletedCondition is null) return;
+        var insertAt = Math.Clamp(_lastDeletedIndex, 0, Conditions.Count);
+        Conditions.Insert(insertAt, _lastDeletedCondition);
+        _lastDeletedCondition = null;
+        UndoDeleteConditionCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(LastDeletedConditionTypeName));
+        OnPropertyChanged(nameof(HasUndoableDelete));
+    }
 }
