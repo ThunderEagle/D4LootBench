@@ -50,6 +50,14 @@
                         Command="{Binding OpenRawEditorCommand}"
                         ToolTip="Open the JSON raw editor in a separate window"
                         Padding="8,2" />
+
+                <Separator />
+
+                <Label Content="Theme:" VerticalAlignment="Center" Padding="4,0" />
+                <ComboBox ItemsSource="{x:Static vm:MainWindowViewModel.Themes}"
+                          SelectedItem="{Binding SelectedTheme}"
+                          Width="72"
+                          VerticalAlignment="Center" />
             </ToolBar>
         </ToolBarTray>
 

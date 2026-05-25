@@ -18,6 +18,18 @@
         <!-- ── Rule List (left panel) ───────────────────────────────── -->
         <DockPanel Grid.Column="0">
 
+            <!-- Filter name + class filter -->
+            <DockPanel DockPanel.Dock="Top" Margin="4,4,4,2" LastChildFill="True">
+                <ComboBox ItemsSource="{x:Static vm:VisualEditorViewModel.PlayerClasses}"
+                          SelectedItem="{Binding SelectedClass}"
+                          DockPanel.Dock="Right"
+                          Width="94"
+                          ToolTip="Filter skills and affixes by class (UI only — not saved in the filter)" />
+                <TextBox Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"
+                         ToolTip="Filter name"
+                         Margin="0,0,4,0" />
+            </DockPanel>
+
             <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
                 <ToolBar>
                     <Button Content="+"  Command="{Binding AddRuleCommand}"    ToolTip="Add rule"   Width="26" />

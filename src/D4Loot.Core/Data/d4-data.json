@@ -3098,27 +3098,6 @@
       "classes": [
         "Paladin"
       ]
-    },
-    {
-      "displayName": "Earth Spike",
-      "hash": "0x001cc052",
-      "classes": [
-        "Druid"
-      ]
-    },
-    {
-      "displayName": "Poison Creeper",
-      "hash": "0x001cc18a",
-      "classes": [
-        "Druid"
-      ]
-    },
-    {
-      "displayName": "Smoke Grenade",
-      "hash": "0x001c9557",
-      "classes": [
-        "Rogue"
-      ]
     }
   ],
   "itemTypes": [
@@ -3230,14 +3209,18 @@
       "hash": "0x0006D154",
       "internalName": "Scythe",
       "category": "Weapons",
-      "classes": "Necromancer"
+      "classes": [
+        "Necromancer"
+      ]
     },
     {
       "displayName": "Two-Handed Scythe",
       "hash": "0x0006D155",
       "internalName": "Scythe2H",
       "category": "Weapons",
-      "classes": "Necromancer"
+      "classes": [
+        "Necromancer"
+      ]
     },
     {
       "displayName": "Staff",
@@ -3274,63 +3257,81 @@
       "hash": "0x0006D167",
       "internalName": "Bow",
       "category": "Weapons",
-      "classes": "Rogue"
+      "classes": [
+        "Rogue"
+      ]
     },
     {
       "displayName": "Crossbow",
       "hash": "0x0006D168",
       "internalName": "Crossbow",
       "category": "Weapons",
-      "classes": "Unknown"
+      "classes": [
+        "Rogue"
+      ]
     },
     {
       "displayName": "Two-Handed Crossbow",
       "hash": "0x0006D169",
       "internalName": "Crossbow2H",
       "category": "Weapons",
-      "classes": "Rogue"
+      "classes": [
+        "Rogue"
+      ]
     },
     {
       "displayName": "Totem",
       "hash": "0x0006D16B",
       "internalName": "OffHandTotem",
       "category": "Weapons",
-      "classes": "Druid"
+      "classes": [
+        "Druid"
+      ]
     },
     {
       "displayName": "Chest Armor",
       "hash": "0x0006D16D",
       "internalName": "ChestArmor",
       "category": "Armor",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Helm",
       "hash": "0x0006D16E",
       "internalName": "Helm",
       "category": "Armor",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Pants",
       "hash": "0x0006D16F",
       "internalName": "Legs",
       "category": "Armor",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Boots",
       "hash": "0x0006D170",
       "internalName": "Boots",
       "category": "Armor",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Gloves",
       "hash": "0x0006D171",
       "internalName": "Gloves",
       "category": "Armor",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Shield",
@@ -3347,28 +3348,36 @@
       "hash": "0x0006D174",
       "internalName": "Ring",
       "category": "Accessories",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Amulet",
       "hash": "0x0006D175",
       "internalName": "Amulet",
       "category": "Accessories",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Charm",
       "hash": "0x0022ed05",
       "internalName": "Charm",
       "category": "Special",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     },
     {
       "displayName": "Horadric Seal",
       "hash": "0x00237e80",
       "internalName": "HoradricSeal",
       "category": "Special",
-      "classes": "All"
+      "classes": [
+        "All"
+      ]
     }
   ],
   "uniques": [
@@ -3676,33 +3685,6 @@
       "hash": "0x000D6FCE",
       "classes": [
         "Druid"
-      ]
-    },
-    {
-      "displayName": "(PH) Performance Test Ring - Rogue Poison Imbue",
-      "snoId": "0x000EE796",
-      "internalName": "performance_test_unique_ring_rogue_imbue_poison",
-      "hash": "0x000EE796",
-      "classes": [
-        "Rogue"
-      ]
-    },
-    {
-      "displayName": "(PH) Performance Test Ring - Rogue Cold Imbue",
-      "snoId": "0x000EE7CF",
-      "internalName": "performance_test_unique_ring_rogue_imbue_cold",
-      "hash": "0x000EE7CF",
-      "classes": [
-        "Rogue"
-      ]
-    },
-    {
-      "displayName": "(PH) Performance Test Ring - Rogue Shadow Imbue",
-      "snoId": "0x000EE7D1",
-      "internalName": "performance_test_unique_ring_rogue_imbue_shadow",
-      "hash": "0x000EE7D1",
-      "classes": [
-        "Rogue"
       ]
     },
     {
@@ -4034,15 +4016,6 @@
       "snoId": "0x0013EEE2",
       "internalName": "Ring_Unique_Generic_101",
       "hash": "0x0013EEE2",
-      "classes": [
-        "All"
-      ]
-    },
-    {
-      "displayName": "(DEBUG) Performance Test Ring - Shrine Artillery",
-      "snoId": "0x00143797",
-      "internalName": "performance_test_unique_ring_shrine_artillery",
-      "hash": "0x00143797",
       "classes": [
         "All"
       ]
@@ -4435,42 +4408,6 @@
       ]
     },
     {
-      "displayName": "Chest_Unique_Necro_98",
-      "snoId": "0x001D6EC0",
-      "internalName": "Chest_Unique_Necro_98",
-      "hash": "0x001D6EC0",
-      "classes": [
-        "Necromancer"
-      ]
-    },
-    {
-      "displayName": "glove_Unique_Necro_98",
-      "snoId": "0x001D6EC7",
-      "internalName": "glove_Unique_Necro_98",
-      "hash": "0x001D6EC7",
-      "classes": [
-        "Necromancer"
-      ]
-    },
-    {
-      "displayName": "Pants_Unique_Necro_98",
-      "snoId": "0x001D6ECF",
-      "internalName": "Pants_Unique_Necro_98",
-      "hash": "0x001D6ECF",
-      "classes": [
-        "Necromancer"
-      ]
-    },
-    {
-      "displayName": "Boots_Unique_Necro_98",
-      "snoId": "0x001D6ED1",
-      "internalName": "Boots_Unique_Necro_98",
-      "hash": "0x001D6ED1",
-      "classes": [
-        "Necromancer"
-      ]
-    },
-    {
       "displayName": "[PH] Unique Necro 98",
       "snoId": "0x001D6ED3",
       "internalName": "Helm_Unique_Necro_98",
@@ -4657,15 +4594,6 @@
       "hash": "0x001DE8E6",
       "classes": [
         "All"
-      ]
-    },
-    {
-      "displayName": "(PH) Template Unique",
-      "snoId": "0x001DF74B",
-      "internalName": "Template_Unique_Spiritborn_000_x1",
-      "hash": "0x001DF74B",
-      "classes": [
-        "Spiritborn"
       ]
     },
     {
@@ -5038,15 +4966,6 @@
       ]
     },
     {
-      "displayName": "Chest_Unique_Generic_125",
-      "snoId": "0x0020097A",
-      "internalName": "Chest_Unique_Generic_125",
-      "hash": "0x0020097A",
-      "classes": [
-        "All"
-      ]
-    },
-    {
       "displayName": "Harriers of War",
       "snoId": "0x00205BCA",
       "internalName": "Boots_Unique_Barbarian_98",
@@ -5191,51 +5110,6 @@
       ]
     },
     {
-      "displayName": "[ph_Hope's Respite]",
-      "snoId": "0x0020665C",
-      "internalName": "Boots_Unique_Sorc_98",
-      "hash": "0x0020665C",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
-      "displayName": "[ph_Hope's Respite]",
-      "snoId": "0x00206660",
-      "internalName": "Chest_Unique_Sorc_98",
-      "hash": "0x00206660",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
-      "displayName": "[ph_Hope's Respite]",
-      "snoId": "0x00206662",
-      "internalName": "Gloves_Unique_Sorc_98",
-      "hash": "0x00206662",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
-      "displayName": "[ph_Hope's Respite]",
-      "snoId": "0x00206666",
-      "internalName": "Helm_Unique_Sorc_98",
-      "hash": "0x00206666",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
-      "displayName": "[ph_Hope's Respite]",
-      "snoId": "0x00206668",
-      "internalName": "Pants_Unique_Sorc_98",
-      "hash": "0x00206668",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
       "displayName": "[PH] Chest Unique Druid 98",
       "snoId": "0x002066AF",
       "internalName": "Chest_Unique_Druid_98",
@@ -5278,15 +5152,6 @@
       "hash": "0x002066B9",
       "classes": [
         "Druid"
-      ]
-    },
-    {
-      "displayName": "Gloves_Unique_Rogue_96",
-      "snoId": "0x0020712C",
-      "internalName": "Gloves_Unique_Rogue_96",
-      "hash": "0x0020712C",
-      "classes": [
-        "Rogue"
       ]
     },
     {
@@ -8485,15 +8350,6 @@
       ]
     },
     {
-      "displayName": "X2_HoradricCube_Unique_IngredientList",
-      "snoId": "0x0024DDEA",
-      "internalName": "X2_HoradricCube_Unique_IngredientList",
-      "hash": "0x0024DDEA",
-      "classes": [
-        "All"
-      ]
-    },
-    {
       "displayName": "Word of Hakan",
       "snoId": "0x0024DFB3",
       "internalName": "S10_Amulet_Unique_Rogue_100_Boots",
@@ -10172,51 +10028,6 @@
       "snoId": "0x0025CBB1",
       "internalName": "1HSword_Unique_Paladin_002",
       "hash": "0x0025CBB1",
-      "classes": [
-        "Paladin"
-      ]
-    },
-    {
-      "displayName": "(DNS)",
-      "snoId": "0x0025CEE2",
-      "internalName": "Boots_Unique_Paladin_95",
-      "hash": "0x0025CEE2",
-      "classes": [
-        "Paladin"
-      ]
-    },
-    {
-      "displayName": "(DNS)",
-      "snoId": "0x0025CEE5",
-      "internalName": "Chest_Unique_Paladin_95",
-      "hash": "0x0025CEE5",
-      "classes": [
-        "Paladin"
-      ]
-    },
-    {
-      "displayName": "(DNS)",
-      "snoId": "0x0025CEE8",
-      "internalName": "Glove_Unique_Paladin_95",
-      "hash": "0x0025CEE8",
-      "classes": [
-        "Paladin"
-      ]
-    },
-    {
-      "displayName": "(DNS)",
-      "snoId": "0x0025CEEC",
-      "internalName": "Helm_Unique_Paladin_95",
-      "hash": "0x0025CEEC",
-      "classes": [
-        "Paladin"
-      ]
-    },
-    {
-      "displayName": "(DNS)",
-      "snoId": "0x0025CEEF",
-      "internalName": "Pants_Unique_Paladin_95",
-      "hash": "0x0025CEEF",
       "classes": [
         "Paladin"
       ]

@@ -61,7 +61,11 @@ public static class ItemTypeDatabase
     }
 
     public static IReadOnlyList<ItemTypeEntry> ForClass(string className)
-        => _byClass.TryGetValue(className, out var list) ? list : [];
+    {
+        var specific = _byClass.TryGetValue(className, out var list) ? list : [];
+        var all = _byClass.TryGetValue("All", out var allList) ? allList : [];
+        return [.. specific, .. all];
+    }
 
     public static string GetDisplayName(uint hash)
         => ByHash.TryGetValue(hash, out var entry) ? entry.Name : $"Unknown item type (0x{hash:x8})";

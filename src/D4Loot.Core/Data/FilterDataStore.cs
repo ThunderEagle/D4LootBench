@@ -33,15 +33,10 @@ internal static class FilterDataStore
 
     private static string? TryLoadExternal()
     {
-        var dir = Path.GetDirectoryName(typeof(FilterDataStore).Assembly.Location);
-        while (dir is not null)
-        {
-            var path = Path.Combine(dir, "d4-data.json");
-            if (File.Exists(path))
-                return File.ReadAllText(path);
-            dir = Path.GetDirectoryName(dir);
-        }
-        return null;
+        // AppContext.BaseDirectory is the process directory in both normal and single-file builds.
+        // Assembly.Location returns "" in single-file bundles, so it cannot be used here.
+        var path = Path.Combine(AppContext.BaseDirectory, "d4-data.json");
+        return File.Exists(path) ? File.ReadAllText(path) : null;
     }
 
     private static string LoadEmbedded()

@@ -16,11 +16,17 @@ public partial class VisualEditorViewModel : ObservableObject
     [NotifyCanExecuteChangedFor(nameof(MoveDownCommand))]
     private FilterRuleViewModel? _selectedRule;
 
-    public string FilterName { get; set; }
+    [ObservableProperty]
+    private string _filterName = null!;
+
+    [ObservableProperty]
+    private PlayerClass _selectedClass = PlayerClass.All;
+
+    public static IReadOnlyList<PlayerClass> PlayerClasses { get; } = Enum.GetValues<PlayerClass>();
 
     public VisualEditorViewModel(FilterRuleset ruleset)
     {
-        FilterName = ruleset.Name;
+        _filterName = ruleset.Name;
         foreach (var rule in ruleset.Rules)
             Rules.Add(MakeRuleVm(rule));
     }
