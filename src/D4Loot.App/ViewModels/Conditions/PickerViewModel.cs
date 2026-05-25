@@ -9,19 +9,12 @@ public sealed record PickerEntry(uint Hash, string DisplayName);
 public sealed partial class PickerViewModel : ObservableObject
 {
     private IReadOnlyList<PickerEntry> _source;
-    private Func<PickerEntry, bool>? _sourceFilter;
 
     public ObservableCollection<PickerEntry> Selected { get; } = [];
 
-    public Func<PickerEntry, bool>? SourceFilter
-    {
-        get => _sourceFilter;
-        set
-        {
-            _sourceFilter = value;
-            OnPropertyChanged(nameof(FilteredAvailable));
-        }
-    }
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(FilteredAvailable))]
+    private Func<PickerEntry, bool>? _sourceFilter;
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(FilteredAvailable))]
