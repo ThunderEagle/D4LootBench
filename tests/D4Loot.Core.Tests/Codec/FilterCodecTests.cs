@@ -71,7 +71,7 @@ public sealed class FilterCodecTests
     [Fact]
     public void Encode_ThenDecode_PreservesAffixConditionIdsAndMinimum()
     {
-        uint[] affixIds = [AffixDatabase.ByName["Critical Strike Chance"], AffixDatabase.ByName["Attack Speed"]];
+        uint[] affixIds = [AffixDatabase.ByName["Critical Strike Chance"].Hash, AffixDatabase.ByName["Attack Speed"].Hash];
         var decoded = RoundTripRule(new FilterRule("BiS Rare", Visibility.Recolor, FilterColors.Gold,
             [new AffixCondition(affixIds, 2)]));
 
@@ -96,7 +96,7 @@ public sealed class FilterCodecTests
         var conditions = new Condition[]
         {
             new RarityCondition(RarityFlags.Rare),
-            new AffixCondition([AffixDatabase.ByName["All Damage"]], 1)
+            new AffixCondition([AffixDatabase.ByName["All Damage"].Hash], 1)
         };
         RoundTripRule(new FilterRule("Orange Rare", Visibility.Recolor, FilterColors.Orange,
             conditions)).Conditions.Count.ShouldBe(2);
@@ -125,7 +125,7 @@ public sealed class FilterCodecTests
     [Fact]
     public void Encode_ThenDecode_PreservesOptionalAffixCondition()
     {
-        uint[] affixIds = [AffixDatabase.ByName["Critical Strike Chance"], AffixDatabase.ByName["Maximum Life"]];
+        uint[] affixIds = [AffixDatabase.ByName["Critical Strike Chance"].Hash, AffixDatabase.ByName["Maximum Life"].Hash];
         var decoded = RoundTripRule(new FilterRule("Test", Visibility.Show, FilterColors.Blue,
             [new OptionalAffixCondition(affixIds, 2)]));
 
@@ -301,7 +301,7 @@ public sealed class FilterCodecTests
     public void JsonRoundTrip_PreservesOptionalAffixCondition()
     {
         var original = new OptionalAffixCondition(
-            [AffixDatabase.ByName["Critical Strike Chance"]], 2)
+            [AffixDatabase.ByName["Critical Strike Chance"].Hash], 2)
         {
             GreaterEntries = [new GreaterAffixEntry(0x001beace, 1)],
             Field5 = 3
@@ -344,16 +344,16 @@ public sealed class FilterCodecTests
     {
         uint[] coreIds =
         [
-            AffixDatabase.ByName["Critical Strike Chance"],
-            AffixDatabase.ByName["Critical Strike Damage"],
-            AffixDatabase.ByName["Attack Speed"],
-            AffixDatabase.ByName["All Damage"],
-            AffixDatabase.ByName["Vulnerable Damage Multiplier"],
+            AffixDatabase.ByName["Critical Strike Chance"].Hash,
+            AffixDatabase.ByName["Critical Strike Damage"].Hash,
+            AffixDatabase.ByName["Attack Speed"].Hash,
+            AffixDatabase.ByName["All Damage"].Hash,
+            AffixDatabase.ByName["Vulnerable Damage Multiplier"].Hash,
         ];
         uint[] secIds =
         [
-            AffixDatabase.ByName["Maximum Life"],
-            AffixDatabase.ByName["Armor"],
+            AffixDatabase.ByName["Maximum Life"].Hash,
+            AffixDatabase.ByName["Armor"].Hash,
         ];
         var allIds = coreIds.Concat(secIds).ToArray();
 
@@ -401,3 +401,4 @@ public sealed class FilterCodecTests
         System.Diagnostics.Debug.WriteLine($"Unique IDs: {string.Join(", ", idStrs)}");
     }
 }
+

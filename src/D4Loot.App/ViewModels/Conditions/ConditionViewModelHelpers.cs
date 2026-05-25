@@ -7,8 +7,8 @@ internal static class ConditionViewModelHelpers
 {
     internal static string LookupName(uint id)
     {
-        if (AffixDatabase.ByHash.TryGetValue(id, out var affixName))
-            return affixName;
+        if (AffixDatabase.ByHash.TryGetValue(id, out var affixEntry))
+            return affixEntry.Name;
         if (SkillDatabase.ByHash.TryGetValue(id, out var skillEntry))
             return skillEntry.Name;
         if (ItemTypeDatabase.ByHash.TryGetValue(id, out var itemTypeEntry))

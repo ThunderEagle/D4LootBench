@@ -1,27 +1,59 @@
 namespace D4Loot.Core.Data;
 
+public sealed record AffixEntry(string Name, uint Hash, IReadOnlyList<string> Classes);
+
 public static class AffixDatabase
 {
-    private static readonly Dictionary<string, uint> _byName;
-    private static readonly Dictionary<uint, string> _byHash;
+    public static IReadOnlyList<AffixEntry> All { get; }
+    public static IReadOnlyDictionary<uint, AffixEntry> ByHash { get; }
+    public static IReadOnlyDictionary<string, AffixEntry> ByName { get; }
+
+    private static readonly Dictionary<string, List<AffixEntry>> _byClass;
 
     static AffixDatabase()
     {
-        _byName = new Dictionary<string, uint>();
+        var all = new List<AffixEntry>();
+        _byClass = new Dictionary<string, List<AffixEntry>>();
+
         var arr = FilterDataStore.Root.GetProperty("affixes");
         foreach (var el in arr.EnumerateArray())
         {
-            var name = el.GetProperty("displayName").GetString()!;
+            var name    = el.GetProperty("displayName").GetString()!;
             var hashHex = el.GetProperty("hash").GetString()!;
-            var hash = Convert.ToUInt32(hashHex[2..], 16);
-            _byName[name] = hash;
+            var hash    = Convert.ToUInt32(hashHex[2..], 16);
+            var classes = el.GetProperty("classes")
+                            .EnumerateArray()
+                            .Select(c => c.GetString()!)
+                            .ToList()
+                            .AsReadOnly();
+
+            var entry = new AffixEntry(name, hash, classes);
+            all.Add(entry);
+
+            foreach (var cls in classes)
+            {
+                if (!_byClass.TryGetValue(cls, out var list))
+                {
+                    list = new List<AffixEntry>();
+                    _byClass[cls] = list;
+                }
+                list.Add(entry);
+            }
         }
-        _byHash = _byName.ToDictionary(kv => kv.Value, kv => kv.Key);
+
+        // Last-write-wins for duplicate names/hashes (e.g. +Blood Lance has two distinct hashes)
+        var byName = new Dictionary<string, AffixEntry>();
+        var byHash = new Dictionary<uint, AffixEntry>();
+        foreach (var e in all) { byName[e.Name] = e; byHash[e.Hash] = e; }
+
+        All    = all.AsReadOnly();
+        ByHash = byHash;
+        ByName = byName;
     }
 
-    public static IReadOnlyDictionary<string, uint> ByName => _byName;
-    public static IReadOnlyDictionary<uint, string> ByHash => _byHash;
+    public static IReadOnlyList<AffixEntry> ForClass(string className)
+        => _byClass.TryGetValue(className, out var list) ? list : [];
 
     public static string GetDisplayName(uint hash)
-        => _byHash.TryGetValue(hash, out var name) ? name : $"Unknown (0x{hash:x8})";
+        => ByHash.TryGetValue(hash, out var entry) ? entry.Name : $"Unknown (0x{hash:x8})";
 }

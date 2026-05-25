@@ -35,7 +35,7 @@ public sealed partial class OptionalAffixConditionViewModel : ConditionViewModel
     }
 
     private static PickerViewModel MakePicker() =>
-        new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value)));
+        new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)));
 
     public override string TypeName => "Optional Affixes";
     public override string Summary => MinimumCount > 0
