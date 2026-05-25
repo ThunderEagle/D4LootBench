@@ -89,7 +89,22 @@ public partial class FilterRuleViewModel : ObservableObject
     [ObservableProperty]
     private ConditionType _selectedNewConditionType;
 
-    public static ConditionType[] AddableConditionTypes { get; } = Enum.GetValues<ConditionType>();
+    private static readonly Dictionary<Type, ConditionType> ConditionTypeMap = new()
+    {
+        [typeof(ItemPowerConditionViewModel)]      = ConditionType.ItemPower,
+        [typeof(RarityConditionViewModel)]         = ConditionType.Rarity,
+        [typeof(ItemPropertiesConditionViewModel)] = ConditionType.ItemProperties,
+        [typeof(GreaterAffixConditionViewModel)]   = ConditionType.GreaterAffix,
+        [typeof(CodexConditionViewModel)]          = ConditionType.Codex,
+        [typeof(ItemTypeConditionViewModel)]       = ConditionType.ItemType,
+        [typeof(AffixConditionViewModel)]          = ConditionType.RequiredAffixes,
+        [typeof(OptionalAffixConditionViewModel)]  = ConditionType.OptionalAffixes,
+        [typeof(SpecificUniqueConditionViewModel)] = ConditionType.SpecificUnique,
+        [typeof(TalismanSetConditionViewModel)]    = ConditionType.TalismanSet,
+    };
+
+    public IEnumerable<ConditionType> AvailableConditionTypes =>
+        Enum.GetValues<ConditionType>().Where(t => !Conditions.Any(c => GetConditionType(c) == t));
 
     public FilterRuleViewModel(FilterRule rule, Func<FilterRuleViewModel, IEnumerable<uint>>? getPeerColors = null)
     {
@@ -101,6 +116,8 @@ public partial class FilterRuleViewModel : ObservableObject
 
         foreach (var condition in rule.Conditions)
             Conditions.Add(FromModel(condition));
+
+        Conditions.CollectionChanged += (_, _) => OnPropertyChanged(nameof(AvailableConditionTypes));
     }
 
     public void ApplyClassFilter(PlayerClass playerClass)
@@ -112,6 +129,9 @@ public partial class FilterRuleViewModel : ObservableObject
 
     public FilterRule BuildRule() =>
         new(Name, Visibility, Color, Conditions.Select(c => c.BuildModel()).ToList(), IsEnabled);
+
+    private static ConditionType? GetConditionType(ConditionViewModel vm) =>
+        ConditionTypeMap.TryGetValue(vm.GetType(), out var type) ? type : null;
 
     private static ConditionViewModel FromModel(Condition c) => c switch
     {
@@ -132,6 +152,9 @@ public partial class FilterRuleViewModel : ObservableObject
     [RelayCommand]
     private void AddCondition()
     {
+        if (Conditions.Any(c => GetConditionType(c) == SelectedNewConditionType))
+            return;
+
         ConditionViewModel vm = SelectedNewConditionType switch
         {
             ConditionType.ItemPower       => new ItemPowerConditionViewModel(),

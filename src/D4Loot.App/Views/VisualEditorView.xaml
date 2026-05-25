@@ -190,7 +190,7 @@
                                         HorizontalAlignment="Right"
                                         Padding="8,2"
                                         DockPanel.Dock="Right" />
-                                <ComboBox ItemsSource="{x:Static vm:FilterRuleViewModel.AddableConditionTypes}"
+                                <ComboBox ItemsSource="{Binding AvailableConditionTypes}"
                                           SelectedItem="{Binding SelectedNewConditionType}"
                                           HorizontalAlignment="Right"
                                           Width="160"
