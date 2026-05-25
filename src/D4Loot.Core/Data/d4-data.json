@@ -896,7 +896,7 @@
       ]
     },
     {
-      "displayName": "Critical Strike Damage",
+      "displayName": "Critical Strike Damage Multiplier",
       "hash": "0x001bead2",
       "classes": [
         "All"
