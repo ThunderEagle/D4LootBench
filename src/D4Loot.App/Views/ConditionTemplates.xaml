@@ -187,6 +187,9 @@
                              Text="{Binding MinimumCount, UpdateSourceTrigger=PropertyChanged}" />
                 </DockPanel>
                 <views:ItemPickerControl DataContext="{Binding Picker}" />
+                <TextBlock Text="Greater Affixes" FontSize="11" FontWeight="SemiBold" Margin="0,8,0,2"
+                           Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                <views:ItemPickerControl DataContext="{Binding GreaterPicker}" />
             </StackPanel>
         </Border>
     </DataTemplate>

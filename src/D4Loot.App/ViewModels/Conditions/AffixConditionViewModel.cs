@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using CommunityToolkit.Mvvm.ComponentModel;
 using D4Loot.Core.Data;
 using D4Loot.Core.Models;
@@ -6,11 +7,11 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class AffixConditionViewModel : ConditionViewModel
 {
-    // GreaterEntries and Field5 semantics not fully understood — preserved for lossless round-trips
-    private readonly IReadOnlyList<GreaterAffixEntry> _preservedGreaterEntries;
+    private readonly Dictionary<uint, uint> _preservedGreaterValues = [];
     private readonly int _preservedField5;
 
     public PickerViewModel Picker { get; }
+    public PickerViewModel GreaterPicker { get; }
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Summary))]
@@ -18,24 +19,51 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
 
     public AffixConditionViewModel()
     {
-        _preservedGreaterEntries = [];
+        _preservedField5 = 0;
         Picker = MakePicker();
+        GreaterPicker = MakeGreaterPicker();
+        Picker.Selected.CollectionChanged += OnPickerSelectionChanged;
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
+        GreaterPicker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
     public AffixConditionViewModel(AffixCondition m)
     {
-        _minimumCount            = m.MinimumCount;
-        _preservedGreaterEntries = m.GreaterEntries;
-        _preservedField5         = m.Field5;
+        _minimumCount = m.MinimumCount;
+        _preservedField5 = m.Field5;
+        foreach (var ge in m.GreaterEntries)
+        {
+            if (!_preservedGreaterValues.ContainsKey(ge.AffixId))
+                _preservedGreaterValues[ge.AffixId] = ge.Value;
+        }
+
         Picker = MakePicker();
         foreach (var id in m.AffixIds)
             Picker.Selected.Add(new PickerEntry(id, AffixDatabase.GetDisplayName(id)));
+
+        GreaterPicker = MakeGreaterPicker();
+        foreach (var ge in m.GreaterEntries)
+            GreaterPicker.Selected.Add(ToPickerEntry(ge));
+
+        Picker.Selected.CollectionChanged += OnPickerSelectionChanged;
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
+        GreaterPicker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
+    }
+
+    private void OnPickerSelectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+    {
+        var source = Picker.Selected.Select(p => new PickerEntry(p.Hash, p.DisplayName));
+        GreaterPicker.ReplaceSource(source);
     }
 
     private static PickerViewModel MakePicker() =>
         new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)));
+
+    private static PickerViewModel MakeGreaterPicker() =>
+        new(Enumerable.Empty<PickerEntry>());
+
+    private static PickerEntry ToPickerEntry(GreaterAffixEntry ge) =>
+        new(ge.AffixId, AffixDatabase.GetDisplayName(ge.AffixId));
 
     public override void ApplyClassFilter(PlayerClass playerClass)
     {
@@ -51,12 +79,24 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
     }
 
     public override string TypeName => "Required Affixes";
-    public override string Summary => $"min {MinimumCount} of {Picker.Selected.Count}";
+
+    public override string Summary
+    {
+        get
+        {
+            var ga = GreaterPicker.Selected.Count;
+            var s = $"min {MinimumCount} of {Picker.Selected.Count}";
+            return ga > 0 ? $"{s}, {ga} greater" : s;
+        }
+    }
 
     public override Condition BuildModel() =>
         new AffixCondition(Picker.Selected.Select(e => e.Hash).ToList(), MinimumCount)
         {
-            GreaterEntries = _preservedGreaterEntries,
-            Field5         = _preservedField5
+            GreaterEntries = GreaterPicker.Selected
+                .Select(e => new GreaterAffixEntry(e.Hash,
+                    _preservedGreaterValues.TryGetValue(e.Hash, out var v) ? v : 0))
+                .ToList(),
+            Field5 = _preservedField5
         };
 }
