@@ -20,18 +20,22 @@ public static class TalismanSetDatabase
         var arr = FilterDataStore.Root.GetProperty("talismanSets");
         foreach (var el in arr.EnumerateArray())
         {
-            var name        = el.GetProperty("displayName").GetString()!;
-            var hashHex     = el.GetProperty("hash").GetString()!;
-            var hash        = Convert.ToUInt32(hashHex[2..], 16);
+            var name         = el.GetProperty("displayName").GetString()!;
             var internalName = el.GetProperty("internalName").GetString()!;
+
+            // Hash field is not yet populated in d4-data.json; skip entries until data is extended
+            if (!el.TryGetProperty("hash", out var hashEl))
+                continue;
+            var hash = Convert.ToUInt32(hashEl.GetString()![2..], 16);
 
             var items = new List<TalismanSetItemEntry>();
             foreach (var item in el.GetProperty("items").EnumerateArray())
             {
                 var iName    = item.GetProperty("displayName").GetString()!;
-                var iHashHex = item.GetProperty("hash").GetString()!;
-                var iHash    = Convert.ToUInt32(iHashHex[2..], 16);
                 var iInternal = item.GetProperty("internalName").GetString()!;
+                if (!item.TryGetProperty("hash", out var iHashEl))
+                    continue;
+                var iHash = Convert.ToUInt32(iHashEl.GetString()![2..], 16);
                 items.Add(new TalismanSetItemEntry(iName, iHash, iInternal));
             }
 

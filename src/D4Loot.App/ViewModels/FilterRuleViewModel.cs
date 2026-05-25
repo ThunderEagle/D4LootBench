@@ -4,6 +4,7 @@ using System.Windows.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using D4Loot.App.Utilities;
+using D4Loot.App.ViewModels.Conditions;
 using D4Loot.App.Views;
 using D4Loot.Core.Data;
 using D4Loot.Core.Models;
@@ -84,6 +85,11 @@ public partial class FilterRuleViewModel : ObservableObject
         }
     }
 
+    [ObservableProperty]
+    private ConditionType _selectedNewConditionType;
+
+    public static ConditionType[] AddableConditionTypes { get; } = Enum.GetValues<ConditionType>();
+
     public FilterRuleViewModel(FilterRule rule, Func<FilterRuleViewModel, IEnumerable<uint>>? getPeerColors = null)
     {
         _name          = rule.Name;
@@ -93,11 +99,47 @@ public partial class FilterRuleViewModel : ObservableObject
         _getPeerColors = getPeerColors ?? (_ => []);
 
         foreach (var condition in rule.Conditions)
-            Conditions.Add(new ConditionViewModel(condition));
+            Conditions.Add(FromModel(condition));
     }
 
     public FilterRule BuildRule() =>
-        new(Name, Visibility, Color, Conditions.Select(c => c.Model).ToList(), IsEnabled);
+        new(Name, Visibility, Color, Conditions.Select(c => c.BuildModel()).ToList(), IsEnabled);
+
+    private static ConditionViewModel FromModel(Condition c) => c switch
+    {
+        ItemPowerCondition m       => new ItemPowerConditionViewModel(m),
+        RarityCondition m          => new RarityConditionViewModel(m),
+        ItemPropertiesCondition m  => new ItemPropertiesConditionViewModel(m),
+        GreaterAffixCondition m    => new GreaterAffixConditionViewModel(m),
+        CodexCondition             => new CodexConditionViewModel(),
+        ItemTypeCondition m        => new ItemTypeConditionViewModel(m),
+        AffixCondition m           => new AffixConditionViewModel(m),
+        OptionalAffixCondition m   => new OptionalAffixConditionViewModel(m),
+        SpecificUniqueCondition m  => new SpecificUniqueConditionViewModel(m),
+        TalismanSetCondition m     => new TalismanSetConditionViewModel(m),
+        UnknownCondition m         => new UnknownConditionViewModel(m),
+        _                          => throw new InvalidOperationException($"Unhandled condition type: {c.GetType().Name}")
+    };
+
+    [RelayCommand]
+    private void AddCondition()
+    {
+        ConditionViewModel vm = SelectedNewConditionType switch
+        {
+            ConditionType.ItemPower       => new ItemPowerConditionViewModel(),
+            ConditionType.Rarity          => new RarityConditionViewModel(),
+            ConditionType.ItemProperties  => new ItemPropertiesConditionViewModel(),
+            ConditionType.GreaterAffix    => new GreaterAffixConditionViewModel(),
+            ConditionType.Codex           => new CodexConditionViewModel(),
+            ConditionType.ItemType        => new ItemTypeConditionViewModel(),
+            ConditionType.RequiredAffixes => new AffixConditionViewModel(),
+            ConditionType.OptionalAffixes => new OptionalAffixConditionViewModel(),
+            ConditionType.SpecificUnique  => new SpecificUniqueConditionViewModel(),
+            ConditionType.TalismanSet     => new TalismanSetConditionViewModel(),
+            _                             => throw new InvalidOperationException()
+        };
+        Conditions.Add(vm);
+    }
 
     // value unused intentionally — only need to invalidate the cached brush on any change.
     // ReSharper disable once UnusedParameter.Local

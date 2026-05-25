@@ -1,0 +1,28 @@
+using System.Globalization;
+using System.Windows.Data;
+using D4Loot.App.ViewModels;
+
+namespace D4Loot.App.Converters;
+
+[ValueConversion(typeof(ConditionType), typeof(string))]
+public sealed class ConditionTypeNameConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture) =>
+        (ConditionType)value switch
+        {
+            ConditionType.ItemPower       => "Item Power",
+            ConditionType.Rarity          => "Rarity",
+            ConditionType.ItemProperties  => "Item Properties",
+            ConditionType.GreaterAffix    => "Greater Affix",
+            ConditionType.Codex           => "Codex of Power",
+            ConditionType.ItemType        => "Item Type",
+            ConditionType.RequiredAffixes => "Required Affixes",
+            ConditionType.OptionalAffixes => "Optional Affixes",
+            ConditionType.SpecificUnique  => "Specific Unique",
+            ConditionType.TalismanSet     => "Talisman Set",
+            _                             => value?.ToString() ?? ""
+        };
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
+        throw new NotSupportedException();
+}

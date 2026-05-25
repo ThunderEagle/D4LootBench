@@ -167,74 +167,33 @@
 
                             <Separator Margin="0,0,0,10" />
 
-                            <!-- Conditions header -->
+                            <!-- Conditions header + add control -->
                             <DockPanel Margin="0,0,0,6">
                                 <TextBlock Text="Conditions"
                                            FontWeight="SemiBold"
                                            VerticalAlignment="Center"
                                            DockPanel.Dock="Left" />
                                 <Button Content="+ Add"
-                                        IsEnabled="False"
+                                        Command="{Binding AddConditionCommand}"
                                         HorizontalAlignment="Right"
                                         Padding="8,2"
-                                        ToolTip="Condition editing coming in Phase 3 — use Raw Editor for now" />
+                                        DockPanel.Dock="Right" />
+                                <ComboBox ItemsSource="{x:Static vm:FilterRuleViewModel.AddableConditionTypes}"
+                                          SelectedItem="{Binding SelectedNewConditionType}"
+                                          HorizontalAlignment="Right"
+                                          Width="160"
+                                          Margin="0,0,6,0"
+                                          DockPanel.Dock="Right">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource ConditionTypeNameConverter}}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
                             </DockPanel>
 
-                            <!-- Condition rows -->
-                            <ItemsControl ItemsSource="{Binding Conditions}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate DataType="{x:Type vm:ConditionViewModel}">
-                                        <Border BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"
-                                                BorderThickness="1" CornerRadius="3"
-                                                Margin="0,0,0,4" Padding="8,5">
-                                            <StackPanel>
-                                                <!-- Header row: TypeName + Summary + delete -->
-                                                <DockPanel>
-                                                    <Button DockPanel.Dock="Right"
-                                                            Content="✕"
-                                                            Command="{Binding DataContext.DeleteConditionCommand,
-                                                                      RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                                            CommandParameter="{Binding}"
-                                                            Padding="6,0"
-                                                            ToolTip="Remove condition" />
-                                                    <TextBlock Text="{Binding TypeName}"
-                                                               FontWeight="SemiBold"
-                                                               Margin="0,0,10,0"
-                                                               DockPanel.Dock="Left"
-                                                               VerticalAlignment="Center"
-                                                               MinWidth="120" />
-                                                    <TextBlock Text="{Binding Summary}"
-                                                               VerticalAlignment="Center"
-                                                               Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-                                                </DockPanel>
-
-                                                <!-- Item list (only for list-type conditions) -->
-                                                <ItemsControl ItemsSource="{Binding Items}"
-                                                              Margin="16,4,0,0">
-                                                    <ItemsControl.Style>
-                                                        <Style TargetType="ItemsControl">
-                                                            <Setter Property="Visibility" Value="Collapsed" />
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding HasItems}" Value="True">
-                                                                    <Setter Property="Visibility" Value="Visible" />
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-                                                        </Style>
-                                                    </ItemsControl.Style>
-                                                    <ItemsControl.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <TextBlock Text="{Binding}"
-                                                                       FontSize="11"
-                                                                       Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"
-                                                                       TextTrimming="CharacterEllipsis" />
-                                                        </DataTemplate>
-                                                    </ItemsControl.ItemTemplate>
-                                                </ItemsControl>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
+                            <!-- Condition rows — templates resolved from Application.Resources by VM type -->
+                            <ItemsControl ItemsSource="{Binding Conditions}" />
 
                         </StackPanel>
                     </DataTemplate>

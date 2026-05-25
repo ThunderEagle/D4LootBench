@@ -5,6 +5,12 @@
     xmlns:conv="clr-namespace:D4Loot.App.Converters"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <conv:BoolToBrushConverter x:Key="ErrorBrushConverter" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/ConditionTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <conv:BoolToBrushConverter x:Key="ErrorBrushConverter" />
+            <conv:ConditionTypeNameConverter x:Key="ConditionTypeNameConverter" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
