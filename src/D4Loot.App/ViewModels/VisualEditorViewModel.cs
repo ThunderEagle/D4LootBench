@@ -40,7 +40,7 @@ public partial class VisualEditorViewModel : ObservableObject
     [RelayCommand]
     private void AddRule()
     {
-        var vm = MakeRuleVm(new FilterRule("New Rule", Visibility.Show, FilterColors.GameDefault, []));
+        var vm = MakeRuleVm(new FilterRule($"Rule #{Rules.Count + 1}", Visibility.Show, FilterColors.GameDefault, []));
         Rules.Add(vm);
         SelectedRule = vm;
     }
