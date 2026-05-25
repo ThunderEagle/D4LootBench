@@ -3,15 +3,26 @@ using System.Text.Json;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using D4Loot.App.ViewModels.Conditions;
 using D4Loot.Core.Codec;
 using D4Loot.Core.Models;
 using D4Loot.Core.Serialization;
+using D4Loot.Core.Validation;
 using Microsoft.Win32;
 
 namespace D4Loot.App.ViewModels;
 
 public partial class MainWindowViewModel : ObservableObject
 {
+    private readonly IConditionViewModelFactory _conditionFactory;
+    private readonly IFilterValidator _validator;
+
+    public MainWindowViewModel(IConditionViewModelFactory conditionFactory, IFilterValidator validator)
+    {
+        _conditionFactory = conditionFactory;
+        _validator        = validator;
+    }
+
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(CopyCodeCommand))]
     [NotifyCanExecuteChangedFor(nameof(SaveJsonCommand))]
@@ -32,7 +43,7 @@ public partial class MainWindowViewModel : ObservableObject
     [RelayCommand]
     private void NewFilter()
     {
-        Editor = new VisualEditorViewModel(new FilterRuleset("New Filter", []));
+        Editor = new VisualEditorViewModel(_conditionFactory,new FilterRuleset("New Filter", []));
         SetStatus("New filter created.", error: false);
     }
 
@@ -62,7 +73,7 @@ public partial class MainWindowViewModel : ObservableObject
             var json    = File.ReadAllText(dlg.FileName);
             var ruleset = JsonSerializer.Deserialize<FilterRuleset>(json, FilterJsonOptions.Default)
                           ?? throw new InvalidOperationException("File deserialised to null.");
-            Editor = new VisualEditorViewModel(ruleset);
+            Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
             SetStatus($"Opened \"{Path.GetFileName(dlg.FileName)}\".", error: false);
         }
         catch (Exception ex)
@@ -79,10 +90,10 @@ public partial class MainWindowViewModel : ObservableObject
         try
         {
             var ruleset = Editor!.BuildRuleset();
-            var errors = ruleset.Validate();
-            if (errors.Count > 0)
+            var result = _validator.Validate(ruleset);
+            if (!result.IsValid)
             {
-                SetStatus(string.Join(" ", errors), error: true);
+                SetStatus(string.Join(" ", result.Errors.Select(e => e.Message)), error: true);
                 return;
             }
             Clipboard.SetText(FilterCodec.Encode(ruleset));
@@ -109,10 +120,10 @@ public partial class MainWindowViewModel : ObservableObject
         try
         {
             var ruleset = Editor.BuildRuleset();
-            var errors = ruleset.Validate();
-            if (errors.Count > 0)
+            var result = _validator.Validate(ruleset);
+            if (!result.IsValid)
             {
-                SetStatus(string.Join(" ", errors), error: true);
+                SetStatus(string.Join(" ", result.Errors.Select(e => e.Message)), error: true);
                 return;
             }
             var json = JsonSerializer.Serialize(ruleset, FilterJsonOptions.Default);
@@ -143,7 +154,7 @@ public partial class MainWindowViewModel : ObservableObject
 
     private void ApplyFromRawEditor(FilterRuleset ruleset)
     {
-        Editor = new VisualEditorViewModel(ruleset);
+        Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
         SetStatus("Filter updated from Raw Editor.", error: false);
     }
 
@@ -154,7 +165,7 @@ public partial class MainWindowViewModel : ObservableObject
         try
         {
             var ruleset = FilterCodec.Decode(code);
-            Editor = new VisualEditorViewModel(ruleset);
+            Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
             SetStatus($"Loaded \"{ruleset.Name}\" — {ruleset.Rules.Count} rule(s).", error: false);
         }
         catch (Exception ex)
