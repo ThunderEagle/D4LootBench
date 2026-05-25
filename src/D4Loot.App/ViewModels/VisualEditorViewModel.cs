@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using D4Loot.App.ViewModels.Conditions;
 using D4Loot.Core.Data;
 using D4Loot.Core.Models;
 
@@ -8,6 +9,8 @@ namespace D4Loot.App.ViewModels;
 
 public partial class VisualEditorViewModel : ObservableObject
 {
+    private readonly IConditionViewModelFactory _conditionFactory;
+
     public ObservableCollection<FilterRuleViewModel> Rules { get; } = [];
 
     [ObservableProperty]
@@ -26,9 +29,10 @@ public partial class VisualEditorViewModel : ObservableObject
 
     public string RuleCountDisplay => $"{Rules.Count} / {FilterRuleset.MaxRuleCount}";
 
-    public VisualEditorViewModel(FilterRuleset ruleset)
+    public VisualEditorViewModel(IConditionViewModelFactory conditionFactory, FilterRuleset ruleset)
     {
-        _filterName = ruleset.Name;
+        _conditionFactory = conditionFactory;
+        _filterName       = ruleset.Name;
         foreach (var rule in ruleset.Rules)
             Rules.Add(MakeRuleVm(rule));
         Rules.CollectionChanged += (_, _) => OnPropertyChanged(nameof(RuleCountDisplay));
@@ -90,7 +94,8 @@ public partial class VisualEditorViewModel : ObservableObject
 
     private FilterRuleViewModel MakeRuleVm(FilterRule rule)
     {
-        var vm = new FilterRuleViewModel(rule, self => Rules.Where(r => r != self).Select(r => r.Color));
+        var vm = new FilterRuleViewModel(_conditionFactory, rule,
+            self => Rules.Where(r => r != self).Select(r => r.Color));
         vm.ApplyClassFilter(SelectedClass);
         return vm;
     }

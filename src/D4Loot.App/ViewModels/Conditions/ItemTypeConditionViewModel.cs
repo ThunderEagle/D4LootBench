@@ -6,19 +6,22 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class ItemTypeConditionViewModel : ConditionViewModel
 {
+    private readonly IFilterDataService _data;
+
     public PickerViewModel Picker { get; }
 
-    public ItemTypeConditionViewModel()
+    public ItemTypeConditionViewModel(IFilterDataService data)
     {
+        _data = data;
         Picker = new PickerViewModel(
-            ItemTypeDatabase.All.Select(e => new PickerEntry(e.Hash, e.Name)));
+            _data.ItemTypes.All.Select(e => new PickerEntry(e.Hash, e.Name)));
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
-    public ItemTypeConditionViewModel(ItemTypeCondition m) : this()
+    public ItemTypeConditionViewModel(IFilterDataService data, ItemTypeCondition m) : this(data)
     {
         foreach (var id in m.TypeIds)
-            Picker.Selected.Add(new PickerEntry(id, ItemTypeDatabase.GetDisplayName(id)));
+            Picker.Selected.Add(new PickerEntry(id, _data.ItemTypes.GetDisplayName(id)));
     }
 
     public override void ApplyClassFilter(PlayerClass playerClass)
@@ -27,7 +30,7 @@ public sealed partial class ItemTypeConditionViewModel : ConditionViewModel
             Picker.SourceFilter = null;
         else
         {
-            var allowed = ItemTypeDatabase.ForClass(playerClass.ToString())
+            var allowed = _data.ItemTypes.ForClass(playerClass.ToString())
                 .Select(e => e.Hash)
                 .ToHashSet();
             Picker.SourceFilter = e => allowed.Contains(e.Hash);

@@ -7,10 +7,10 @@ public partial class MainWindow
 {
     private readonly MainWindowViewModel _vm;
 
-    public MainWindow()
+    public MainWindow(MainWindowViewModel vm)
     {
         InitializeComponent();
-        _vm = new MainWindowViewModel();
+        _vm = vm;
         DataContext = _vm;
         _vm.ShowRawEditorRequested += OnShowRawEditorRequested;
     }

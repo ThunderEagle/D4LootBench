@@ -7,6 +7,7 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class AffixConditionViewModel : ConditionViewModel
 {
+    private readonly IFilterDataService _data;
     private readonly Dictionary<uint, uint> _preservedGreaterValues = [];
     private readonly int _preservedField5;
 
@@ -17,8 +18,9 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
     [NotifyPropertyChangedFor(nameof(Summary))]
     private int _minimumCount = 1;
 
-    public AffixConditionViewModel()
+    public AffixConditionViewModel(IFilterDataService data)
     {
+        _data = data;
         _preservedField5 = 0;
         Picker = MakePicker();
         GreaterPicker = MakeGreaterPicker();
@@ -27,8 +29,9 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
         GreaterPicker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
-    public AffixConditionViewModel(AffixCondition m)
+    public AffixConditionViewModel(IFilterDataService data, AffixCondition m)
     {
+        _data = data;
         _minimumCount = m.MinimumCount;
         _preservedField5 = m.Field5;
         foreach (var ge in m.GreaterEntries)
@@ -39,7 +42,7 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
 
         Picker = MakePicker();
         foreach (var id in m.AffixIds)
-            Picker.Selected.Add(new PickerEntry(id, AffixDatabase.GetDisplayName(id)));
+            Picker.Selected.Add(new PickerEntry(id, _data.Affixes.GetDisplayName(id)));
 
         GreaterPicker = MakeGreaterPicker();
         foreach (var ge in m.GreaterEntries)
@@ -57,7 +60,7 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
     }
 
     private PickerViewModel MakePicker() =>
-        new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)))
+        new(_data.Affixes.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)))
         {
             MaxSelectionCount = AffixCondition.MaxSelectionCount
         };
@@ -68,8 +71,8 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
             MaxSelectionCount = AffixCondition.MaxSelectionCount
         };
 
-    private static PickerEntry ToPickerEntry(GreaterAffixEntry ge) =>
-        new(ge.AffixId, AffixDatabase.GetDisplayName(ge.AffixId));
+    private PickerEntry ToPickerEntry(GreaterAffixEntry ge) =>
+        new(ge.AffixId, _data.Affixes.GetDisplayName(ge.AffixId));
 
     public override void ApplyClassFilter(PlayerClass playerClass)
     {
@@ -77,7 +80,7 @@ public sealed partial class AffixConditionViewModel : ConditionViewModel
             Picker.SourceFilter = null;
         else
         {
-            var allowed = AffixDatabase.ForClass(playerClass.ToString())
+            var allowed = _data.Affixes.ForClass(playerClass.ToString())
                 .Select(e => e.Hash)
                 .ToHashSet();
             Picker.SourceFilter = e => allowed.Contains(e.Hash);

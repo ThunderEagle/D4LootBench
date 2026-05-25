@@ -6,13 +6,16 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
 {
+    private readonly IFilterDataService _data;
+
     public PickerViewModel SetPicker { get; }
     public PickerViewModel ItemPicker { get; }
 
-    public TalismanSetConditionViewModel()
+    public TalismanSetConditionViewModel(IFilterDataService data)
     {
+        _data = data;
         SetPicker = new PickerViewModel(
-            TalismanSetDatabase.All.Select(e => new PickerEntry(e.Hash, e.Name)))
+            _data.TalismanSets.All.Select(e => new PickerEntry(e.Hash, e.Name)))
         {
             MaxSelectionCount = TalismanSetCondition.MaxSelectionCount
         };
@@ -22,18 +25,18 @@ public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
         ItemPicker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
-    public TalismanSetConditionViewModel(TalismanSetCondition m) : this()
+    public TalismanSetConditionViewModel(IFilterDataService data, TalismanSetCondition m) : this(data)
     {
         foreach (var id in m.SetIds)
-            SetPicker.Selected.Add(new PickerEntry(id, TalismanSetDatabase.GetSetName(id)));
+            SetPicker.Selected.Add(new PickerEntry(id, _data.TalismanSets.GetSetName(id)));
 
         foreach (var entry in m.SetEntries)
         {
-            var name = TalismanSetDatabase.ItemToSetHash.TryGetValue(entry.ItemId, out var setHash)
-                && TalismanSetDatabase.ByHash.TryGetValue(setHash, out var setInfo)
+            var name = _data.TalismanSets.ItemToSetHash.TryGetValue(entry.ItemId, out var setHash)
+                && _data.TalismanSets.ByHash.TryGetValue(setHash, out var setInfo)
                 && setInfo.Items.FirstOrDefault(i => i.Hash == entry.ItemId) is { } item
                     ? $"{setInfo.Name} → {item.Name}"
-                    : TalismanSetDatabase.GetItemName(entry.ItemId);
+                    : _data.TalismanSets.GetItemName(entry.ItemId);
             ItemPicker.Selected.Add(new PickerEntry(entry.ItemId, name));
         }
 
@@ -51,11 +54,11 @@ public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
         var items = new List<PickerEntry>();
         var sets = SetPicker.Selected.Count > 0
             ? SetPicker.Selected
-            : TalismanSetDatabase.All.Select(s => new PickerEntry(s.Hash, s.Name));
+            : _data.TalismanSets.All.Select(s => new PickerEntry(s.Hash, s.Name));
 
         foreach (var setPk in sets)
         {
-            if (TalismanSetDatabase.ByHash.TryGetValue(setPk.Hash, out var setInfo))
+            if (_data.TalismanSets.ByHash.TryGetValue(setPk.Hash, out var setInfo))
             {
                 foreach (var item in setInfo.Items)
                     items.Add(new PickerEntry(item.Hash, $"{setInfo.Name} → {item.Name}"));
@@ -72,7 +75,7 @@ public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
         }
         else
         {
-            var allowed = TalismanSetDatabase.ForClass(playerClass.ToString())
+            var allowed = _data.TalismanSets.ForClass(playerClass.ToString())
                 .Select(e => e.Hash)
                 .ToHashSet();
             SetPicker.SourceFilter = e => allowed.Contains(e.Hash);
@@ -100,7 +103,7 @@ public sealed partial class TalismanSetConditionViewModel : ConditionViewModel
         SetIds = SetPicker.Selected.Select(e => e.Hash).ToList(),
         SetEntries = ItemPicker.Selected
             .Select(e => new TalismanSetEntry(
-                TalismanSetDatabase.GetSetHashForItem(e.Hash), e.Hash))
+                _data.TalismanSets.GetSetHashForItem(e.Hash), e.Hash))
             .ToList()
     };
 }

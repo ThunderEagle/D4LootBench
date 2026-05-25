@@ -21,6 +21,7 @@ public sealed class NamedColor(string name, uint argb)
 
 public partial class FilterRuleViewModel : ObservableObject
 {
+    private readonly IConditionViewModelFactory _conditionFactory;
     private readonly Func<FilterRuleViewModel, IEnumerable<uint>> _getPeerColors;
     private SolidColorBrush? _wpfBrush;
     private PlayerClass _classFilter = PlayerClass.All;
@@ -89,33 +90,23 @@ public partial class FilterRuleViewModel : ObservableObject
     [ObservableProperty]
     private ConditionType _selectedNewConditionType;
 
-    private static readonly Dictionary<Type, ConditionType> ConditionTypeMap = new()
-    {
-        [typeof(ItemPowerConditionViewModel)]      = ConditionType.ItemPower,
-        [typeof(RarityConditionViewModel)]         = ConditionType.Rarity,
-        [typeof(ItemPropertiesConditionViewModel)] = ConditionType.ItemProperties,
-        [typeof(GreaterAffixConditionViewModel)]   = ConditionType.GreaterAffix,
-        [typeof(CodexConditionViewModel)]          = ConditionType.Codex,
-        [typeof(ItemTypeConditionViewModel)]       = ConditionType.ItemType,
-        [typeof(AffixConditionViewModel)]          = ConditionType.RequiredAffixes,
-        [typeof(OptionalAffixConditionViewModel)]  = ConditionType.OptionalAffixes,
-        [typeof(SpecificUniqueConditionViewModel)] = ConditionType.SpecificUnique,
-        [typeof(TalismanSetConditionViewModel)]    = ConditionType.TalismanSet,
-    };
-
     public IEnumerable<ConditionType> AvailableConditionTypes =>
-        Enum.GetValues<ConditionType>().Where(t => !Conditions.Any(c => GetConditionType(c) == t));
+        Enum.GetValues<ConditionType>().Where(t => Conditions.All(c => _conditionFactory.GetConditionType(c) != t));
 
-    public FilterRuleViewModel(FilterRule rule, Func<FilterRuleViewModel, IEnumerable<uint>>? getPeerColors = null)
+    public FilterRuleViewModel(
+        IConditionViewModelFactory conditionFactory,
+        FilterRule rule,
+        Func<FilterRuleViewModel, IEnumerable<uint>>? getPeerColors = null)
     {
-        _name          = rule.Name;
-        _visibility    = rule.Visibility;
-        _color         = rule.Color;
-        _isEnabled     = rule.IsEnabled;
-        _getPeerColors = getPeerColors ?? (_ => []);
+        _conditionFactory = conditionFactory;
+        _name             = rule.Name;
+        _visibility       = rule.Visibility;
+        _color            = rule.Color;
+        _isEnabled        = rule.IsEnabled;
+        _getPeerColors    = getPeerColors ?? (_ => []);
 
         foreach (var condition in rule.Conditions)
-            Conditions.Add(FromModel(condition));
+            Conditions.Add(_conditionFactory.FromModel(condition));
 
         Conditions.CollectionChanged += (_, _) => OnPropertyChanged(nameof(AvailableConditionTypes));
     }
@@ -130,45 +121,13 @@ public partial class FilterRuleViewModel : ObservableObject
     public FilterRule BuildRule() =>
         new(Name, Visibility, Color, Conditions.Select(c => c.BuildModel()).ToList(), IsEnabled);
 
-    private static ConditionType? GetConditionType(ConditionViewModel vm) =>
-        ConditionTypeMap.TryGetValue(vm.GetType(), out var type) ? type : null;
-
-    private static ConditionViewModel FromModel(Condition c) => c switch
-    {
-        ItemPowerCondition m       => new ItemPowerConditionViewModel(m),
-        RarityCondition m          => new RarityConditionViewModel(m),
-        ItemPropertiesCondition m  => new ItemPropertiesConditionViewModel(m),
-        GreaterAffixCondition m    => new GreaterAffixConditionViewModel(m),
-        CodexCondition             => new CodexConditionViewModel(),
-        ItemTypeCondition m        => new ItemTypeConditionViewModel(m),
-        AffixCondition m           => new AffixConditionViewModel(m),
-        OptionalAffixCondition m   => new OptionalAffixConditionViewModel(m),
-        SpecificUniqueCondition m  => new SpecificUniqueConditionViewModel(m),
-        TalismanSetCondition m     => new TalismanSetConditionViewModel(m),
-        UnknownCondition m         => new UnknownConditionViewModel(m),
-        _                          => throw new InvalidOperationException($"Unhandled condition type: {c.GetType().Name}")
-    };
-
     [RelayCommand]
     private void AddCondition()
     {
-        if (Conditions.Any(c => GetConditionType(c) == SelectedNewConditionType))
+        if (Conditions.Any(c => _conditionFactory.GetConditionType(c) == SelectedNewConditionType))
             return;
 
-        ConditionViewModel vm = SelectedNewConditionType switch
-        {
-            ConditionType.ItemPower       => new ItemPowerConditionViewModel(),
-            ConditionType.Rarity          => new RarityConditionViewModel(),
-            ConditionType.ItemProperties  => new ItemPropertiesConditionViewModel(),
-            ConditionType.GreaterAffix    => new GreaterAffixConditionViewModel(),
-            ConditionType.Codex           => new CodexConditionViewModel(),
-            ConditionType.ItemType        => new ItemTypeConditionViewModel(),
-            ConditionType.RequiredAffixes => new AffixConditionViewModel(),
-            ConditionType.OptionalAffixes => new OptionalAffixConditionViewModel(),
-            ConditionType.SpecificUnique  => new SpecificUniqueConditionViewModel(),
-            ConditionType.TalismanSet     => new TalismanSetConditionViewModel(),
-            _                             => throw new InvalidOperationException()
-        };
+        var vm = _conditionFactory.CreateNew(SelectedNewConditionType);
         vm.ApplyClassFilter(_classFilter);
         Conditions.Add(vm);
     }

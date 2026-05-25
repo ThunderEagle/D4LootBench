@@ -6,6 +6,8 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class OptionalAffixConditionViewModel : ConditionViewModel
 {
+    private readonly IFilterDataService _data;
+
     // GreaterEntries and Field5 semantics not fully understood — preserved for lossless round-trips
     private readonly IReadOnlyList<GreaterAffixEntry> _preservedGreaterEntries;
     private readonly int _preservedField5;
@@ -16,26 +18,28 @@ public sealed partial class OptionalAffixConditionViewModel : ConditionViewModel
     [NotifyPropertyChangedFor(nameof(Summary))]
     private int _minimumCount;
 
-    public OptionalAffixConditionViewModel()
+    public OptionalAffixConditionViewModel(IFilterDataService data)
     {
+        _data = data;
         _preservedGreaterEntries = [];
         Picker = MakePicker();
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
-    public OptionalAffixConditionViewModel(OptionalAffixCondition m)
+    public OptionalAffixConditionViewModel(IFilterDataService data, OptionalAffixCondition m)
     {
+        _data = data;
         _minimumCount            = m.MinimumCount;
         _preservedGreaterEntries = m.GreaterEntries;
         _preservedField5         = m.Field5;
         Picker = MakePicker();
         foreach (var id in m.AffixIds)
-            Picker.Selected.Add(new PickerEntry(id, AffixDatabase.GetDisplayName(id)));
+            Picker.Selected.Add(new PickerEntry(id, _data.Affixes.GetDisplayName(id)));
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
     private PickerViewModel MakePicker() =>
-        new(AffixDatabase.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)))
+        new(_data.Affixes.ByHash.Select(kv => new PickerEntry(kv.Key, kv.Value.Name)))
         {
             MaxSelectionCount = OptionalAffixCondition.MaxSelectionCount
         };
@@ -46,7 +50,7 @@ public sealed partial class OptionalAffixConditionViewModel : ConditionViewModel
             Picker.SourceFilter = null;
         else
         {
-            var allowed = AffixDatabase.ForClass(playerClass.ToString())
+            var allowed = _data.Affixes.ForClass(playerClass.ToString())
                 .Select(e => e.Hash)
                 .ToHashSet();
             Picker.SourceFilter = e => allowed.Contains(e.Hash);

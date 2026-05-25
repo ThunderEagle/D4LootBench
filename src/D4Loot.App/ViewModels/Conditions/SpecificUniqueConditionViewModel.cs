@@ -6,13 +6,16 @@ namespace D4Loot.App.ViewModels.Conditions;
 
 public sealed partial class SpecificUniqueConditionViewModel : ConditionViewModel
 {
+    private readonly IFilterDataService _data;
+
     public PickerViewModel Picker { get; }
 
     private readonly ILookup<string, uint> _displayNameToSnoIds;
 
-    public SpecificUniqueConditionViewModel()
+    public SpecificUniqueConditionViewModel(IFilterDataService data)
     {
-        _displayNameToSnoIds = UniqueItemDatabase.Released
+        _data = data;
+        _displayNameToSnoIds = _data.Uniques.Released
             .ToLookup(e => e.Name, e => e.SnoId);
 
         var source = _displayNameToSnoIds
@@ -27,12 +30,12 @@ public sealed partial class SpecificUniqueConditionViewModel : ConditionViewMode
         Picker.Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(Summary));
     }
 
-    public SpecificUniqueConditionViewModel(SpecificUniqueCondition m) : this()
+    public SpecificUniqueConditionViewModel(IFilterDataService data, SpecificUniqueCondition m) : this(data)
     {
         var seen = new HashSet<string>();
         foreach (var id in m.UniqueIds)
         {
-            var name = UniqueItemDatabase.GetDisplayName(id);
+            var name = _data.Uniques.GetDisplayName(id);
             if (seen.Add(name))
                 Picker.Selected.Add(new PickerEntry(id, name));
         }
@@ -44,7 +47,7 @@ public sealed partial class SpecificUniqueConditionViewModel : ConditionViewMode
             Picker.SourceFilter = null;
         else
         {
-            var allowed = UniqueItemDatabase.ForClass(playerClass.ToString())
+            var allowed = _data.Uniques.ForClass(playerClass.ToString())
                 .Select(e => e.SnoId)
                 .ToHashSet();
             Picker.SourceFilter = e => allowed.Contains(e.Hash);
