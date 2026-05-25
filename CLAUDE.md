@@ -41,8 +41,8 @@ Full spec is in `docs/filter-format.md`. Key points:
 - Color format: packed ABGR `uint32` little-endian — `makeColor(r,g,b)` = `(a<<24)|(b<<16)|(g<<8)|r`
 - Rules are written in **reverse display order** (lowest-priority rule first in binary)
 - **Maximum 25 rules per filter** — game-enforced limit; editor must validate on export
-- 63 confirmed affix hash IDs in `AffixDatabase`; full skill IDs for all 9 classes in `SkillDatabase` (4 Sorcerer basic skills pending in-game name verification)
-- Item type IDs fully catalogued (25 types): Charm = `0x0022ed05`, Seal = `0x00237e80`
+- 251 affix hash IDs in `AffixDatabase` (all S04_ standard item affixes: 65 stat affixes, 117 SkillRankBonus, 52 PassiveRankBonus, 17 X2/S11 misc); Sorcerer basics confirmed: Spark, Fire Bolt, Frost Bolt, Arc Lash
+- Item type IDs fully catalogued (27 types): Charm = `0x0022ed05`, Seal = `0x00237e80`
 
 Sources: Upsilon72/d4-filter-generator (Season 13), fnuecke/diablo4-loot-filter-viewer (.proto), DiabloTools/d4data (CoreTOC)
 
@@ -59,13 +59,13 @@ Sources: Upsilon72/d4-filter-generator (Season 13), fnuecke/diablo4-loot-filter-
 - **Phase 1** ✅ — Core library complete:
   - Domain models (`FilterRuleset`, `FilterRule`, full `Condition` hierarchy — 9 types)
   - `FilterCodec.Encode()` / `FilterCodec.Decode()` — bidirectional, lossless round-trip for all condition types
-  - `AffixDatabase` (63 entries), `SkillDatabase` (all 9 classes, ~200 entries), `ItemTypeDatabase` (25 types), `FilterColors`
-  - 15 unit tests passing, 0 warnings
+  - `AffixDatabase` (251 entries), `SkillDatabase` (all 9 classes, ~200 entries), `ItemTypeDatabase` (27 types), `FilterColors`
+  - 23 unit tests passing, 0 warnings
   - Attribution sources confirmed; all licenses verified
 
 ## What's Next
 - **Phase 2** — WPF shell: main window + JSON editor tab (AvalonEdit, round-trip import/export), then rule list and rule editor panel
-- **Phase 3** — Item/affix data integration: condition value pickers bind to AffixDatabase/SkillDatabase; resolve 4 Sorcerer basic skill display names
+- **Phase 3** — Item/affix data integration: condition value pickers bind to AffixDatabase/SkillDatabase (Sorcerer basics already resolved)
 - **Phase 4** — AI rule assistant: `D4Loot.Ai` project, Ollama-first, optional cloud providers (see `docs/ai-assistant.md`)
 
 ## Key Decisions Made

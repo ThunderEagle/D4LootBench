@@ -8,37 +8,40 @@ This document tracks known gaps in the d4-data.json database and provides guidan
 
 ---
 
-## Gap 1: Affixes (Low Priority)
+## Gap 1: Affixes (RESOLVED ✅)
 
 ### Status
-- **Coverage:** 63 documented affixes
-- **Estimated Total:** 100+ affixes exist in the game
+- **Coverage:** 251 documented affixes (was 63)
+- **Estimated Total:** 236 S04_ affixes + 15 X2/S11/S12 affixes = fully covered for standard item affixes
 
 ### What We Have
-Core affixes for loot filtering across 63 primary stats/modifiers:
-- Cooldown reduction, Armor, Attack Speed
-- Damage multipliers (Cold, Fire, Lightning, Physical, Poison)
-- Resistance types (all elements)
-- Critical Strike Chance/Damage
-- Damage Over Time modifiers
-- Class-specific affixes (selected)
+Complete S04_ affix set (all 236 type-104 S04_ entries from CoreTOC) including:
+- All core stat and combat affixes (Armor, AttackSpeed, CritChance, etc.)
+- Stat variants: ArmorPercent, AllStats, % Dexterity/Intelligence/Strength/Willpower
+- All 102 named SkillRankBonus affixes (+Whirlwind, +Fireball, etc.) — resolved via d4data Power STL files
+- 15 SkillRankBonus category affixes (Brawling Skills (Barbarian), etc.)
+- All 52 PassiveRankBonus affixes — resolved via Power Talent STL files
+- Resource affixes (On Kill, Per Second) for all 9 classes
+- 15 non-S04 affixes: X2 Talisman-era damage multipliers, S11 stats, Evade mechanics, Weapon Damage
 
-### What's Missing
-- Secondary/niche affixes not commonly filtered
-- Affixes added in recent patches (Season 13+)
-- Affixes with very specific use cases
+### Display Name Resolution Method
+1. **SkillRankBonus (named):** `.aff.json` → `nParam` → CoreTOC SNO ID → `Power_{Class}_{Skill}.stl.json` → `[Name]`
+2. **SkillRankBonus (category):** Derived from internal name pattern
+3. **PassiveRankBonus:** Internal name → `Power_{Class}_Talent_{path}.stl.json` → `[Name]`
+4. **Stat affixes:** Manually curated display names
 
-### Impact on Filters
-**None** — If a filter uses an affix we don't have, it decodes and displays as `Unknown (0x...)`.
-The filter round-trips losslessly; only the UI display is affected.
+### What's Still Missing
+- X2/S11/S12/S13 tier affixes (250 entries): primarily Transfiguration affixes, Kill Streak mechanics, Greater stat variants, Warlock/Paladin/Spiritborn skill ranks
+- These are low priority — mostly Horadric Cube Transfiguration and seasonal mechanics players rarely filter on
 
-### How to Resolve
-1. **Reactive:** Decode real player filters; log unknown affixes
-2. **Proactive:** Extract from fnuecke's `names.json` (category data not currently available, but SNO IDs are)
-3. **Source:** DiabloTools/d4data has authoritative affix lists in game data
+### Sorcerer Basics Confirmed
+- `S04_SkillRankBonus_Sorc_Basic_1` = Spark
+- `S04_SkillRankBonus_Sorc_Basic_2` = Fire Bolt
+- `S04_SkillRankBonus_Sorc_Basic_3` = Frost Bolt
+- `S04_SkillRankBonus_Sorc_Basic_4` = Arc Lash
 
 ### Priority
-**LOW** — Not blocking any functionality. Can be addressed post-launch if users report unknown affixes in filters.
+**RESOLVED** — Standard item affixes fully covered. Remaining gaps are Transfiguration and seasonal mechanics.
 
 ---
 
@@ -201,7 +204,7 @@ This is just for display/UI enhancement (showing "which items are in this set").
 
 | Gap | Category | Items | Coverage | Impact | Priority |
 |-----|----------|-------|----------|--------|----------|
-| 1 | Affixes | 63 / 100+ | 63% | Low | LOW |
+| 1 | Affixes (S04 + X2/S11) | 251 / 501 | 50% | Low | ✅ RESOLVED (standard affixes complete) |
 | 2 | Skills | 223 / 250+ | 89% | Low | MEDIUM |
 | 3 | Unique Affix Maps | 0 / TBD | 0% | None | LOW |
 | 4 | Item Type Affix Maps | 0 / TBD | 0% | None | VERY LOW |
@@ -219,7 +222,7 @@ This is just for display/UI enhancement (showing "which items are in this set").
 - Talisman sets: 50 (100% resolved)
 - Item types: 27 (100% resolved)
 - Skills: 223 (89% coverage)
-- Affixes: 63 (63% coverage, sufficient for core filters)
+- Affixes: 251 (all standard S04 item affixes covered, including 102 named skill ranks + 52 passives)
 
 ### Post-Launch (Phase 2)
 1. **Gap 2:** Verify Warlock skill completeness; collect unknown skills from player filters
@@ -286,4 +289,4 @@ To add new items/affixes/skills:
 ---
 
 ## Last Updated
-May 24, 2026 — Post talisman set database completion
+May 24, 2026 — Affix database expanded to 251 entries (S04 complete: all named skill ranks + passives resolved from d4data Power STL files)

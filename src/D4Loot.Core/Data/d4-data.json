@@ -3,12 +3,656 @@
   "source": "DiabloTools/d4data CoreTOC_flat.json (build 3.0.2.71886)",
   "affixes": [
     {
+      "displayName": "% Armor",
+      "hash": "0x001d5ded"
+    },
+    {
       "displayName": "% Cooldown Reduction",
       "hash": "0x001beab8"
     },
     {
+      "displayName": "% Dexterity",
+      "hash": "0x001d5def"
+    },
+    {
+      "displayName": "% Intelligence",
+      "hash": "0x001d5df1"
+    },
+    {
+      "displayName": "% Strength",
+      "hash": "0x001d5df3"
+    },
+    {
+      "displayName": "% Willpower",
+      "hash": "0x001d5df5"
+    },
+    {
+      "displayName": "+Alchemical Advantage (Passive)",
+      "hash": "0x001d69e5"
+    },
+    {
+      "displayName": "+Amplify Damage (Passive)",
+      "hash": "0x001d6cf9"
+    },
+    {
+      "displayName": "+Arc Lash",
+      "hash": "0x001d6752"
+    },
+    {
+      "displayName": "+Ball Lightning",
+      "hash": "0x001d6754"
+    },
+    {
+      "displayName": "+Barrage",
+      "hash": "0x001c953f"
+    },
+    {
+      "displayName": "+Bash",
+      "hash": "0x001c60bc"
+    },
+    {
+      "displayName": "+Blade Shift",
+      "hash": "0x001c9537"
+    },
+    {
+      "displayName": "+Blight",
+      "hash": "0x001c7e9a"
+    },
+    {
+      "displayName": "+Blizzard",
+      "hash": "0x001d6756"
+    },
+    {
+      "displayName": "+Blood Howl",
+      "hash": "0x001cc06d"
+    },
+    {
+      "displayName": "+Blood Lance",
+      "hash": "0x001c7eb0"
+    },
+    {
+      "displayName": "+Blood Lance",
+      "hash": "0x001f8931"
+    },
+    {
+      "displayName": "+Blood Mist",
+      "hash": "0x001c7eb2"
+    },
+    {
+      "displayName": "+Blood Surge",
+      "hash": "0x001c7ea8"
+    },
+    {
+      "displayName": "+Bone Prison",
+      "hash": "0x001c7eb6"
+    },
+    {
+      "displayName": "+Bone Spear",
+      "hash": "0x001c7e90"
+    },
+    {
+      "displayName": "+Bone Spirit",
+      "hash": "0x001c7eb8"
+    },
+    {
+      "displayName": "+Bone Splinters",
+      "hash": "0x001c7e6e"
+    },
+    {
+      "displayName": "+Boulder",
+      "hash": "0x001cc06f"
+    },
+    {
+      "displayName": "+Brute Force (Passive)",
+      "hash": "0x001d6cc7"
+    },
+    {
+      "displayName": "+Call of the Wild (Passive)",
+      "hash": "0x001d6e08"
+    },
+    {
+      "displayName": "+Caltrops",
+      "hash": "0x001c9547"
+    },
+    {
+      "displayName": "+Chain Lightning",
+      "hash": "0x001d6743"
+    },
+    {
+      "displayName": "+Challenging Shout",
+      "hash": "0x001c692a"
+    },
+    {
+      "displayName": "+Charge",
+      "hash": "0x001c692c"
+    },
+    {
+      "displayName": "+Charged Bolts",
+      "hash": "0x001d6745"
+    },
+    {
+      "displayName": "+Clarity (Passive)",
+      "hash": "0x001ec861"
+    },
+    {
+      "displayName": "+Claw",
+      "hash": "0x001cc054"
+    },
+    {
+      "displayName": "+Coalesced Blood (Passive)",
+      "hash": "0x001d6cff"
+    },
+    {
+      "displayName": "+Cold Imbuement",
+      "hash": "0x001c9549"
+    },
+    {
+      "displayName": "+Compound Fracture (Passive)",
+      "hash": "0x001d6d56"
+    },
+    {
+      "displayName": "+Concealment",
+      "hash": "0x001c954b"
+    },
+    {
+      "displayName": "+Corpse Explosion",
+      "hash": "0x001c7eba"
+    },
+    {
+      "displayName": "+Corpse Tendrils",
+      "hash": "0x001c7ebc"
+    },
+    {
+      "displayName": "+Counteroffensive  (Passive)",
+      "hash": "0x001d6cc3"
+    },
+    {
+      "displayName": "+Crushing Earth (Passive)",
+      "hash": "0x001d6e0c"
+    },
+    {
+      "displayName": "+Cut to the Bone (Passive)",
+      "hash": "0x001d6cc1"
+    },
+    {
+      "displayName": "+Cyclone Armor",
+      "hash": "0x001cc071"
+    },
+    {
+      "displayName": "+Dark Shroud",
+      "hash": "0x001c954d"
+    },
+    {
+      "displayName": "+Dash",
+      "hash": "0x001c954f"
+    },
+    {
+      "displayName": "+Deadly Venom (Passive)",
+      "hash": "0x001d69dc"
+    },
+    {
+      "displayName": "+Death Blow",
+      "hash": "0x001c692e"
+    },
+    {
+      "displayName": "+Death's Embrace (Passive)",
+      "hash": "0x001d6cf1"
+    },
+    {
+      "displayName": "+Debilitating Roar",
+      "hash": "0x001cc073"
+    },
+    {
+      "displayName": "+Decompose",
+      "hash": "0x001c7e7d"
+    },
+    {
+      "displayName": "+Decrepify",
+      "hash": "0x001c7ebe"
+    },
+    {
+      "displayName": "+Defiance (Passive)",
+      "hash": "0x001d6e12"
+    },
+    {
+      "displayName": "+Devouring Blaze (Passive)",
+      "hash": "0x001d6cdc"
+    },
+    {
+      "displayName": "+Double Swing",
+      "hash": "0x001c6908"
+    },
+    {
+      "displayName": "+Duelist (Passive)",
+      "hash": "0x001d6cc9"
+    },
+    {
+      "displayName": "+Earth Spike",
+      "hash": "0x001cc052"
+    },
+    {
+      "displayName": "+Earthen Bulwark",
+      "hash": "0x001cc075"
+    },
+    {
+      "displayName": "+Elemental Dominance (Passive)",
+      "hash": "0x001d6cd2"
+    },
+    {
+      "displayName": "+Endless Pyre (Passive)",
+      "hash": "0x001d6ce4"
+    },
+    {
+      "displayName": "+Envenom (Passive)",
+      "hash": "0x001d6e0e"
+    },
+    {
+      "displayName": "+Evulsion (Passive)",
+      "hash": "0x001d6d60"
+    },
+    {
+      "displayName": "+Exploit (Passive)",
+      "hash": "0x001d693f"
+    },
+    {
+      "displayName": "+Fire Bolt",
+      "hash": "0x001d674d"
+    },
+    {
+      "displayName": "+Fireball",
+      "hash": "0x001d673f"
+    },
+    {
+      "displayName": "+Firewall",
+      "hash": "0x001d6758"
+    },
+    {
+      "displayName": "+Flame Shield",
+      "hash": "0x001d675a"
+    },
+    {
+      "displayName": "+Flay",
+      "hash": "0x001c60c0"
+    },
+    {
+      "displayName": "+Flurry",
+      "hash": "0x001c953d"
+    },
+    {
+      "displayName": "+Forceful Arrow",
+      "hash": "0x001c9535"
+    },
+    {
+      "displayName": "+Frenzy",
+      "hash": "0x001c60c2"
+    },
+    {
+      "displayName": "+Frigid Finesse (Passive)",
+      "hash": "0x001d69e9"
+    },
+    {
+      "displayName": "+Frost Bolt",
+      "hash": "0x001d6750"
+    },
+    {
+      "displayName": "+Frost Nova",
+      "hash": "0x001d675c"
+    },
+    {
+      "displayName": "+Frozen Orb",
+      "hash": "0x001d6749"
+    },
+    {
+      "displayName": "+Fueled by Death (Passive)",
+      "hash": "0x001d6ced"
+    },
+    {
+      "displayName": "+Glass Cannon (Passive)",
+      "hash": "0x001d6cd4"
+    },
+    {
+      "displayName": "+Gloom (Passive)",
+      "hash": "0x001d6d29"
+    },
+    {
+      "displayName": "+Golem",
+      "hash": "0x001d6e53"
+    },
+    {
+      "displayName": "+Ground Stomp",
+      "hash": "0x001c6935"
+    },
+    {
+      "displayName": "+Hammer of the Ancients",
+      "hash": "0x001c68cb"
+    },
+    {
+      "displayName": "+Heartseeker",
+      "hash": "0x001c952f"
+    },
+    {
+      "displayName": "+Heavy Handed (Passive)",
+      "hash": "0x001d6cc5"
+    },
+    {
+      "displayName": "+Hellbent Commander (Passive)",
+      "hash": "0x001d6d74"
+    },
+    {
+      "displayName": "+Hemorrhage",
+      "hash": "0x001c7e84"
+    },
+    {
+      "displayName": "+Hoarfrost (Passive)",
+      "hash": "0x001d6ce2"
+    },
+    {
+      "displayName": "+Hurricane",
+      "hash": "0x001cc077"
+    },
+    {
+      "displayName": "+Hydra",
+      "hash": "0x001d675e"
+    },
+    {
+      "displayName": "+Ice Armor",
+      "hash": "0x001d6760"
+    },
+    {
+      "displayName": "+Ice Blades",
+      "hash": "0x001d6762"
+    },
+    {
+      "displayName": "+Ice Shards",
+      "hash": "0x001d6741"
+    },
+    {
+      "displayName": "+Icy Touch (Passive)",
+      "hash": "0x001d6ce0"
+    },
+    {
+      "displayName": "+Imperfectly Balanced (Passive)",
+      "hash": "0x001d6ce7"
+    },
+    {
+      "displayName": "+Impetus (Passive)",
+      "hash": "0x001d69eb"
+    },
+    {
+      "displayName": "+Incinerate",
+      "hash": "0x001d6747"
+    },
+    {
+      "displayName": "+Inner Flames (Passive)",
+      "hash": "0x001d6cda"
+    },
+    {
+      "displayName": "+Invigorating Strike",
+      "hash": "0x001c9533"
+    },
+    {
+      "displayName": "+Iron Maiden",
+      "hash": "0x001c7ec0"
+    },
+    {
+      "displayName": "+Iron Skin",
+      "hash": "0x001c6938"
+    },
+    {
+      "displayName": "+Kick",
+      "hash": "0x001c693a"
+    },
+    {
+      "displayName": "+Landslide",
+      "hash": "0x001cc062"
+    },
+    {
+      "displayName": "+Leap",
+      "hash": "0x001c6941"
+    },
+    {
+      "displayName": "+Lightning Spear",
+      "hash": "0x001d6764"
+    },
+    {
+      "displayName": "+Lightning Storm",
+      "hash": "0x001cc068"
+    },
+    {
+      "displayName": "+Lunging Strike",
+      "hash": "0x001c60c4"
+    },
+    {
+      "displayName": "+Malice (Passive)",
+      "hash": "0x001d6985"
+    },
+    {
+      "displayName": "+Maul",
+      "hash": "0x001cc060"
+    },
+    {
+      "displayName": "+Memento Mori (Passive)",
+      "hash": "0x001d6d84"
+    },
+    {
+      "displayName": "+Meteor",
+      "hash": "0x001d6766"
+    },
+    {
+      "displayName": "+Natural Disaster (Passive)",
+      "hash": "0x001d6e14"
+    },
+    {
+      "displayName": "+Nature's Reach (Passive)",
+      "hash": "0x001d6e06"
+    },
+    {
+      "displayName": "+No Mercy (Passive)",
+      "hash": "0x001d6cbf"
+    },
+    {
+      "displayName": "+Penetrating Shot",
+      "hash": "0x001c9543"
+    },
+    {
+      "displayName": "+Permafrost (Passive)",
+      "hash": "0x001d6cde"
+    },
+    {
+      "displayName": "+Pit Fighter (Passive)",
+      "hash": "0x001d6ccb"
+    },
+    {
+      "displayName": "+Poison Creeper",
+      "hash": "0x001cc18a"
+    },
+    {
+      "displayName": "+Poison Imbuement",
+      "hash": "0x001c9545"
+    },
+    {
+      "displayName": "+Poison Trap",
+      "hash": "0x001c9551"
+    },
+    {
+      "displayName": "+Precision Imbuement (Passive)",
+      "hash": "0x001d6a01"
+    },
+    {
+      "displayName": "+Predatory Instinct (Passive)",
+      "hash": "0x001d6e04"
+    },
+    {
+      "displayName": "+Primordial Binding (Passive)",
+      "hash": "0x001d6cd6"
+    },
+    {
+      "displayName": "+Pulverize",
+      "hash": "0x001cc064"
+    },
+    {
+      "displayName": "+Puncture",
+      "hash": "0x001c9531"
+    },
+    {
+      "displayName": "+Quickshift (Passive)",
+      "hash": "0x001d6e18"
+    },
+    {
+      "displayName": "+Rabies",
+      "hash": "0x001cc183"
+    },
+    {
+      "displayName": "+Rallying Cry",
+      "hash": "0x001c6943"
+    },
+    {
+      "displayName": "+Rapid Fire",
+      "hash": "0x001c953b"
+    },
+    {
+      "displayName": "+Ravens",
+      "hash": "0x001cc185"
+    },
+    {
+      "displayName": "+Reap",
+      "hash": "0x001c7e88"
+    },
+    {
+      "displayName": "+Rend",
+      "hash": "0x001c68f6"
+    },
+    {
+      "displayName": "+Resonance (Passive)",
+      "hash": "0x001d6e16"
+    },
+    {
+      "displayName": "+Rupture",
+      "hash": "0x001c6945"
+    },
+    {
+      "displayName": "+Sever",
+      "hash": "0x001c7ea1"
+    },
+    {
+      "displayName": "+Shadow Imbuement",
+      "hash": "0x001c9553"
+    },
+    {
+      "displayName": "+Shadow Step",
+      "hash": "0x001c9555"
+    },
+    {
+      "displayName": "+Shocking Impact (Passive)",
+      "hash": "0x001d6cd8"
+    },
+    {
+      "displayName": "+Shred",
+      "hash": "0x001cc06a"
+    },
+    {
+      "displayName": "+Skeleton Mage",
+      "hash": "0x001d6e51"
+    },
+    {
+      "displayName": "+Skeleton Warrior",
+      "hash": "0x001d6e4f"
+    },
+    {
+      "displayName": "+Slaying Strike (Passive)",
+      "hash": "0x001d6cbb"
+    },
+    {
+      "displayName": "+Smoke Grenade",
+      "hash": "0x001c9557"
+    },
+    {
+      "displayName": "+Spark",
+      "hash": "0x001d674b"
+    },
+    {
+      "displayName": "+Steel Grasp",
+      "hash": "0x001c6947"
+    },
+    {
+      "displayName": "+Storm Strike",
+      "hash": "0x001cc056"
+    },
+    {
+      "displayName": "+Teleport",
+      "hash": "0x001d6768"
+    },
+    {
+      "displayName": "+Terror (Passive)",
+      "hash": "0x001d6d34"
+    },
+    {
+      "displayName": "+Tides of Blood (Passive)",
+      "hash": "0x001d6d0d"
+    },
+    {
+      "displayName": "+Tornado",
+      "hash": "0x001cc066"
+    },
+    {
+      "displayName": "+Toxic Claws (Passive)",
+      "hash": "0x001d6e10"
+    },
+    {
+      "displayName": "+Trample",
+      "hash": "0x001cc188"
+    },
+    {
+      "displayName": "+Trap Mastery (Passive)",
+      "hash": "0x001d6a04"
+    },
+    {
+      "displayName": "+Twisting Blades",
+      "hash": "0x001c9541"
+    },
+    {
+      "displayName": "+Unstable Elixirs (Passive)",
+      "hash": "0x001d69d8"
+    },
+    {
+      "displayName": "+Upheaval",
+      "hash": "0x001c690e"
+    },
+    {
+      "displayName": "+War Cry",
+      "hash": "0x001c6949"
+    },
+    {
+      "displayName": "+Weapon Mastery (Passive)",
+      "hash": "0x001d6933"
+    },
+    {
+      "displayName": "+Whirlwind",
+      "hash": "0x001c6920"
+    },
+    {
+      "displayName": "+Wild Impulses (Passive)",
+      "hash": "0x001d6e02"
+    },
+    {
+      "displayName": "+Wind Shear",
+      "hash": "0x001cc058"
+    },
+    {
+      "displayName": "+Wolves",
+      "hash": "0x001cc18d"
+    },
+    {
+      "displayName": "Agility Skills (Rogue)",
+      "hash": "0x001d6e41"
+    },
+    {
       "displayName": "All Damage",
       "hash": "0x001bead4"
+    },
+    {
+      "displayName": "All Stats",
+      "hash": "0x001beaca"
     },
     {
       "displayName": "Armor",
@@ -27,6 +671,18 @@
       "hash": "0x00266b22"
     },
     {
+      "displayName": "Basic Skill Damage",
+      "hash": "0x001bfce4"
+    },
+    {
+      "displayName": "Basic Skills",
+      "hash": "0x001d6e2f"
+    },
+    {
+      "displayName": "Brawling Skills (Barbarian)",
+      "hash": "0x001d6e25"
+    },
+    {
       "displayName": "Cold Damage Multiplier",
       "hash": "0x00270af5"
     },
@@ -35,12 +691,44 @@
       "hash": "0x001beb2e"
     },
     {
+      "displayName": "Companion Skills (Druid)",
+      "hash": "0x001d6e2d"
+    },
+    {
+      "displayName": "Conjuration Skills (Sorcerer)",
+      "hash": "0x001d6e3d"
+    },
+    {
+      "displayName": "Core Skills",
+      "hash": "0x001d6e31"
+    },
+    {
+      "displayName": "Core/Spender Skill Damage",
+      "hash": "0x001bfd1a"
+    },
+    {
+      "displayName": "Corpse Skills (Necromancer)",
+      "hash": "0x001d6e4b"
+    },
+    {
       "displayName": "Critical Strike Chance",
       "hash": "0x001beace"
     },
     {
+      "displayName": "Critical Strike Chance (Jewelry)",
+      "hash": "0x001bead0"
+    },
+    {
       "displayName": "Critical Strike Damage",
       "hash": "0x001bead2"
+    },
+    {
+      "displayName": "Crowd Control Duration Reduction",
+      "hash": "0x001beab6"
+    },
+    {
+      "displayName": "Curse Skills (Necromancer)",
+      "hash": "0x001d6e49"
     },
     {
       "displayName": "Damage Over Time Multiplier",
@@ -49,6 +737,10 @@
     {
       "displayName": "Damage Reduction",
       "hash": "0x001d6e63"
+    },
+    {
+      "displayName": "Defensive Skills",
+      "hash": "0x001d6e2b"
     },
     {
       "displayName": "Dexterity",
@@ -115,6 +807,10 @@
       "hash": "0x00270aff"
     },
     {
+      "displayName": "Imbuements Skills (Rogue)",
+      "hash": "0x001d6e45"
+    },
+    {
       "displayName": "Intelligence",
       "hash": "0x001beabe"
     },
@@ -131,6 +827,10 @@
       "hash": "0x001beada"
     },
     {
+      "displayName": "Life Regeneration (Minor)",
+      "hash": "0x001d5e01"
+    },
+    {
       "displayName": "Lightning Damage Multiplier",
       "hash": "0x00270afd"
     },
@@ -143,8 +843,24 @@
       "hash": "0x001beadc"
     },
     {
+      "displayName": "Lucky Hit Chance (Jewelry)",
+      "hash": "0x001beb2b"
+    },
+    {
       "displayName": "Lucky Hit Restore Primary Resource",
       "hash": "0x0024527f"
+    },
+    {
+      "displayName": "Lucky Hit: Restore Primary Resource",
+      "hash": "0x001d62f1"
+    },
+    {
+      "displayName": "Lucky Hit: Vulnerable Chance",
+      "hash": "0x001d6244"
+    },
+    {
+      "displayName": "Macabre Skills (Necromancer)",
+      "hash": "0x001d6e47"
     },
     {
       "displayName": "Mana On Kill",
@@ -153,6 +869,10 @@
     {
       "displayName": "Mana Regeneration",
       "hash": "0x001d5e36"
+    },
+    {
+      "displayName": "Mastery Skills (Sorcerer)",
+      "hash": "0x001d6e3f"
     },
     {
       "displayName": "Maximum Evade Charge",
@@ -167,8 +887,16 @@
       "hash": "0x001bfc79"
     },
     {
+      "displayName": "Maximum Resource (Jewelry)",
+      "hash": "0x001bfc7b"
+    },
+    {
       "displayName": "Movement Speed",
       "hash": "0x001beade"
+    },
+    {
+      "displayName": "Overpower Damage",
+      "hash": "0x001beae0"
     },
     {
       "displayName": "Physical Damage Multiplier",
@@ -191,12 +919,20 @@
       "hash": "0x001beae2"
     },
     {
+      "displayName": "Projectile Skill Damage",
+      "hash": "0x001d6e65"
+    },
+    {
       "displayName": "Resistance to All Elements",
       "hash": "0x001bfd38"
     },
     {
       "displayName": "Resource Cost Reduction",
       "hash": "0x001d3a0f"
+    },
+    {
+      "displayName": "Resource Cost Reduction (Minor)",
+      "hash": "0x001d3a11"
     },
     {
       "displayName": "Resource Generation",
@@ -223,8 +959,16 @@
       "hash": "0x001beac2"
     },
     {
+      "displayName": "Subterfuge Skills (Rogue)",
+      "hash": "0x001d6e43"
+    },
+    {
       "displayName": "Thorns",
       "hash": "0x001beb22"
+    },
+    {
+      "displayName": "Thorns (Shields)",
+      "hash": "0x001beb24"
     },
     {
       "displayName": "Vigor On Kill",
@@ -243,6 +987,10 @@
       "hash": "0x0027fc93"
     },
     {
+      "displayName": "WeaponMastery Skills (Barbarian)",
+      "hash": "0x001d6e27"
+    },
+    {
       "displayName": "Willpower",
       "hash": "0x001beac6"
     },
@@ -253,6 +1001,10 @@
     {
       "displayName": "Wrath Regeneration",
       "hash": "0x0026a37c"
+    },
+    {
+      "displayName": "Wrath Skills (Druid)",
+      "hash": "0x001d6e33"
     }
   ],
   "skills": [
