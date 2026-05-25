@@ -195,11 +195,12 @@ public static class FilterCodec
                 buf.AddRange(ProtoWriter.VarintField(1, 9));
                 foreach (var id in ts.SetIds)
                     buf.AddRange(ProtoWriter.Fixed32Field(2, id));
-                foreach (var se in ts.SetEntries)
+                foreach (var group in ts.SetEntries.GroupBy(e => e.SetId))
                 {
                     var inner = new List<byte>();
-                    inner.AddRange(ProtoWriter.Fixed32Field(1, se.SetId));
-                    inner.AddRange(ProtoWriter.Fixed32Field(2, se.ItemId));
+                    inner.AddRange(ProtoWriter.Fixed32Field(1, group.Key));
+                    foreach (var se in group)
+                        inner.AddRange(ProtoWriter.Fixed32Field(2, se.ItemId));
                     buf.AddRange(ProtoWriter.LenField(3, [.. inner]));
                 }
                 break;
@@ -239,16 +240,20 @@ public static class FilterCodec
                     if (entryBytes.Length >= 10)
                     {
                         var er = new ProtoReader(entryBytes);
-                        uint? eid = null, eval = null;
+                        uint? setField = null;
+                        var itemFields = new List<uint>();
                         while (er.HasData)
                         {
                             var (ef, ew) = er.ReadTag();
-                            if (ef == 1 && ew == 5) eid = er.ReadFixed32();
-                            else if (ef == 2 && ew == 5) eval = er.ReadFixed32();
+                            if (ef == 1 && ew == 5) setField = er.ReadFixed32();
+                            else if (ef == 2 && ew == 5) itemFields.Add(er.ReadFixed32());
                             else er.Skip(ew);
                         }
-                        if (eid.HasValue && eval.HasValue)
-                            greaterEntries.Add(new GreaterAffixEntry(eid.Value, eval.Value));
+                        if (setField.HasValue)
+                        {
+                            foreach (var item in itemFields)
+                                greaterEntries.Add(new GreaterAffixEntry(setField.Value, item));
+                        }
                     }
                     break;
                 }

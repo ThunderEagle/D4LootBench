@@ -8,7 +8,7 @@ public sealed record PickerEntry(uint Hash, string DisplayName);
 
 public sealed partial class PickerViewModel : ObservableObject
 {
-    private readonly IReadOnlyList<PickerEntry> _source;
+    private IReadOnlyList<PickerEntry> _source;
     private Func<PickerEntry, bool>? _sourceFilter;
 
     public ObservableCollection<PickerEntry> Selected { get; } = [];
@@ -39,6 +39,22 @@ public sealed partial class PickerViewModel : ObservableObject
     {
         _source = source.OrderBy(e => e.DisplayName).ToList();
         Selected.CollectionChanged += (_, _) => OnPropertyChanged(nameof(FilteredAvailable));
+    }
+
+    /// <summary>Replaces the available-item source, removing stale selections.</summary>
+    public void ReplaceSource(IEnumerable<PickerEntry> newSource)
+    {
+        var newList = newSource.OrderBy(e => e.DisplayName).ToList();
+        var validHashes = newList.Select(e => e.Hash).ToHashSet();
+
+        for (int i = Selected.Count - 1; i >= 0; i--)
+        {
+            if (!validHashes.Contains(Selected[i].Hash))
+                Selected.RemoveAt(i);
+        }
+
+        _source = newList;
+        OnPropertyChanged(nameof(FilteredAvailable));
     }
 
     public IEnumerable<PickerEntry> FilteredAvailable

@@ -253,7 +253,12 @@
                     <TextBlock Text="{Binding Summary}" VerticalAlignment="Center"
                                Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
                 </DockPanel>
-                <views:ItemPickerControl DataContext="{Binding Picker}" />
+                <TextBlock Text="Sets" FontSize="11" FontWeight="SemiBold" Margin="0,0,0,2"
+                           Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                <views:ItemPickerControl DataContext="{Binding SetPicker}" />
+                <TextBlock Text="Specific Items" FontSize="11" FontWeight="SemiBold" Margin="0,8,0,2"
+                           Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                <views:ItemPickerControl DataContext="{Binding ItemPicker}" />
             </StackPanel>
         </Border>
     </DataTemplate>

@@ -199,6 +199,51 @@ public sealed class FilterCodecTests
         result.SetEntries[0].ItemId.ShouldBe(0x00aabbccu);
     }
 
+    [Fact]
+    public void Encode_ThenDecode_PreservesTalismanSetCondition_MultipleItemsSameSet()
+    {
+        // Multiple items in the same set should be packed into one sub-message and round-trip intact.
+        var cond = new TalismanSetCondition
+        {
+            SetIds     = [0x00230acc],
+            SetEntries =
+            [
+                new TalismanSetEntry(0x00230acc, 0x00250ee3),
+                new TalismanSetEntry(0x00230acc, 0x00250edb)
+            ]
+        };
+        var decoded = RoundTripRule(new FilterRule("Set", Visibility.Show, FilterColors.Blue, [cond]));
+
+        var result = decoded.Conditions[0].ShouldBeOfType<TalismanSetCondition>();
+        result.SetIds.ShouldBe(cond.SetIds);
+        result.SetEntries.Count.ShouldBe(2);
+        result.SetEntries[0].SetId.ShouldBe(0x00230accu);
+        result.SetEntries[0].ItemId.ShouldBe(0x00250ee3u);
+        result.SetEntries[1].SetId.ShouldBe(0x00230accu);
+        result.SetEntries[1].ItemId.ShouldBe(0x00250edbu);
+    }
+
+    [Fact]
+    public void Decode_TalismanSetCondition_GameFormat_MultipleItemsSameSet()
+    {
+        // Game-encoded: single sub-message with SetId + 2x ItemId
+        const string code = "Ci0KCFRhbGlzbWFuEAAdAAAAACIYCAkVzAojABoPDcwKIwAV4w4lABXbDiUAKAESCk5ldyBGaWx0ZXIYCCAB";
+        var ruleset = FilterCodec.Decode(code);
+
+        var cond = ruleset.Rules[0].Conditions
+            .OfType<TalismanSetCondition>()
+            .ShouldHaveSingleItem();
+
+        cond.SetIds.ShouldHaveSingleItem();
+        cond.SetIds[0].ShouldBe(0x00230accu);
+
+        cond.SetEntries.Count.ShouldBe(2);
+        cond.SetEntries[0].SetId.ShouldBe(0x00230accu);
+        cond.SetEntries[0].ItemId.ShouldBe(0x00250ee3u);
+        cond.SetEntries[1].SetId.ShouldBe(0x00230accu);
+        cond.SetEntries[1].ItemId.ShouldBe(0x00250edbu);
+    }
+
     // ── Encode produces valid Base64 ──────────────────────────────────────
 
     [Fact]

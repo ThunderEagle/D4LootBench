@@ -13,6 +13,9 @@ public static class TalismanSetDatabase
     /// <summary>Flat lookup of all item hashes across every set.</summary>
     public static IReadOnlyDictionary<uint, TalismanSetItemEntry> ItemsByHash { get; }
 
+    /// <summary>Maps item hash → the set hash the item belongs to.</summary>
+    public static IReadOnlyDictionary<uint, uint> ItemToSetHash { get; }
+
     private static readonly Dictionary<string, List<TalismanSetInfo>> _byClass;
 
     static TalismanSetDatabase()
@@ -67,6 +70,9 @@ public static class TalismanSetDatabase
         ItemsByHash = all
             .SelectMany(s => s.Items)
             .ToDictionary(i => i.Hash);
+        ItemToSetHash = all
+            .SelectMany(s => s.Items.Select(i => (ItemHash: i.Hash, SetHash: s.Hash)))
+            .ToDictionary(x => x.ItemHash, x => x.SetHash);
     }
 
     public static IReadOnlyList<TalismanSetInfo> ForClass(string className)
@@ -81,4 +87,7 @@ public static class TalismanSetDatabase
 
     public static string GetItemName(uint hash)
         => ItemsByHash.TryGetValue(hash, out var entry) ? entry.Name : $"Unknown item (0x{hash:x8})";
+
+    public static uint GetSetHashForItem(uint itemHash)
+        => ItemToSetHash.TryGetValue(itemHash, out var setHash) ? setHash : 0;
 }
