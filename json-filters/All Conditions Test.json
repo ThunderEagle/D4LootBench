@@ -85,7 +85,7 @@
           "$type": "affix",
           "AffixIds": [
             "0x001beab8",
-            "0x001d5ded"
+            "0x001beab2"
           ],
           "MinimumCount": 2,
           "GreaterEntries": [

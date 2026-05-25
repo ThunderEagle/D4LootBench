@@ -3,13 +3,6 @@
   "source": "DiabloTools/d4data CoreTOC_flat.json (build 3.0.2.71886)",
   "affixes": [
     {
-      "displayName": "% Armor",
-      "hash": "0x001d5ded",
-      "classes": [
-        "All"
-      ]
-    },
-    {
       "displayName": "% Cooldown Reduction",
       "hash": "0x001beab8",
       "classes": [
