@@ -3,7 +3,6 @@ using System.Text.Json;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using D4Loot.App.Themes;
 using D4Loot.Core.Codec;
 using D4Loot.Core.Models;
 using D4Loot.Core.Serialization;
@@ -24,19 +23,6 @@ public partial class MainWindowViewModel : ObservableObject
 
     [ObservableProperty]
     private bool _hasError;
-
-    private AppTheme _selectedTheme = AppTheme.Light;
-    public AppTheme SelectedTheme
-    {
-        get => _selectedTheme;
-        set
-        {
-            if (SetProperty(ref _selectedTheme, value))
-                ThemeManager.Apply(value);
-        }
-    }
-
-    public static IReadOnlyList<AppTheme> Themes { get; } = Enum.GetValues<AppTheme>();
 
     /// <summary>Raised when the Raw Editor window should be opened. Handler must show the window.</summary>
     public event Action<RawEditorViewModel>? ShowRawEditorRequested;

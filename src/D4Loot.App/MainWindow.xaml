@@ -51,21 +51,24 @@
                         ToolTip="Open the JSON raw editor in a separate window"
                         Padding="8,2" />
 
-                <Separator />
-
-                <Label Content="Theme:" VerticalAlignment="Center" Padding="4,0" />
-                <ComboBox ItemsSource="{x:Static vm:MainWindowViewModel.Themes}"
-                          SelectedItem="{Binding SelectedTheme}"
-                          Width="72"
-                          VerticalAlignment="Center" />
             </ToolBar>
         </ToolBarTray>
 
         <!-- ── Status bar ───────────────────────────────────────────── -->
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>
-                <TextBlock Text="{Binding StatusMessage}"
-                           Foreground="{Binding HasError, Converter={StaticResource ErrorBrushConverter}}" />
+                <TextBlock Text="{Binding StatusMessage}">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding HasError}" Value="True">
+                                    <Setter Property="Foreground" Value="Red" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
             </StatusBarItem>
         </StatusBar>
 

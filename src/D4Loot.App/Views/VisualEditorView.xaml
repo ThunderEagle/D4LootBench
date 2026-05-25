@@ -32,11 +32,11 @@
 
             <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
                 <ToolBar>
-                    <Button Content="+"  Command="{Binding AddRuleCommand}"    ToolTip="Add rule"   Width="26" />
-                    <Button Content="−"  Command="{Binding DeleteRuleCommand}" ToolTip="Delete rule" Width="26" />
+                    <Button Content="+"  Command="{Binding AddRuleCommand}"    ToolTip="Add rule"   Width="26" Height="22" FontSize="14" FontWeight="Bold" />
+                    <Button Content="−"  Command="{Binding DeleteRuleCommand}" ToolTip="Delete rule" Width="26" Height="22" FontSize="14" FontWeight="Bold" />
                     <Separator />
-                    <Button Content="↑"  Command="{Binding MoveUpCommand}"     ToolTip="Move up"    Width="26" />
-                    <Button Content="↓"  Command="{Binding MoveDownCommand}"   ToolTip="Move down"  Width="26" />
+                    <Button Content="↑"  Command="{Binding MoveUpCommand}"     ToolTip="Move up"    Width="26" Height="22" FontSize="14" FontWeight="Bold" />
+                    <Button Content="↓"  Command="{Binding MoveDownCommand}"   ToolTip="Move down"  Width="26" Height="22" FontSize="14" FontWeight="Bold" />
                 </ToolBar>
             </ToolBarTray>
 

@@ -6,7 +6,7 @@
 
     <!-- Shared style for the outer condition card border -->
     <Style x:Key="ConditionCardStyle" TargetType="Border">
-        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="CornerRadius" Value="3" />
         <Setter Property="Margin" Value="0,0,0,4" />
