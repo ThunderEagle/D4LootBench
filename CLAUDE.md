@@ -4,87 +4,74 @@
 A standalone WPF desktop application for editing Diablo IV loot filter share codes. D4's in-game filter UI is clunky; this app lets players import a filter code, visually edit all its rules, then re-export the code to paste back into the game. Distribution via GitHub Releases as a self-contained single-file `.exe` — no installer, no hosting required.
 
 ## Technology Stack
-- **.NET 10 / WPF** (`net10.0-windows`) — Windows-only desktop app, user's wheelhouse
+- **.NET 10 / WPF** (`net10.0-windows`) — Windows-only desktop app
 - **CommunityToolkit.Mvvm 8.4.2** — MVVM source generators (D4Loot.App)
-- **Shouldly 4.3.0** — test assertions (MIT license)
+- **AvalonEdit 6.3.0** — JSON editor with syntax highlighting, folding, search
+- **Shouldly 4.3.0** — test assertions
 - **xUnit** — test runner
 
 ## Solution Layout
 ```
-D4Loot.sln
+D4Loot.slnx
 ├── src/D4Loot.Core/          # Pure .NET 10 class library — zero WPF dependency
-│   ├── Models/               # FilterRuleset, FilterRule, Condition subtypes, Enums
+│   ├── Models/               # FilterRuleset, FilterRule, 10 Condition subtypes + UnknownCondition
 │   ├── Codec/                # FilterCodec (encode/decode), ProtoWriter, ProtoReader
-│   └── Data/                 # AffixDatabase, SkillDatabase, FilterColors
-├── src/D4Loot.Ai/            # (Phase 4) LLM provider abstraction — no WPF dependency
-│   ├── ILlmProvider.cs
-│   ├── LlmSettings.cs
-│   ├── RuleAssistant.cs
-│   └── Providers/            # OllamaProvider, AnthropicProvider, OpenAiProvider
-├── src/D4Loot.App/           # WPF app
-│   ├── ViewModels/           # (Phase 2 — not yet built)
-│   └── Views/                # (Phase 2 — not yet built)
+│   ├── Data/                 # AffixDatabase, SkillDatabase, ItemTypeDatabase, UniqueItemDatabase, FilterColors, FilterDataStore, d4-data.json
+│   └── Serialization/        # FilterJsonOptions, HexUInt32Converter
+├── src/D4Loot.App/           # WPF app (CommunityToolkit.Mvvm)
+│   ├── ViewModels/           # MainWindowVM, VisualEditorVM, FilterRuleVM, ConditionVM, RawEditorVM, ColorPickerVM
+│   ├── Views/                # VisualEditorView, RawEditorWindow, ColorPickerDialog
+│   ├── Converters/           # BoolToBrushConverter
+│   └── Utilities/            # ColorUtility (HSV/ABGR conversion, contrast helper)
 ├── tests/D4Loot.Core.Tests/
-│   └── Codec/FilterCodecTests.cs   # 12 passing tests
-└── docs/
-    ├── filter-format.md      # Full protobuf format spec with field tables and hash IDs
-    └── ai-assistant.md       # AI rule assistant architecture and design decisions
+│   └── Codec/FilterCodecTests.cs   # 33 tests (round-trip, real Raxx filter, idempotency, hash ID test)
+├── docs/
+│   ├── filter-format.md      # Full protobuf spec with field tables and hash IDs
+│   ├── visual-editor.md      # Visual editor UI architecture plan
+│   ├── ai-assistant.md       # AI rule assistant architecture (deferred)
+│   ├── share-codes.md        # Share code format overview
+│   └── data-gaps.md          # Data gaps analysis and mitigation plan
+├── json-filters/
+│   ├── Raxx's Torment 6+ Filter.json
+│   └── All Conditions Test.json
+└── docs/reference-codes/
+    └── raxx-torment-6-plus.txt
 ```
 
 ## Filter Code Format (Critical Background)
-D4 share codes are **Base64-encoded hand-rolled Protocol Buffers binary** — no compression.
-Full spec is in `docs/filter-format.md`. Key points:
+D4 share codes are **Base64-encoded hand-rolled Protocol Buffers binary**. Full spec in `docs/filter-format.md`. Key points:
 - **Filter** → repeated Rule messages (field 1) + name (field 2) + count (field 3) + version=1 (field 4)
 - **Rule** → name (1), visibility/enum (2), color/ABGR-uint32 (3), repeated Condition (4), enabled (5)
-- **Condition** types (all 10 known): Item Power (0), Rarity (1), Item Properties (2), Greater Affix (3), Codex (4), Item Type (5), Required Affixes (6), Optional Affixes (7), Specific Unique (8), Talisman Set (9)
-- Types 0–7 are fully modelled; types 8–9 round-trip as `UnknownCondition` (IDs not yet catalogued)
-- Color format: packed ABGR `uint32` little-endian — `makeColor(r,g,b)` = `(a<<24)|(b<<16)|(g<<8)|r`
+- **Condition** types (all 10 known + `UnknownCondition` defensive fallback): Item Power (0), Rarity (1), Item Properties (2), Greater Affix (3), Codex (4), Item Type (5), Required Affixes (6), Optional Affixes (7), Specific Unique (8), Talisman Set (9)
+- All 10 condition types are fully modelled with codec support and per-type editor ViewModels
+- Color format: packed ABGR `uint32` little-endian
 - Rules are written in **reverse display order** (lowest-priority rule first in binary)
-- **Maximum 25 rules per filter** — game-enforced limit; editor must validate on export
-- 251 affix hash IDs in `AffixDatabase` (all S04_ standard item affixes: 65 stat affixes, 117 SkillRankBonus, 52 PassiveRankBonus, 17 X2/S11 misc); Sorcerer basics confirmed: Spark, Fire Bolt, Frost Bolt, Arc Lash
-- Item type IDs fully catalogued (27 types): Charm = `0x0022ed05`, Seal = `0x00237e80`
+- **Maximum 25 rules per filter** — game-enforced limit; editor validates on export
+- 251 affix hash IDs, ~200 skills (9 classes), 27 item types, ~900 unique items (~848 display names resolved)
 
-Sources: Upsilon72/d4-filter-generator (Season 13), fnuecke/diablo4-loot-filter-viewer (.proto), DiabloTools/d4data (CoreTOC)
+Sources: Upsilon72/d4-filter-generator, fnuecke/diablo4-loot-filter-viewer, DiabloTools/d4data, d4lfteam/d4lf
 
-## Attribution Required (Before Public Release)
-- **Upsilon72/d4-filter-generator** (MIT) — original protobuf wire format reverse engineering, condition type encoding, affix hash IDs
-- **fnuecke/diablo4-loot-filter-viewer** (Unlicense/public domain) — complete `.proto` field layout, all 10 condition type semantics, `names.json` ID lookup
-- **DiabloTools/d4data** (MIT) — `CoreTOC_flat.json`, authoritative datamined ID tables for all skills, item types, and affixes
-- **d4lfteam/d4lf** (MIT) — affix name reference database
-- **Raxx** (filter author) — real-world filter export used to validate and extend the spec
-- Must appear in app About dialog and README. See `docs/filter-format.md` for full wording and license status.
+## Phase Status
+- **Phase 0** ✅ — Format reverse-engineered; `docs/filter-format.md` written; all 10 condition types documented
+- **Phase 1** ✅ — Core library: domain models, codec, databases (251 affixes, ~200 skills, 27 item types, ~900 uniques), 33 tests passing, 0 warnings
+- **Phase 2** ✅ — WPF shell: main window with tabs, visual editor (rule list + editor panel + color picker), JSON editor (AvalonEdit), import/export/copy/save
+- **Phase 3** ✅ — Item/affix data integration: per-type condition editing ViewModels via DataTemplate dispatch, value pickers bound to databases, class filtering, selection limits/validation, unique display name resolution (848/901), greater affix picker, talisman set editing
+- **Phase 4** ❌ — AI rule assistant: not started (scaffolding was removed; design doc exists at `docs/ai-assistant.md`)
 
-## What's Done
-- **Phase 0** ✅ — Format fully reverse-engineered; `docs/filter-format.md` written; all 10 condition types documented
-- **Phase 1** ✅ — Core library complete:
-  - Domain models (`FilterRuleset`, `FilterRule`, full `Condition` hierarchy — 9 types)
-  - `FilterCodec.Encode()` / `FilterCodec.Decode()` — bidirectional, lossless round-trip for all condition types
-  - `AffixDatabase` (251 entries), `SkillDatabase` (all 9 classes, ~200 entries), `ItemTypeDatabase` (27 types), `FilterColors`
-  - 23 unit tests passing, 0 warnings
-  - Attribution sources confirmed; all licenses verified
-
-## What's Next
-- **Phase 2** — WPF shell: main window + JSON editor tab (AvalonEdit, round-trip import/export), then rule list and rule editor panel
-- **Phase 3** — Item/affix data integration: condition value pickers bind to AffixDatabase/SkillDatabase (Sorcerer basics already resolved)
-- **Phase 4** — AI rule assistant: `D4Loot.Ai` project, Ollama-first, optional cloud providers (see `docs/ai-assistant.md`)
-
-## Key Decisions Made
-- **WPF over MAUI** — audience is 100% Windows, user's comfort zone, simpler deployment
-- **Custom protobuf codec** over Google.Protobuf — format uses only 3 wire types, ~80 lines, handles unknown fields gracefully for patch resilience
+## Key Decisions
+- **WPF over MAUI** — audience is 100% Windows, simpler deployment
+- **Custom protobuf codec** over Google.Protobuf — 3 wire types, ~80 lines, handles unknown fields for patch resilience
 - **Shouldly** over FluentAssertions — FA v8 went commercial; Shouldly stays MIT
-- **No Priority field on FilterRule** — priority is implicit from list index; redundant field would create inconsistency
-- **UnknownCondition type** preserves raw bytes for condition types not yet mapped, ensuring lossless round-trips on future game patches
-- **JSON editor before visual editor** — AvalonEdit tab gives immediate insight into filter structure; doubles as a power-user/debug feature in the final app
-- **AI assistant is opt-in and user-configured** — not bundled with a hardcoded API key; users choose their provider (Ollama free/local, or cloud with own key); see `docs/ai-assistant.md`
-- **Ollama-first for AI** — local/free, zero key management, validates the full assistant UX loop before adding cloud provider complexity
+- **UnknownCondition** — preserves raw bytes for future/prototype condition types, ensuring lossless round-trips
+- **Per-type ViewModels** — each condition type gets its own editor ViewModel + DataTemplate, avoids monolithic switch
+- **JSON editor before visual editor** — AvalonEdit tab gives immediate insight; doubles as power-user/debug feature
 
 ## Running / Testing
 ```powershell
-dotnet build          # full solution
-dotnet test           # 12 tests in D4Loot.Core.Tests
-```
-
-## Publish (Phase 4)
-```powershell
+dotnet build          # full solution (0 warnings)
+dotnet test           # 33 tests in D4Loot.Core.Tests
 dotnet publish src/D4Loot.App -r win-x64 -p:PublishSingleFile=true --self-contained true
 ```
+
+## Attribution Required (Before Public Release)
+See `docs/filter-format.md` for full wording. Sources: Upsilon72/d4-filter-generator (MIT), fnuecke/diablo4-loot-filter-viewer (Unlicense), DiabloTools/d4data (MIT), d4lfteam/d4lf (MIT), Raxx (real-world filter).
