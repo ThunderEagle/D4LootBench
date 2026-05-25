@@ -5137,42 +5137,6 @@
       ]
     },
     {
-      "displayName": "Piranhado",
-      "snoId": "0x00207ADD",
-      "internalName": "S07_Witch_Bonus_Unique_001",
-      "hash": "0x00207ADD",
-      "classes": [
-        "Warlock"
-      ]
-    },
-    {
-      "displayName": "Doom Orb",
-      "snoId": "0x002088F3",
-      "internalName": "S07_Witch_Eldritch_Unique_001",
-      "hash": "0x002088F3",
-      "classes": [
-        "Warlock"
-      ]
-    },
-    {
-      "displayName": "The Cycle",
-      "snoId": "0x00208904",
-      "internalName": "S07_Witch_GrowthRot_Unique_001",
-      "hash": "0x00208904",
-      "classes": [
-        "Warlock"
-      ]
-    },
-    {
-      "displayName": "Vengeful Spirit",
-      "snoId": "0x00208906",
-      "internalName": "S07_Witch_Psyche_Unique_001",
-      "hash": "0x00208906",
-      "classes": [
-        "Warlock"
-      ]
-    },
-    {
       "displayName": "Okun's Catalyst",
       "snoId": "0x002092DC",
       "internalName": "1HFocus_Unique_Sorc_101",
@@ -5974,87 +5938,6 @@
       ]
     },
     {
-      "displayName": "Chaos Unleashed",
-      "snoId": "0x0023EB39",
-      "internalName": "S10_ChaosPerk_Generic_Unique_001",
-      "hash": "0x0023EB39",
-      "classes": [
-        "All"
-      ]
-    },
-    {
-      "displayName": "Brawn Over Brains",
-      "snoId": "0x0023EB3C",
-      "internalName": "S10_ChaosPerk_Generic_Unique_002",
-      "hash": "0x0023EB3C",
-      "classes": [
-        "All"
-      ]
-    },
-    {
-      "displayName": "A Beast Cornered",
-      "snoId": "0x0023EB3F",
-      "internalName": "S10_ChaosPerk_Generic_Unique_003",
-      "hash": "0x0023EB3F",
-      "classes": [
-        "All"
-      ]
-    },
-    {
-      "displayName": "Single-Minded Fury",
-      "snoId": "0x0023EB50",
-      "internalName": "S10_ChaosPerk_Barb_Unique_001",
-      "hash": "0x0023EB50",
-      "classes": [
-        "Barbarian"
-      ]
-    },
-    {
-      "displayName": "Savagery",
-      "snoId": "0x0023EB59",
-      "internalName": "S10_ChaosPerk_Druid_Unique_001",
-      "hash": "0x0023EB59",
-      "classes": [
-        "Druid"
-      ]
-    },
-    {
-      "displayName": "Alter the Balance",
-      "snoId": "0x0023EB61",
-      "internalName": "S10_ChaosPerk_Necro_Unique_001",
-      "hash": "0x0023EB61",
-      "classes": [
-        "Necromancer"
-      ]
-    },
-    {
-      "displayName": "Hit and Run",
-      "snoId": "0x0023EC06",
-      "internalName": "S10_ChaosPerk_Rogue_Unique_001",
-      "hash": "0x0023EC06",
-      "classes": [
-        "Rogue"
-      ]
-    },
-    {
-      "displayName": "Mana Shield",
-      "snoId": "0x0023EC0E",
-      "internalName": "S10_ChaosPerk_Sorc_Unique_001",
-      "hash": "0x0023EC0E",
-      "classes": [
-        "Sorcerer"
-      ]
-    },
-    {
-      "displayName": "Convocation of Spirits",
-      "snoId": "0x0023EC16",
-      "internalName": "S10_ChaosPerk_Spiritborn_Unique_001",
-      "hash": "0x0023EC16",
-      "classes": [
-        "Spiritborn"
-      ]
-    },
-    {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x002410AF",
       "internalName": "1HFocus_Unique_Necro_100",
@@ -6394,15 +6277,6 @@
       "hash": "0x00265A83",
       "classes": [
         "Paladin"
-      ]
-    },
-    {
-      "displayName": "Bearded Axe",
-      "snoId": "0x002691E1",
-      "internalName": "S12_SH_TreasureHunterHunt_FakeItem_Unique_01",
-      "hash": "0x002691E1",
-      "classes": [
-        "All"
       ]
     },
     {
