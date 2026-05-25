@@ -39,7 +39,18 @@
 
             <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
                 <ToolBar>
-                    <Button Content="+"  Command="{Binding AddRuleCommand}"    ToolTip="Add rule"   Width="26" Height="22" FontSize="14" FontWeight="Bold" />
+                    <Button Content="+"  Command="{Binding AddRuleCommand}"    Width="26" Height="22" FontSize="14" FontWeight="Bold">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="ToolTip" Value="Add rule" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsAtRuleLimit}" Value="True">
+                                        <Setter Property="ToolTip" Value="Maximum 25 rules per filter (game-enforced)" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                     <Button Content="−"  Command="{Binding DeleteRuleCommand}" ToolTip="Delete rule" Width="26" Height="22" FontSize="14" FontWeight="Bold" />
                     <Separator />
                     <Button Content="↑"  Command="{Binding MoveUpCommand}"     ToolTip="Move up"    Width="26" Height="22" FontSize="14" FontWeight="Bold" />

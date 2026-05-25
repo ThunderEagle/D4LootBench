@@ -35,19 +35,28 @@ public partial class VisualEditorViewModel : ObservableObject
         _filterName       = ruleset.Name;
         foreach (var rule in ruleset.Rules)
             Rules.Add(MakeRuleVm(rule));
-        Rules.CollectionChanged += (_, _) => OnPropertyChanged(nameof(RuleCountDisplay));
+        Rules.CollectionChanged += (_, _) =>
+        {
+            OnPropertyChanged(nameof(RuleCountDisplay));
+            OnPropertyChanged(nameof(IsAtRuleLimit));
+            AddRuleCommand.NotifyCanExecuteChanged();
+        };
     }
+
+    public bool IsAtRuleLimit => Rules.Count >= FilterRuleset.MaxRuleCount;
 
     public FilterRuleset BuildRuleset() =>
         new(FilterName, Rules.Select(r => r.BuildRule()));
 
-    [RelayCommand]
+    [RelayCommand(CanExecute = nameof(CanAddRule))]
     private void AddRule()
     {
         var vm = MakeRuleVm(new FilterRule($"Rule #{Rules.Count + 1}", Visibility.Show, FilterColors.GameDefault, []));
         Rules.Add(vm);
         SelectedRule = vm;
     }
+
+    private bool CanAddRule() => Rules.Count < FilterRuleset.MaxRuleCount;
 
     [RelayCommand(CanExecute = nameof(HasSelection))]
     private void DeleteRule()

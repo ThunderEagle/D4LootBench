@@ -37,7 +37,7 @@
 
                 <Button Content="Copy Code"
                         Command="{Binding CopyCodeCommand}"
-                        ToolTip="Export the filter as a D4 share code to the clipboard (max 25 rules)"
+                        ToolTip="Export the filter as a D4 share code to the clipboard (max 25 rules; disabled when validation errors exist)"
                         Padding="8,2" />
                 <Button Content="Save JSON…"
                         Command="{Binding SaveJsonCommand}"
@@ -51,8 +51,41 @@
                         ToolTip="Open the JSON raw editor in a separate window"
                         Padding="8,2" />
 
+                <Separator />
+
+                <Button Content="{Binding IssuesBadge}"
+                        Command="{Binding ValidateCommand}"
+                        ToolTip="Check the filter against game-enforced rules"
+                        Padding="8,2">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding HasBlockingErrors}" Value="True">
+                                    <Setter Property="Foreground" Value="Red" />
+                                    <Setter Property="FontWeight" Value="SemiBold" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
             </ToolBar>
         </ToolBarTray>
+
+        <!-- ── Issues panel (collapsed when empty) ─────────────────── -->
+        <views:IssuesPanel DockPanel.Dock="Top" Issues="{Binding Issues}">
+            <views:IssuesPanel.Style>
+                <Style TargetType="views:IssuesPanel">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding HasIssues}" Value="True">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </views:IssuesPanel.Style>
+        </views:IssuesPanel>
 
         <!-- ── Status bar ───────────────────────────────────────────── -->
         <StatusBar DockPanel.Dock="Bottom">

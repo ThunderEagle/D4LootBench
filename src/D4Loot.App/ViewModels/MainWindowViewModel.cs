@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text.Json;
 using System.Windows;
@@ -27,7 +28,36 @@ public partial class MainWindowViewModel : ObservableObject
     [NotifyCanExecuteChangedFor(nameof(CopyCodeCommand))]
     [NotifyCanExecuteChangedFor(nameof(SaveJsonCommand))]
     [NotifyCanExecuteChangedFor(nameof(OpenRawEditorCommand))]
+    [NotifyCanExecuteChangedFor(nameof(ValidateCommand))]
     private VisualEditorViewModel? _editor;
+
+    /// <summary>Findings from the last validate / export attempt. Empty when no issues.</summary>
+    public ObservableCollection<ValidationIssue> Issues { get; } = [];
+
+    public bool HasIssues => Issues.Count > 0;
+    public bool HasBlockingErrors => Issues.Any(i => i.Severity == ValidationSeverity.Error);
+    public string IssuesBadge => Issues.Count == 0 ? "Validate" : $"Validate ({Issues.Count})";
+
+    [RelayCommand(CanExecute = nameof(HasEditor))]
+    private void Validate()
+    {
+        var ruleset = Editor!.BuildRuleset();
+        RefreshIssues(_validator.Validate(ruleset));
+        SetStatus(HasBlockingErrors
+            ? $"{Issues.Count(i => i.Severity == ValidationSeverity.Error)} validation error(s) — see panel."
+            : "Filter is valid.", error: HasBlockingErrors);
+    }
+
+    private void RefreshIssues(ValidationResult result)
+    {
+        Issues.Clear();
+        foreach (var i in result.Issues) Issues.Add(i);
+        OnPropertyChanged(nameof(HasIssues));
+        OnPropertyChanged(nameof(HasBlockingErrors));
+        OnPropertyChanged(nameof(IssuesBadge));
+        CopyCodeCommand.NotifyCanExecuteChanged();
+        SaveJsonCommand.NotifyCanExecuteChanged();
+    }
 
     [ObservableProperty]
     private string _statusMessage = "Import a filter code or open a JSON file to get started.";
@@ -43,6 +73,7 @@ public partial class MainWindowViewModel : ObservableObject
     [RelayCommand]
     private void NewFilter()
     {
+        RefreshIssues(ValidationResult.Empty);
         Editor = new VisualEditorViewModel(_conditionFactory,new FilterRuleset("New Filter", []));
         SetStatus("New filter created.", error: false);
     }
@@ -73,7 +104,8 @@ public partial class MainWindowViewModel : ObservableObject
             var json    = File.ReadAllText(dlg.FileName);
             var ruleset = JsonSerializer.Deserialize<FilterRuleset>(json, FilterJsonOptions.Default)
                           ?? throw new InvalidOperationException("File deserialised to null.");
-            Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
+            RefreshIssues(ValidationResult.Empty);
+        Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
             SetStatus($"Opened \"{Path.GetFileName(dlg.FileName)}\".", error: false);
         }
         catch (Exception ex)
@@ -84,16 +116,17 @@ public partial class MainWindowViewModel : ObservableObject
 
     // ── Export ────────────────────────────────────────────────────────────
 
-    [RelayCommand(CanExecute = nameof(HasEditor))]
+    [RelayCommand(CanExecute = nameof(CanExport))]
     private void CopyCode()
     {
         try
         {
             var ruleset = Editor!.BuildRuleset();
             var result = _validator.Validate(ruleset);
+            RefreshIssues(result);
             if (!result.IsValid)
             {
-                SetStatus(string.Join(" ", result.Errors.Select(e => e.Message)), error: true);
+                SetStatus($"Cannot export — {result.Errors.Count()} validation error(s). See panel.", error: true);
                 return;
             }
             Clipboard.SetText(FilterCodec.Encode(ruleset));
@@ -105,7 +138,9 @@ public partial class MainWindowViewModel : ObservableObject
         }
     }
 
-    [RelayCommand(CanExecute = nameof(HasEditor))]
+    private bool CanExport() => Editor is not null && !HasBlockingErrors;
+
+    [RelayCommand(CanExecute = nameof(CanExport))]
     private void SaveJson()
     {
         var dlg = new SaveFileDialog
@@ -121,9 +156,10 @@ public partial class MainWindowViewModel : ObservableObject
         {
             var ruleset = Editor.BuildRuleset();
             var result = _validator.Validate(ruleset);
+            RefreshIssues(result);
             if (!result.IsValid)
             {
-                SetStatus(string.Join(" ", result.Errors.Select(e => e.Message)), error: true);
+                SetStatus($"Cannot save — {result.Errors.Count()} validation error(s). See panel.", error: true);
                 return;
             }
             var json = JsonSerializer.Serialize(ruleset, FilterJsonOptions.Default);
@@ -154,6 +190,7 @@ public partial class MainWindowViewModel : ObservableObject
 
     private void ApplyFromRawEditor(FilterRuleset ruleset)
     {
+        RefreshIssues(ValidationResult.Empty);
         Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
         SetStatus("Filter updated from Raw Editor.", error: false);
     }
@@ -165,7 +202,8 @@ public partial class MainWindowViewModel : ObservableObject
         try
         {
             var ruleset = FilterCodec.Decode(code);
-            Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
+            RefreshIssues(ValidationResult.Empty);
+        Editor = new VisualEditorViewModel(_conditionFactory,ruleset);
             SetStatus($"Loaded \"{ruleset.Name}\" — {ruleset.Rules.Count} rule(s).", error: false);
         }
         catch (Exception ex)
