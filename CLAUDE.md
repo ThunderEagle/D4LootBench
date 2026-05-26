@@ -99,8 +99,3 @@ dotnet publish src/FilterForge.App -r win-x64 -p:PublishSingleFile=true --self-c
 ## Ad-Hoc Verification
 Use `dotnet run verify.cs` (no extra install — built into .NET 10) for one-off C# scripts that reference the solution. Write a top-level statement file, add project references inline, and run. Do NOT use `dotnet script` — that requires installing a separate global tool. Prefer a temporary xunit test or `dotnet run verify.cs` over standalone scripts.
 
-## Attribution Required (Before Public Release)
-See `docs/filter-format.md` for full wording. Sources: Upsilon72/d4-filter-generator (MIT), fnuecke/diablo4-loot-filter-viewer (Unlicense), DiabloTools/d4data (MIT), d4lfteam/d4lf (MIT), Raxx (real-world filter).
-
-## README Troubleshooting Note
-When writing README.md: include a troubleshooting note that if a share code imported from an external source fails to decode or produces unexpected results, the user should re-export the filter from the in-game UI and use that fresh code. Older tool exports or manually-shared codes may have subtle encoding differences (e.g. the GitHub copy of Raxx's filter has 13 greater entries per condition instead of the game's 14).
