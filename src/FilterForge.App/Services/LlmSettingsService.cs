@@ -1,6 +1,4 @@
 using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ThunderEagle.FilterForge.Ai;
@@ -38,7 +36,6 @@ public sealed class LlmSettingsService
                         Provider  = stored.Provider,
                         BaseUrl   = string.IsNullOrEmpty(stored.BaseUrl)   ? defaults.BaseUrl   : stored.BaseUrl,
                         ModelName = string.IsNullOrEmpty(stored.ModelName) ? defaults.ModelName : stored.ModelName,
-                        ApiKey    = DecryptApiKey(stored.ApiKeyProtected),
                     };
                 }
             }
@@ -49,40 +46,13 @@ public sealed class LlmSettingsService
 
     private static void Write(LlmSettings settings)
     {
-        var stored = new StoredSettings(
-            settings.Provider,
-            settings.BaseUrl,
-            settings.ModelName,
-            EncryptApiKey(settings.ApiKey));
-
+        var stored = new StoredSettings(settings.Provider, settings.BaseUrl, settings.ModelName);
         Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
         File.WriteAllText(_path, JsonSerializer.Serialize(stored, new JsonSerializerOptions { WriteIndented = true }));
     }
 
-    private static string? EncryptApiKey(string? apiKey)
-    {
-        if (string.IsNullOrEmpty(apiKey)) return null;
-        var plainBytes     = Encoding.UTF8.GetBytes(apiKey);
-        var encryptedBytes = ProtectedData.Protect(plainBytes, null, DataProtectionScope.CurrentUser);
-        return Convert.ToBase64String(encryptedBytes);
-    }
-
-    private static string? DecryptApiKey(string? protectedBase64)
-    {
-        if (string.IsNullOrEmpty(protectedBase64)) return null;
-        try
-        {
-            var encryptedBytes = Convert.FromBase64String(protectedBase64);
-            var plainBytes     = ProtectedData.Unprotect(encryptedBytes, null, DataProtectionScope.CurrentUser);
-            return Encoding.UTF8.GetString(plainBytes);
-        }
-        catch { return null; }
-    }
-
-    // Serialized form — ApiKeyProtected replaces ApiKey so the plain text never touches disk.
     private sealed record StoredSettings(
-        [property: JsonPropertyName("provider")]       LlmProviderType Provider,
-        [property: JsonPropertyName("baseUrl")]        string BaseUrl,
-        [property: JsonPropertyName("modelName")]      string ModelName,
-        [property: JsonPropertyName("apiKeyProtected")] string? ApiKeyProtected);
+        [property: JsonPropertyName("provider")]  LlmProviderType Provider,
+        [property: JsonPropertyName("baseUrl")]   string BaseUrl,
+        [property: JsonPropertyName("modelName")] string ModelName);
 }

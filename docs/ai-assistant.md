@@ -114,7 +114,23 @@ The UI presents this as actionable feedback, not a raw error.
 
 1. **Phase 2 first** — JSON editor and visual editor are prerequisites; the AI assistant only makes sense once users can see and edit rules.
 2. **Phase 4A** — `ILlmProvider` + `OllamaProvider` + `RuleAssistant` + settings UI. Validates the full loop with zero key management.
-3. **Phase 4B** — Add `AnthropicProvider` and `OpenAiProvider`, DPAPI key storage, model-specific tuning.
+3. **Phase 4B (Polish)** — See below.
+
+---
+
+## Phase 4B — Polish
+
+### Ollama connectivity banner
+
+On panel first-open, fire a background ping to `{BaseUrl}/api/tags`. If it fails, show a non-blocking status banner inside the panel ("Ollama not detected at localhost:11434") with a link to setup docs. No gating — the panel must stay visible so users can find it to configure Ollama in the first place. Dismiss the banner automatically if a subsequent ping succeeds (e.g. after the user starts Ollama and hits Test Connection).
+
+Do **not** hide the panel or block app startup on this check. Startup latency and a non-default port would both make that approach brittle.
+
+### LM Studio support
+
+LM Studio exposes an OpenAI-compatible `/v1/chat/completions` endpoint (default: `http://localhost:1234`). `OllamaProvider` already targets that same endpoint shape, so LM Studio likely works today by just changing the Base URL. The one difference is JSON mode: Ollama uses `"format": "json"` (its own field); LM Studio uses `"response_format": {"type": "json_object"}` (OpenAI-style). Unknown fields are typically ignored, so the Ollama field probably falls on the floor silently and the system prompt carries the weight.
+
+**Action:** test LM Studio manually before writing any code. If JSON output quality is acceptable without the correct mode field, update the help text only ("LM Studio users: set Base URL to `http://localhost:1234`"). If reliability is poor, add a lightweight `LmStudioProvider` that swaps `"format"` → `"response_format"` and introduce an `LmStudio` enum value — no other changes needed.
 
 ---
 

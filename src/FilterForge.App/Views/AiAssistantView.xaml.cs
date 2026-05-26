@@ -1,4 +1,3 @@
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using ThunderEagle.FilterForge.App.ViewModels;
@@ -33,11 +32,4 @@ public partial class AiAssistantView : UserControl
         e.Handled = true;
     }
 
-    // PasswordBox.Password has no dependency property, so binding isn't possible.
-    // Push the value into the VM on every keystroke instead.
-    private void ApiKeyBox_PasswordChanged(object sender, RoutedEventArgs e)
-    {
-        if (DataContext is AiAssistantViewModel vm)
-            vm.ApiKey = ((PasswordBox)sender).Password;
-    }
 }

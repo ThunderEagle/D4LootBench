@@ -29,52 +29,26 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-                    <!-- Row 0: Provider -->
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Provider" VerticalAlignment="Center" />
-                    <ComboBox Grid.Row="0" Grid.Column="1"
-                              ItemsSource="{Binding Providers}"
-                              SelectedItem="{Binding Provider}"
-                              Margin="0,2,8,2" />
-
-                    <!-- Row 1: Base URL (Ollama only — cloud providers have fixed endpoints) -->
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Base URL" VerticalAlignment="Center"
-                               Visibility="{Binding IsOllamaProvider, Converter={StaticResource BoolToVis}}" />
-                    <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                    <!-- Row 0: Base URL -->
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Base URL" VerticalAlignment="Center" />
+                    <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
                              Text="{Binding BaseUrl, UpdateSourceTrigger=PropertyChanged}"
-                             Margin="0,2,0,2"
-                             Visibility="{Binding IsOllamaProvider, Converter={StaticResource BoolToVis}}" />
+                             Margin="0,2,0,2" />
 
-                    <!-- Row 2: Model (hidden for Mock; ComboBox with Ollama model list + refresh) -->
-                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Model" VerticalAlignment="Center"
-                               Visibility="{Binding IsConfigurableProvider, Converter={StaticResource BoolToVis}}" />
-                    <DockPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,2,0,2"
-                               Visibility="{Binding IsConfigurableProvider, Converter={StaticResource BoolToVis}}">
+                    <!-- Row 1: Model -->
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Model" VerticalAlignment="Center" />
+                    <DockPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,2,0,2">
                         <Button DockPanel.Dock="Right"
                                 Command="{Binding RefreshModelsCommand}"
                                 Content="⟳" FontSize="14"
-                                ToolTip="Fetch available models from the provider"
-                                Padding="6,1" Margin="4,0,0,0"
-                                Visibility="{Binding IsConfigurableProvider, Converter={StaticResource BoolToVis}}" />
+                                ToolTip="Fetch available models from Ollama"
+                                Padding="6,1" Margin="4,0,0,0" />
                         <ComboBox IsEditable="True"
                                   Text="{Binding ModelName, UpdateSourceTrigger=PropertyChanged}"
                                   ItemsSource="{Binding AvailableModels}" />
                     </DockPanel>
-
-                    <!-- Row 3: API Key (cloud providers only) -->
-                    <TextBlock Grid.Row="3" Grid.Column="0" Text="API Key" VerticalAlignment="Center"
-                               Visibility="{Binding IsApiKeyVisible, Converter={StaticResource BoolToVis}}" />
-                    <PasswordBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"
-                                 Margin="0,2,0,2"
-                                 Visibility="{Binding IsApiKeyVisible, Converter={StaticResource BoolToVis}}"
-                                 x:Name="ApiKeyBox"
-                                 PasswordChanged="ApiKeyBox_PasswordChanged" />
-
-                    <!-- Row 4 equivalent via last row: Buttons -->
-                    <!-- Appended inline as next row -->
                 </Grid>
             </Expander>
 

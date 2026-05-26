@@ -27,10 +27,9 @@ public partial class AiAssistantViewModel : ObservableObject
         _onAddRule       = onAddRule;
 
         var s = settingsService.Current;
-        _provider  = s.Provider;
+        _provider  = s.Provider == LlmProviderType.Mock ? LlmProviderType.Ollama : s.Provider;
         _baseUrl   = s.BaseUrl;
         _modelName = s.ModelName;
-        _apiKey    = s.ApiKey ?? "";
     }
 
     // ── Prompt / generation ───────────────────────────────────────────────
@@ -132,59 +131,25 @@ public partial class AiAssistantViewModel : ObservableObject
 
     // ── Provider settings ─────────────────────────────────────────────────
 
-    public static IReadOnlyList<LlmProviderType> Providers { get; } =
-        Enum.GetValues<LlmProviderType>();
+    // Mock is excluded — it's a dev tool, not a user-facing option.
+    public static IReadOnlyList<LlmProviderType> Providers { get; } = [LlmProviderType.Ollama];
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsConfigurableProvider))]
-    [NotifyPropertyChangedFor(nameof(IsOllamaProvider))]
-    [NotifyPropertyChangedFor(nameof(IsApiKeyVisible))]
     private LlmProviderType _provider;
 
     [ObservableProperty] private string _baseUrl;
     [ObservableProperty] private string _modelName;
-    [ObservableProperty] private string _apiKey;
 
-    /// <summary>True for any provider that has model settings (i.e. not Mock).</summary>
     public bool IsConfigurableProvider => Provider != LlmProviderType.Mock;
-    /// <summary>True only for Ollama — the only provider where BaseUrl is configurable.</summary>
-    public bool IsOllamaProvider => Provider == LlmProviderType.Ollama;
-    public bool IsApiKeyVisible  => Provider is LlmProviderType.OpenAi or LlmProviderType.Anthropic;
 
     partial void OnProviderChanged(LlmProviderType value)
     {
-        // Populate static fallbacks immediately so the dropdown isn't empty
-        AvailableModels.Clear();
-        var defaults = value switch
-        {
-            LlmProviderType.Anthropic => _anthropicFallbacks,
-            LlmProviderType.OpenAi    => _openAiFallbacks,
-            _                          => []
-        };
-        foreach (var m in defaults) AvailableModels.Add(m);
-
-        // Ollama has no auth requirement — auto-fetch on switch
         if (value == LlmProviderType.Ollama)
             _ = RefreshModels(CancellationToken.None);
     }
 
     // ── Model list ────────────────────────────────────────────────────────
-
-    private static readonly string[] _anthropicFallbacks =
-    [
-        "claude-haiku-4-5-20251001",
-        "claude-sonnet-4-6",
-        "claude-opus-4-7",
-    ];
-
-    private static readonly string[] _openAiFallbacks =
-    [
-        "gpt-4o-mini",
-        "gpt-4o",
-        "gpt-4.1",
-        "o1-mini",
-        "o1",
-    ];
 
     public ObservableCollection<string> AvailableModels { get; } = [];
 
@@ -198,17 +163,11 @@ public partial class AiAssistantViewModel : ObservableObject
         IsRefreshingModels = true;
         try
         {
-            var models = Provider switch
-            {
-                LlmProviderType.Ollama    => await FetchOllamaModels(ct),
-                LlmProviderType.Anthropic => await FetchAnthropicModels(ct),
-                LlmProviderType.OpenAi    => await FetchOpenAiModels(ct),
-                _                          => []
-            };
+            var models = await FetchOllamaModels(ct);
             AvailableModels.Clear();
             foreach (var m in models) AvailableModels.Add(m);
         }
-        catch { /* unreachable or auth failure — static fallbacks remain usable */ }
+        catch { /* Ollama not running — list stays empty, user can type a model name */ }
         finally
         {
             IsRefreshingModels = false;
@@ -225,46 +184,10 @@ public partial class AiAssistantViewModel : ObservableObject
         return response?.Models?.Select(m => m.Name) ?? [];
     }
 
-    private async Task<IEnumerable<string>> FetchAnthropicModels(CancellationToken ct)
-    {
-        using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
-        http.DefaultRequestHeaders.Add("x-api-key", ApiKey);
-        http.DefaultRequestHeaders.Add("anthropic-version", "2023-06-01");
-        var response = await http.GetFromJsonAsync<AnthropicModelsResponse>(
-            "https://api.anthropic.com/v1/models", ct);
-        return response?.Data?.Select(m => m.Id) ?? [];
-    }
-
-    private async Task<IEnumerable<string>> FetchOpenAiModels(CancellationToken ct)
-    {
-        using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
-        http.DefaultRequestHeaders.Authorization =
-            new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", ApiKey);
-        var response = await http.GetFromJsonAsync<OpenAiModelsResponse>(
-            "https://api.openai.com/v1/models", ct);
-        // Filter to chat-completion models only; exclude embeddings, audio, image, etc.
-        return response?.Data?
-            .Select(m => m.Id)
-            .Where(id => id.StartsWith("gpt-") || id.StartsWith("o1") ||
-                         id.StartsWith("o3") || id.StartsWith("o4"))
-            .Order()
-            ?? Enumerable.Empty<string>();
-    }
-
     private sealed record OllamaTagsResponse(
         [property: JsonPropertyName("models")] List<OllamaModelEntry>? Models);
     private sealed record OllamaModelEntry(
         [property: JsonPropertyName("name")] string Name);
-
-    private sealed record AnthropicModelsResponse(
-        [property: JsonPropertyName("data")] List<AnthropicModelEntry>? Data);
-    private sealed record AnthropicModelEntry(
-        [property: JsonPropertyName("id")] string Id);
-
-    private sealed record OpenAiModelsResponse(
-        [property: JsonPropertyName("data")] List<OpenAiModelEntry>? Data);
-    private sealed record OpenAiModelEntry(
-        [property: JsonPropertyName("id")] string Id);
 
     // ── Test connection ───────────────────────────────────────────────────
 
@@ -280,7 +203,6 @@ public partial class AiAssistantViewModel : ObservableObject
             Provider  = Provider,
             BaseUrl   = BaseUrl,
             ModelName = ModelName,
-            ApiKey    = string.IsNullOrWhiteSpace(ApiKey) ? null : ApiKey,
         });
         StatusText = "Settings saved.";
         HasError   = false;
@@ -298,7 +220,6 @@ public partial class AiAssistantViewModel : ObservableObject
             Provider  = Provider,
             BaseUrl   = BaseUrl,
             ModelName = ModelName,
-            ApiKey    = string.IsNullOrWhiteSpace(ApiKey) ? null : ApiKey,
         };
 
         try
