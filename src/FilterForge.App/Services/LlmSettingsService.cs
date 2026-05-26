@@ -27,7 +27,9 @@ public sealed class LlmSettingsService
         {
             if (File.Exists(_path))
             {
-                var stored = JsonSerializer.Deserialize<StoredSettings>(File.ReadAllText(_path));
+                var stored = JsonSerializer.Deserialize<StoredSettings>(
+                    File.ReadAllText(_path),
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                 if (stored is not null)
                 {
                     var defaults = new LlmSettings();
