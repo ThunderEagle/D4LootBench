@@ -77,7 +77,7 @@ To edit it (e.g. to add a newly released item or correct a name):
 2. Edit the file with any text editor
 3. Restart FilterForge — the local copy takes precedence over the embedded one
 
-See [docs/d4-data-format.md](docs/d4-data-format.md) for the full schema reference. Community corrections are welcome via Issues or pull requests.
+See [docs/d4-data-format.md](docs/d4-data-format.md) for the full schema reference. Community corrections are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
