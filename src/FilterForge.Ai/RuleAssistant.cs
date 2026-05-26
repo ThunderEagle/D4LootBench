@@ -96,6 +96,25 @@ public sealed class RuleAssistant(
                     conditions.Add(new ItemPowerCondition(ic.Minimum, ic.Maximum));
                     break;
 
+                case "itemproperties":
+                {
+                    var mask = 0;
+                    foreach (var p in ic.Properties ?? [])
+                    {
+                        if (p.Equals("Ancestral", StringComparison.OrdinalIgnoreCase))
+                            mask |= 4;
+                        else
+                            errors.Add($"Unknown item property '{p}'. Only 'Ancestral' is supported.");
+                    }
+                    if (errors.Count == 0)
+                        conditions.Add(new ItemPropertiesCondition(mask == 0 ? 4 : mask));
+                    break;
+                }
+
+                case "codex":
+                    conditions.Add(new CodexCondition());
+                    break;
+
                 case "requiredaffixes":
                 {
                     var ids = ResolveNames(ic.Affixes ?? [],
@@ -228,6 +247,7 @@ public sealed class RuleAssistant(
     {
         public string       Type         { get; set; } = "";
         public List<string>? Items       { get; set; }
+        public List<string>? Properties     { get; set; }
         public List<string>? Affixes        { get; set; }
         public List<string>? GreaterAffixes { get; set; }
         public List<string>? Rarities       { get; set; }
