@@ -52,7 +52,7 @@ Complete S04_ affix set (all 236 type-104 S04_ entries from CoreTOC) including:
 - **Estimated Total:** ~250 skills
 
 ### What We Have
-- All 9 classes documented (Barbarian, Sorcerer, Necromancer, Druid, Rogue, Paladin, Spiritborn, Warlock)
+- All 8 classes documented (Barbarian, Sorcerer, Necromancer, Druid, Rogue, Paladin, Spiritborn, Warlock)
 - ~200 core verified and datamined skills per AGENTS.md
 - Coverage includes new Warlock class (Season 13)
 
