@@ -1,6 +1,6 @@
 using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
+using ThunderEagle.FilterForge.App.Services;
 using ThunderEagle.FilterForge.App.ViewModels;
 using ThunderEagle.FilterForge.App.Views;
 
@@ -8,19 +8,46 @@ namespace ThunderEagle.FilterForge.App;
 
 public partial class MainWindow
 {
-    private readonly MainWindowViewModel _vm;
+    private readonly MainWindowViewModel  _vm;
+    private readonly WindowSettingsService _windowSettings;
     private double _savedPanelHeight = 220;
     private HelpWindow? _helpWindow;
 
-    public MainWindow(MainWindowViewModel vm)
+    public MainWindow(MainWindowViewModel vm, WindowSettingsService windowSettings)
     {
         InitializeComponent();
-        _vm = vm;
-        DataContext = _vm;
+        _vm             = vm;
+        _windowSettings = windowSettings;
+        DataContext     = _vm;
         _vm.ShowRawEditorRequested += OnShowRawEditorRequested;
         _vm.OpenHelpRequested     += OnOpenHelpRequested;
         _vm.ShowAboutRequested    += OnShowAboutRequested;
         _vm.PropertyChanged       += OnVmPropertyChanged;
+
+        RestoreWindowSettings();
+    }
+
+    private void RestoreWindowSettings()
+    {
+        _savedPanelHeight = _windowSettings.AiPanelHeight;
+        Width             = _windowSettings.Width;
+        Height            = _windowSettings.Height;
+
+        if (_windowSettings.Top  is { } top)  Top  = top;
+        if (_windowSettings.Left is { } left) Left = left;
+
+        WindowState = _windowSettings.State;
+    }
+
+    protected override void OnClosing(CancelEventArgs e)
+    {
+        var panelRow = ContentGrid.RowDefinitions[2];
+        if (panelRow.ActualHeight > 0)
+            _savedPanelHeight = panelRow.ActualHeight;
+
+        _windowSettings.AiPanelHeight = _savedPanelHeight;
+        _windowSettings.Save(this);
+        base.OnClosing(e);
     }
 
     private void OnVmPropertyChanged(object? sender, PropertyChangedEventArgs e)

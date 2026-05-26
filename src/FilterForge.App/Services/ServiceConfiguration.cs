@@ -18,6 +18,7 @@ internal static class ServiceConfiguration
         services.AddSingleton<IConditionViewModelFactory, ConditionViewModelFactory>();
 
         services.AddSingleton<LlmSettingsService>();
+        services.AddSingleton<WindowSettingsService>();
         services.AddSingleton<SystemPromptBuilder>();
         services.AddSingleton<NameResolver>();
         services.AddSingleton<ILlmProvider, SettingsAwareLlmProvider>();

@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     d:DataContext="{d:DesignInstance Type=vm:VisualEditorViewModel, IsDesignTimeCreatable=False}">
 
-    <Grid>
+    <Grid x:Name="EditorGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="320" MinWidth="200" />
             <ColumnDefinition Width="6" />
@@ -83,7 +83,7 @@
         </DockPanel>
 
         <!-- ── Splitter ──────────────────────────────────────────────── -->
-        <GridSplitter Grid.Column="1"
+        <GridSplitter x:Name="RuleListSplitter" Grid.Column="1"
                       HorizontalAlignment="Stretch"
                       Width="6"
                       ShowsPreview="True"
