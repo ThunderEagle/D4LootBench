@@ -6,6 +6,9 @@
 # Claude Code local settings (machine-specific permissions)
 .claude/
 
+# Private planning docs — not for public repo
+docs/launch-plan.md
+
 # dotenv files
 .env
 
