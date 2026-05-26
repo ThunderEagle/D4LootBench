@@ -17,44 +17,67 @@
         <!-- ── Toolbar ──────────────────────────────────────────────── -->
         <ToolBarTray DockPanel.Dock="Top" IsLocked="True">
             <ToolBar>
-                <Button Content="New"
-                        Command="{Binding NewFilterCommand}"
+                <Button Command="{Binding NewFilterCommand}"
                         ToolTip="Create an empty filter"
-                        Padding="8,2" />
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8A5;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="New" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
 
                 <Separator />
 
-                <Button Content="Paste Code"
-                        Command="{Binding PasteCodeCommand}"
+                <Button Command="{Binding PasteCodeCommand}"
                         ToolTip="Import a D4 filter share code from the clipboard"
-                        Padding="8,2" />
-                <Button Content="Open JSON…"
-                        Command="{Binding OpenJsonCommand}"
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE77F;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Paste Code" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Command="{Binding OpenJsonCommand}"
                         ToolTip="Open a previously saved filter JSON file"
-                        Padding="8,2" />
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Open JSON…" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
 
                 <Separator />
 
-                <Button Content="Copy Code"
-                        Command="{Binding CopyCodeCommand}"
+                <Button Command="{Binding CopyCodeCommand}"
                         ToolTip="Export the filter as a D4 share code to the clipboard (max 25 rules; disabled when validation errors exist)"
-                        Padding="8,2" />
-                <Button Content="Save JSON…"
-                        Command="{Binding SaveJsonCommand}"
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Copy Code" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Command="{Binding SaveJsonCommand}"
                         ToolTip="Save the filter as a local JSON file"
-                        Padding="8,2" />
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Save JSON…" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
 
                 <Separator />
 
-                <Button Content="Raw Editor"
-                        Command="{Binding OpenRawEditorCommand}"
+                <Button Command="{Binding OpenRawEditorCommand}"
                         ToolTip="Open the JSON raw editor in a separate window"
-                        Padding="8,2" />
+                        Padding="8,2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8D4;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="Raw Editor" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
 
                 <Separator />
 
-                <Button Content="{Binding IssuesBadge}"
-                        Command="{Binding ValidateCommand}"
+                <Button Command="{Binding ValidateCommand}"
                         ToolTip="Check the filter against game-enforced rules"
                         Padding="8,2">
                     <Button.Style>
@@ -68,6 +91,10 @@
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="14" VerticalAlignment="Center" Margin="0,0,5,0" />
+                        <TextBlock Text="{Binding IssuesBadge}" VerticalAlignment="Center" />
+                    </StackPanel>
                 </Button>
 
             </ToolBar>
