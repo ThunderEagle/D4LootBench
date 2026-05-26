@@ -31,6 +31,7 @@
                          SelectedItem="{Binding SelectedAvailable, Mode=TwoWay}"
                          DisplayMemberPath="DisplayName"
                          MinHeight="200"
+                         MaxHeight="300"
                          ToolTip="Double-click an item to add it"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.InputBindings>
@@ -73,6 +74,7 @@
                          SelectedItem="{Binding SelectedCurrent, Mode=TwoWay}"
                          DisplayMemberPath="DisplayName"
                          MinHeight="200"
+                         MaxHeight="300"
                          ToolTip="Double-click an item to remove it"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.InputBindings>
