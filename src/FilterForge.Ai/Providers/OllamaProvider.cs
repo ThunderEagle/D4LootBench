@@ -29,7 +29,19 @@ public sealed class OllamaProvider : ILlmProvider, IDisposable
                 new { role = "system", content = systemPrompt },
                 new { role = "user",   content = userPrompt   }
             },
-            format      = "json",
+            // JSON Schema format (Ollama 0.4+): grammar-constrained generation enforces
+            // the top-level shape so malformed structure is impossible, not just discouraged.
+            format = new
+            {
+                type       = "object",
+                required   = new[] { "name", "visibility", "conditions" },
+                properties = new
+                {
+                    name       = new { type = "string" },
+                    visibility = new { type = "string", @enum = new[] { "Show", "Recolor", "HideAll" } },
+                    conditions = new { type = "array", items = new { type = "object" } }
+                }
+            },
             stream      = false,
             temperature = 0.1
         };
@@ -83,7 +95,7 @@ public sealed class OllamaProvider : ILlmProvider, IDisposable
         content = content.Trim();
         if (!content.StartsWith("```")) return content;
         var start = content.IndexOf('\n') + 1;
-        var end   = content.LastIndexOf("```");
+        var end   = content.LastIndexOf("```", StringComparison.Ordinal);
         return start > 0 && end > start ? content[start..end].Trim() : content;
     }
 

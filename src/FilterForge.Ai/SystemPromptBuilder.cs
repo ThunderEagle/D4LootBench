@@ -63,6 +63,23 @@ public sealed class SystemPromptBuilder
 
         sb.AppendLine("""
 
+            EXAMPLE — named Greater Affix (follow this pattern exactly):
+            Request: "show items that have critical strike chance as a greater affix"
+            Response:
+            {
+              "name": "GA Crit Chance",
+              "visibility": "Show",
+              "conditions": [
+                {
+                  "type": "RequiredAffixes",
+                  "affixes": ["Critical Strike Chance"],
+                  "greaterAffixes": ["Critical Strike Chance"],
+                  "minimumCount": 1
+                }
+              ]
+            }
+            The GA affix appears in BOTH "affixes" AND "greaterAffixes". No separate GreaterAffix condition is added.
+
             RULES:
             - Use ONLY names from the lists above — do not invent or abbreviate names.
             - ItemType uses names from ITEM TYPES only. SpecificUnique uses names from UNIQUE ITEMS only. Never mix the two lists.

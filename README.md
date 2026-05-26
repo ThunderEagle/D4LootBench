@@ -47,7 +47,7 @@ The AI assistant is an opt-in feature — FilterForge works fully without it.
 **Recommended setup: [Ollama](https://ollama.com) (free, runs locally)**
 
 1. Install Ollama from [ollama.com](https://ollama.com)
-2. Pull a model (see table below): `ollama pull qwen2.5-coder:7b`
+2. Pull a model (see table below): `ollama pull qwen2.5-coder:14b`
 3. Open FilterForge → click the **AI** button in the toolbar to expand the panel
 4. Set **Base URL** to `http://localhost:11434` and **Model** to the name you pulled
 
@@ -55,13 +55,14 @@ Then describe what you want in plain English, e.g. *"show all ancestral items wi
 
 **Recommended models**
 
-| Model | VRAM | Notes |
-|-------|------|-------|
-| `qwen2.5-coder:7b` | ~4 GB | Best balance of quality and speed; strong structured JSON output — recommended starting point |
-| `qwen2.5-coder:14b` | ~9 GB | Higher quality rule generation; tested and confirmed working |
-| `llama3.2` | ~2 GB | Runs on CPU if you have no GPU; output quality is lower for structured tasks |
+| GPU VRAM | Recommended model | Notes |
+|----------|-------------------|-------|
+| 10 GB+ | `qwen2.5-coder:14b` | Best quality; 11/11 on structured rule generation |
+| 6–9 GB | `qwen2.5-coder:7b` | Good quality (11/11); fits most mid-range GPUs |
 
-> Models not listed here may work but have not been tested. Coder-focused models generally produce better results for this task since the output is structured JSON.
+> If you're unsure how much VRAM your GPU has, check Task Manager → Performance → GPU. If a model is too large to fit in VRAM, Ollama will silently fall back to CPU — inference will work but will be significantly slower.
+
+> **Other models:** Non-coding general-purpose models (e.g. `llama3.2`) are not recommended. The assistant output is structured JSON that must match a strict schema — general models tested poorly and produced incorrect rules even with precise prompts. Use a coder model if at all possible. If you choose to experiment with other models, review every generated rule carefully before adding it to your filter.
 
 > Cloud providers (Anthropic, OpenAI) are not yet wired into the UI. The provider abstraction is in place and may be added based on community interest.
 

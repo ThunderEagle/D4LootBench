@@ -46,7 +46,7 @@ public sealed class LlmSettings
 {
     public LlmProviderType Provider { get; set; } = LlmProviderType.Ollama;
     public string BaseUrl { get; set; } = "http://localhost:11434";  // Ollama default
-    public string ModelName { get; set; } = "llama3.2";
+    public string ModelName { get; set; } = "qwen2.5-coder:14b";
     public string? ApiKey { get; set; }  // null for Ollama; encrypted via DPAPI before storage
 }
 
@@ -63,7 +63,7 @@ API keys are encrypted with `System.Security.Cryptography.ProtectedData` (Window
 - API is OpenAI-compatible at `{BaseUrl}/v1/chat/completions`
 - No auth header needed
 - Model list queryable at `{BaseUrl}/api/tags`
-- Recommended models: `qwen2.5-coder:7b` (best balance), `qwen2.5-coder:14b` (tested/confirmed), `llama3.2` (CPU fallback)
+- Recommended models: `qwen2.5-coder:14b` (11/11, 10 GB+ VRAM), `qwen2.5-coder:7b` (11/11, 6 GB+ VRAM); general-purpose models not recommended — poor structured output accuracy
 - JSON mode: pass `"format": "json"` in request body
 
 ### OpenAI
