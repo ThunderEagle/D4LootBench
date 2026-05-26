@@ -9,7 +9,7 @@ Allow users to describe a filter rule in plain English and have an LLM generate 
 - **Public release:** AI assistant is present but disabled until the user configures a provider in settings.
 - **No hardcoded API key** — the developer never pays for user traffic.
 - **Ollama** is the recommended free path; the app ships with a setup guide in the help section.
-- Cloud providers (Anthropic, OpenAI) are available for users who already have accounts.
+- Cloud providers (Anthropic, OpenAI) were considered but not shipped in Phase 4A. The `ILlmProvider` abstraction is in place; cloud support may be added if there is user demand.
 
 ---
 
