@@ -19,6 +19,11 @@
     <UseWPF>true</UseWPF>
     <RootNamespace>ThunderEagle.FilterForge.App</RootNamespace>
     <AssemblyName>ThunderEagle.FilterForge.App</AssemblyName>
+    <ApplicationIcon>Assets\filterforge.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\filterforge.ico" />
+  </ItemGroup>
 
 </Project>

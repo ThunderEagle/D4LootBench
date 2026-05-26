@@ -9,6 +9,7 @@
     mc:Ignorable="d"
     d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel, IsDesignTimeCreatable=False}"
     Title="FilterForge — Filter Editor"
+    Icon="Assets/filterforge.ico"
     Height="700" Width="1100"
     MinHeight="450" MinWidth="700">
 
