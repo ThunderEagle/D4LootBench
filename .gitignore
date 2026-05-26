@@ -9,6 +9,10 @@
 # Private planning docs — not for public repo
 docs/launch-plan.md
 
+# Dev tool configs — machine-specific, not for public repo
+opencode.json
+AGENTS.md
+
 # dotenv files
 .env
 
