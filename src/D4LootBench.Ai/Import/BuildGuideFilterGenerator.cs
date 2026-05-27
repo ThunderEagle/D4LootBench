@@ -76,10 +76,10 @@ public sealed class BuildGuideFilterGenerator(NameResolver nameResolver)
                 warnings.Add($"Could not resolve item type: \"{itemTypeName}\"");
         }
 
-        // Take up to 2 affixes in priority order (Priority=0 means positional — treat as already ordered)
+        // Take up to 4 affixes in priority order (Priority=0 means positional — treat as already ordered)
         var targetAffixes = slot.Affixes
             .OrderBy(a => a.Priority == 0 ? int.MaxValue : a.Priority)
-            .Take(2)
+            .Take(4)
             .ToList();
 
         var affixIds       = new List<uint>();
@@ -101,7 +101,7 @@ public sealed class BuildGuideFilterGenerator(NameResolver nameResolver)
 
         if (affixIds.Count > 0)
         {
-            conditions.Add(new AffixCondition(affixIds, affixIds.Count)
+            conditions.Add(new AffixCondition(affixIds, Math.Min(2, affixIds.Count))
             {
                 GreaterEntries = greaterEntries
             });
