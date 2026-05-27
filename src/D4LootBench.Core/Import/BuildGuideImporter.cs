@@ -63,7 +63,7 @@ public sealed class BuildGuideImporter
         if (text.Contains("toggle modifiers", StringComparison.OrdinalIgnoreCase))
             return BuildGuideFormat.Mobalytics;
 
-        if (text.Contains("Gear Affixes\t", StringComparison.Ordinal))
+        if (text.Contains("Gear Affixes", StringComparison.OrdinalIgnoreCase))
             return BuildGuideFormat.IcyVeins;
 
         // Maxroll: first non-blank line is a known slot keyword

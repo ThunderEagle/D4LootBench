@@ -27,8 +27,8 @@ public sealed class IcyVeinsParser : IBuildGuideParser
             switch (state)
             {
                 case State.Idle:
-                    // Header row: "Slot\tGear Affixes\tTempering Affixes"
-                    if (!isBlank && rawLine.Contains("Gear Affixes") && rawLine.Contains('\t'))
+                    // Header row: any line containing "Gear Affixes" (with or without tabs)
+                    if (!isBlank && rawLine.Contains("Gear Affixes", StringComparison.OrdinalIgnoreCase))
                         state = State.Rows;
                     break;
 
@@ -44,6 +44,18 @@ public sealed class IcyVeinsParser : IBuildGuideParser
                         var affixPart = StripTemperColumn(rawLine[(tabIdx + 1)..]);
                         TryAddNumberedAffix(affixPart, affixes, ref priorityCounter);
                         state = State.AffixContinuation;
+                    }
+                    else
+                    {
+                        // Slot name on its own line (no tab to first affix)
+                        var trimmed = rawLine.Trim();
+                        if (!IsNumberedAffix(trimmed) && !trimmed.StartsWith('+'))
+                        {
+                            EmitSlot();
+                            slotLabel = trimmed;
+                            priorityCounter = 0;
+                            state = State.AffixContinuation;
+                        }
                     }
                     break;
 
@@ -82,7 +94,18 @@ public sealed class IcyVeinsParser : IBuildGuideParser
                     }
                     else
                     {
-                        TryAddNumberedAffix(rawLine.Trim(), affixes, ref priorityCounter);
+                        var trimmed = rawLine.Trim();
+                        if (IsNumberedAffix(trimmed))
+                        {
+                            TryAddNumberedAffix(trimmed, affixes, ref priorityCounter);
+                        }
+                        else if (!trimmed.StartsWith('+'))
+                        {
+                            // New slot name on its own line; starts-with-'+' lines are tempering affixes
+                            EmitSlot();
+                            slotLabel = trimmed;
+                            priorityCounter = 0;
+                        }
                     }
                     break;
 

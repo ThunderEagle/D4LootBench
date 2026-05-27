@@ -217,6 +217,22 @@ public sealed class BuildGuideParserTests
     // ── Icy Veins browser multi-line cell paste ──────────────────────────────
 
     [Fact]
+    public void IcyVeins_CrlfLineEndings_ParsesCorrectSlotCount()
+    {
+        var crlfFixture = IcyVeinsFixture.ReplaceLineEndings("\r\n");
+        var guide = new IcyVeinsParser().Parse(crlfFixture);
+        guide.Slots.Count.ShouldBe(2);
+    }
+
+    [Fact]
+    public void IcyVeins_SlotNameOnOwnLine_ParsesCorrectSlotCount()
+    {
+        // Some browsers paste the slot name and first affix on separate lines (no tab between them)
+        var guide = new IcyVeinsParser().Parse(IcyVeinsSeparateLineFixture);
+        guide.Slots.Count.ShouldBe(2);
+    }
+
+    [Fact]
     public void IcyVeins_BrowserPaste_ParsesCorrectSlotCount()
     {
         var guide = new IcyVeinsParser().Parse(IcyVeinsBrowserPasteFixture);
@@ -317,6 +333,20 @@ public sealed class BuildGuideParserTests
         "2. Maximum Life\n" +
         "3. Armor\n" +
         "4. Strength\t+ Category (Name)\n";
+
+    // Slot name on its own line (no tab between slot and first affix — some browser/OS combinations).
+    private const string IcyVeinsSeparateLineFixture =
+        "Slot\tGear Affixes\tTempering Affixes\n" +
+        "Helm\n" +
+        "1. Critical Strike Chance\n" +
+        "2. Attack Speed\n" +
+        "3. Dexterity\n" +
+        "4. Movement Speed\n" +
+        "Chest\n" +
+        "1. Damage Reduction\n" +
+        "2. Maximum Life\n" +
+        "3. Armor\n" +
+        "4. Strength\n";
 
     // Browser multi-line cell paste: each affix on its own row with empty first column (leading tab).
     // Tempering affixes appear as a separate row with two leading tabs.
