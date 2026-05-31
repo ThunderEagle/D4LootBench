@@ -1,5 +1,5 @@
 {
-  "formatVersion": 2,
+  "formatVersion": 3,
   "source": "LootBenchDataExtract build 3.0.3.72031",
   "affixes": [
     {
@@ -4259,4027 +4259,4832 @@
     {
       "displayName": "Fists of Fate",
       "snoId": "0x0002d7ab",
-      "internalName": "Gloves_Unique_Generic_002"
+      "internalName": "Gloves_Unique_Generic_002",
+      "isMythic": false
     },
     {
       "displayName": "Gloves of the Illuminator",
       "snoId": "0x00031a2d",
-      "internalName": "Gloves_Unique_Sorc_002"
+      "internalName": "Gloves_Unique_Sorc_002",
+      "isMythic": false
     },
     {
       "displayName": "Penitent Greaves",
       "snoId": "0x00032d88",
-      "internalName": "Boots_Unique_Generic_001"
+      "internalName": "Boots_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Doombringer",
       "snoId": "0x00035f59",
-      "internalName": "1HSword_Unique_Generic_001"
+      "internalName": "1HSword_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "The Grandfather",
       "snoId": "0x00036827",
-      "internalName": "2HSword_Unique_Generic_001"
+      "internalName": "2HSword_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "The Butcher\u0027s Cleaver",
       "snoId": "0x00036837",
-      "internalName": "1HAxe_Unique_Generic_001"
+      "internalName": "1HAxe_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Windforce",
       "snoId": "0x00036b4a",
-      "internalName": "2HBow_Unique_Rogue_006"
+      "internalName": "2HBow_Unique_Rogue_006",
+      "isMythic": false
     },
     {
       "displayName": "Andariel\u0027s Visage",
       "snoId": "0x0003b10a",
-      "internalName": "Helm_Unique_Generic_001"
+      "internalName": "Helm_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "Frostburn",
       "snoId": "0x0003e301",
-      "internalName": "Gloves_Unique_Generic_003"
+      "internalName": "Gloves_Unique_Generic_003",
+      "isMythic": false
     },
     {
       "displayName": "Fields of Crimson",
       "snoId": "0x00047319",
-      "internalName": "2HSword_Unique_Barb_002"
+      "internalName": "2HSword_Unique_Barb_002",
+      "isMythic": false
     },
     {
       "displayName": "Flickerstep",
       "snoId": "0x00047355",
-      "internalName": "Boots_Unique_Generic_002"
+      "internalName": "Boots_Unique_Generic_002",
+      "isMythic": false
     },
     {
       "displayName": "Gohr\u0027s Devastating Grips",
       "snoId": "0x000496bf",
-      "internalName": "Gloves_Unique_Barb_001"
+      "internalName": "Gloves_Unique_Barb_001",
+      "isMythic": false
     },
     {
       "displayName": "Hellhammer",
       "snoId": "0x0005415d",
-      "internalName": "2HMace_Unique_Barb_001"
+      "internalName": "2HMace_Unique_Barb_001",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0005698c",
-      "internalName": "2HStaff_Unique_Druid_001"
+      "internalName": "2HStaff_Unique_Druid_001",
+      "isMythic": false
     },
     {
       "displayName": "Ancients\u0027 Oath",
       "snoId": "0x00057189",
-      "internalName": "2HAxe_Unique_Barb_001"
+      "internalName": "2HAxe_Unique_Barb_001",
+      "isMythic": false
     },
     {
       "displayName": "Mad Wolf\u0027s Glee",
       "snoId": "0x000575b4",
-      "internalName": "Chest_Unique_Druid_002"
+      "internalName": "Chest_Unique_Druid_002",
+      "isMythic": false
     },
     {
       "displayName": "Ahavarion, Spear of Lycander",
       "snoId": "0x00057afd",
-      "internalName": "2HStaff_Unique_Generic_100"
+      "internalName": "2HStaff_Unique_Generic_100",
+      "isMythic": true
     },
     {
       "displayName": "Azurewrath",
       "snoId": "0x00057bb8",
-      "internalName": "1HSword_Unique_Generic_100"
+      "internalName": "1HSword_Unique_Generic_100",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x00057d3f",
-      "internalName": "2HBow_Unique_Rogue_001"
+      "internalName": "2HBow_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x00061184",
-      "internalName": "1HMace_Unique_Druid_001"
+      "internalName": "1HMace_Unique_Druid_001",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Infinite",
       "snoId": "0x000660e1",
-      "internalName": "Chest_Unique_Sorc_002"
+      "internalName": "Chest_Unique_Sorc_002",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0006e213",
-      "internalName": "1HDagger_Unique_Rogue_001"
+      "internalName": "1HDagger_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "Deathmask of Nirmitruq",
       "snoId": "0x0006f2ed",
-      "internalName": "Helm_Unique_Rogue_002"
+      "internalName": "Helm_Unique_Rogue_002",
+      "isMythic": false
     },
     {
       "displayName": "Asheara\u0027s Khanjar",
       "snoId": "0x00072a90",
-      "internalName": "1HDagger_Unique_Rogue_002"
+      "internalName": "1HDagger_Unique_Rogue_002",
+      "isMythic": false
     },
     {
       "displayName": "Eyes in the Dark",
       "snoId": "0x00072e0b",
-      "internalName": "Pants_Unique_Rogue_004"
+      "internalName": "Pants_Unique_Rogue_004",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of the Nameless",
       "snoId": "0x00078d8d",
-      "internalName": "Helm_Unique_Rogue_001"
+      "internalName": "Helm_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "Boost Helm",
       "snoId": "0x00079b1c",
-      "internalName": "Helm_Unique_Generic_Boost_NoPowers"
+      "internalName": "Helm_Unique_Generic_Boost_NoPowers",
+      "isMythic": false
     },
     {
       "displayName": "Boost Dagger",
       "snoId": "0x00079b75",
-      "internalName": "1HDagger_Unique_Generic_Boost_NoPowers1"
+      "internalName": "1HDagger_Unique_Generic_Boost_NoPowers1",
+      "isMythic": false
     },
     {
       "displayName": "Boost Scythe",
       "snoId": "0x00079b7d",
-      "internalName": "2HScythe_Unique_Generic_Boost_NoPowers"
+      "internalName": "2HScythe_Unique_Generic_Boost_NoPowers",
+      "isMythic": false
     },
     {
       "displayName": "Boost Pants",
       "snoId": "0x00079b87",
-      "internalName": "Pants_Unique_Generic_Boost_NoPowers"
+      "internalName": "Pants_Unique_Generic_Boost_NoPowers",
+      "isMythic": false
     },
     {
       "displayName": "Eaglehorn",
       "snoId": "0x0008c816",
-      "internalName": "TEST_unique_rogue_xbow_001"
+      "internalName": "TEST_unique_rogue_xbow_001",
+      "isMythic": false
     },
     {
       "displayName": "Halo",
       "snoId": "0x0008d02f",
-      "internalName": "TEST_unique_generic_ring_004"
+      "internalName": "TEST_unique_generic_ring_004",
+      "isMythic": false
     },
     {
       "displayName": "Harlequin Crest",
       "snoId": "0x00094e1c",
-      "internalName": "Helm_Unique_Generic_002"
+      "internalName": "Helm_Unique_Generic_002",
+      "isMythic": true
     },
     {
       "displayName": "Insatiable Fury",
       "snoId": "0x000d54b3",
-      "internalName": "Chest_Unique_Druid_003"
+      "internalName": "Chest_Unique_Druid_003",
+      "isMythic": false
     },
     {
       "displayName": "Storm\u0027s Companion",
       "snoId": "0x000d6fce",
-      "internalName": "Pants_Unique_Druid_001"
+      "internalName": "Pants_Unique_Druid_001",
+      "isMythic": false
     },
     {
       "displayName": "(PH) Performance Test Ring - Rogue Poison Imbue",
       "snoId": "0x000ee796",
-      "internalName": "performance_test_unique_ring_rogue_imbue_poison"
+      "internalName": "performance_test_unique_ring_rogue_imbue_poison",
+      "isMythic": false
     },
     {
       "displayName": "(PH) Performance Test Ring - Rogue Cold Imbue",
       "snoId": "0x000ee7cf",
-      "internalName": "performance_test_unique_ring_rogue_imbue_cold"
+      "internalName": "performance_test_unique_ring_rogue_imbue_cold",
+      "isMythic": false
     },
     {
       "displayName": "(PH) Performance Test Ring - Rogue Shadow Imbue",
       "snoId": "0x000ee7d1",
-      "internalName": "performance_test_unique_ring_rogue_imbue_shadow"
+      "internalName": "performance_test_unique_ring_rogue_imbue_shadow",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x000f19ee",
-      "internalName": "Ring_Unique_Druid_003"
+      "internalName": "Ring_Unique_Druid_003",
+      "isMythic": false
     },
     {
       "displayName": "Boost Staff",
       "snoId": "0x000fe443",
-      "internalName": "2HStaff_Unique_Generic_Boost_NoPowers_8"
+      "internalName": "2HStaff_Unique_Generic_Boost_NoPowers_8",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x00103904",
-      "internalName": "2HStaff_Unique_Sorc_002"
+      "internalName": "2HStaff_Unique_Sorc_002",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x00126753",
-      "internalName": "2HCrossbow_Unique_Rogue_100"
+      "internalName": "2HCrossbow_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "100,000 Steps",
       "snoId": "0x001278e2",
-      "internalName": "Boots_Unique_Barb_100"
+      "internalName": "Boots_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x00127d06",
-      "internalName": "Ring_Unique_Sorc_100"
+      "internalName": "Ring_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x00128948",
-      "internalName": "1HWand_Unique_Sorc_100"
+      "internalName": "1HWand_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Razorplate",
       "snoId": "0x00128a59",
-      "internalName": "Chest_Unique_Generic_100"
+      "internalName": "Chest_Unique_Generic_100",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x00128a9e",
-      "internalName": "Ring_Unique_Generic_100"
+      "internalName": "Ring_Unique_Generic_100",
+      "isMythic": false
     },
     {
       "displayName": "Blood Moon Breeches",
       "snoId": "0x00129210",
-      "internalName": "Pants_Unique_Necro_100"
+      "internalName": "Pants_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Death\u0027s Pavane",
       "snoId": "0x00129a94",
-      "internalName": "Pants_Unique_Rogue_100"
+      "internalName": "Pants_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x00129e70",
-      "internalName": "2HScythe_Unique_Necro_100"
+      "internalName": "2HScythe_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Greaves of the Empty Tomb",
       "snoId": "0x00129ea2",
-      "internalName": "Boots_Unique_Necro_100"
+      "internalName": "Boots_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0012a626",
-      "internalName": "2HMace_Unique_Barb_100"
+      "internalName": "2HMace_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0012a7e3",
-      "internalName": "Ring_Unique_Necro_100"
+      "internalName": "Ring_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Mutilator Plate",
       "snoId": "0x0012afab",
-      "internalName": "Chest_Unique_Necro_100"
+      "internalName": "Chest_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x0012b254",
-      "internalName": "Amulet_Unique_Sorc_100"
+      "internalName": "Amulet_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Tal Rasha\u0027s Iridescent Loop",
       "snoId": "0x0012b360",
-      "internalName": "Ring_Unique_Sorc_101"
+      "internalName": "Ring_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "Howl from Below",
       "snoId": "0x0012ba0e",
-      "internalName": "Gloves_Unique_Necro_100"
+      "internalName": "Gloves_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0012c695",
-      "internalName": "Amulet_Unique_Necro_100"
+      "internalName": "Amulet_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Deathless Visage",
       "snoId": "0x0012d6ef",
-      "internalName": "Helm_Unique_Necro_100"
+      "internalName": "Helm_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Melted Heart of Selig",
       "snoId": "0x0013781f",
-      "internalName": "Amulet_Unique_Generic_100"
+      "internalName": "Amulet_Unique_Generic_100",
+      "isMythic": true
     },
     {
       "displayName": "Rage of Harrogath",
       "snoId": "0x0013e73a",
-      "internalName": "Chest_Unique_Barb_100"
+      "internalName": "Chest_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x0013e788",
-      "internalName": "1HSword_Unique_Barb_101"
+      "internalName": "1HSword_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0013e795",
-      "internalName": "Amulet_Unique_Barb_100"
+      "internalName": "Amulet_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Tempest Roar",
       "snoId": "0x0013e7aa",
-      "internalName": "Helm_Unique_Druid_100"
+      "internalName": "Helm_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "Vasily\u0027s Prayer",
       "snoId": "0x0013ee66",
-      "internalName": "Helm_Unique_Druid_101"
+      "internalName": "Helm_Unique_Druid_101",
+      "isMythic": false
     },
     {
       "displayName": "Waxing Gibbous",
       "snoId": "0x0013ee6b",
-      "internalName": "1HAxe_Unique_Druid_100"
+      "internalName": "1HAxe_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "Blood Artisan\u0027s Cuirass",
       "snoId": "0x0013ee76",
-      "internalName": "Chest_Unique_Necro_101"
+      "internalName": "Chest_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0013ee7c",
-      "internalName": "1HScythe_Unique_Necro_100"
+      "internalName": "1HScythe_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Grasp of Shadow",
       "snoId": "0x0013ee8b",
-      "internalName": "Gloves_Unique_Rogue_100"
+      "internalName": "Gloves_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0013ee93",
-      "internalName": "Amulet_Unique_Rogue_100"
+      "internalName": "Amulet_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Iceheart Brais",
       "snoId": "0x0013eea2",
-      "internalName": "Pants_Unique_Sorc_100"
+      "internalName": "Pants_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Esu\u0027s Heirloom",
       "snoId": "0x0013eebe",
-      "internalName": "Boots_Unique_Sorc_100"
+      "internalName": "Boots_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0013eec7",
-      "internalName": "2HStaff_Unique_Sorc_100"
+      "internalName": "2HStaff_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Temerity",
       "snoId": "0x0013eed6",
-      "internalName": "Pants_Unique_Generic_100"
+      "internalName": "Pants_Unique_Generic_100",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Starless Skies",
       "snoId": "0x0013eee2",
-      "internalName": "Ring_Unique_Generic_101"
+      "internalName": "Ring_Unique_Generic_101",
+      "isMythic": true
     },
     {
       "displayName": "(DEBUG) Performance Test Ring - Shrine Artillery",
       "snoId": "0x00143797",
-      "internalName": "performance_test_unique_ring_shrine_artillery"
+      "internalName": "performance_test_unique_ring_shrine_artillery",
+      "isMythic": false
     },
     {
       "displayName": "Unsung Ascetic\u0027s Wraps",
       "snoId": "0x0015e163",
-      "internalName": "Gloves_Unique_Druid_100"
+      "internalName": "Gloves_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "The Oculus",
       "snoId": "0x0015f72a",
-      "internalName": "1HWand_Unique_Sorc_101"
+      "internalName": "1HWand_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "Eaglehorn",
       "snoId": "0x0015f732",
-      "internalName": "2HBow_Unique_Rogue_100"
+      "internalName": "2HBow_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0015f736",
-      "internalName": "1HShield_Unique_Necro_100"
+      "internalName": "1HShield_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Tassets of the Dawning Sky",
       "snoId": "0x001689d8",
-      "internalName": "Pants_Unique_Generic_101"
+      "internalName": "Pants_Unique_Generic_101",
+      "isMythic": false
     },
     {
       "displayName": "Tuskhelm of Joritz the Mighty",
       "snoId": "0x0016ba9e",
-      "internalName": "Helm_Unique_Barb_100"
+      "internalName": "Helm_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Godslayer Crown",
       "snoId": "0x0017bafb",
-      "internalName": "Helm_Unique_Generic_003"
+      "internalName": "Helm_Unique_Generic_003",
+      "isMythic": false
     },
     {
       "displayName": "Paingorger\u0027s Gauntlets",
       "snoId": "0x0017cb1d",
-      "internalName": "Gloves_Unique_Generic_004"
+      "internalName": "Gloves_Unique_Generic_004",
+      "isMythic": false
     },
     {
       "displayName": "Tibault\u0027s Will",
       "snoId": "0x0017cb7b",
-      "internalName": "Pants_Unique_Generic_102"
+      "internalName": "Pants_Unique_Generic_102",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0017cd71",
-      "internalName": "Ring_Unique_Generic_102"
+      "internalName": "Ring_Unique_Generic_102",
+      "isMythic": false
     },
     {
       "displayName": "Soulbrand",
       "snoId": "0x0017d127",
-      "internalName": "Chest_Unique_Generic_101"
+      "internalName": "Chest_Unique_Generic_101",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x0017d2dc",
-      "internalName": "Amulet_Unique_Generic_101"
+      "internalName": "Amulet_Unique_Generic_101",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x001892c9",
-      "internalName": "Amulet_Unique_Druid_100"
+      "internalName": "Amulet_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Leathers",
       "snoId": "0x00189a04",
-      "internalName": "Chest_Unique_Rogue_100"
+      "internalName": "Chest_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Thorn Pulse",
       "snoId": "0x001900e9",
-      "internalName": "x1_Ring_Unique_Generic_104"
+      "internalName": "x1_Ring_Unique_Generic_104",
+      "isMythic": false
     },
     {
       "displayName": "Beastfall Boots",
       "snoId": "0x001a0351",
-      "internalName": "Boots_Unique_Rogue_100"
+      "internalName": "Boots_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x001a0a6a",
-      "internalName": "Ring_Unique_Barb_100"
+      "internalName": "Ring_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x001a0a9b",
-      "internalName": "Ring_Unique_Druid_100"
+      "internalName": "Ring_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "Writhing Band of Trickery",
       "snoId": "0x001a0aa2",
-      "internalName": "Ring_Unique_Rogue_100"
+      "internalName": "Ring_Unique_Rogue_100",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x001a0aa4",
-      "internalName": "Ring_Unique_Necro_101"
+      "internalName": "Ring_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x001a223e",
-      "internalName": "Ring_Unique_Barb_101"
+      "internalName": "Ring_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Starfall Coronet",
       "snoId": "0x001a2442",
-      "internalName": "Helm_Unique_Sorc_100"
+      "internalName": "Helm_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Blood-Mad Idol",
       "snoId": "0x001a3b76",
-      "internalName": "Amulet_Unique_Generic_102"
+      "internalName": "Amulet_Unique_Generic_102",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x001acd0a",
-      "internalName": "Gloves_Unique_Druid_97"
+      "internalName": "Gloves_Unique_Druid_97",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x001ad4fb",
-      "internalName": "x1_Ring_Unique_Rogue_128"
+      "internalName": "x1_Ring_Unique_Rogue_128",
+      "isMythic": false
     },
     {
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x001b4be5",
-      "internalName": "Helm_Unique_Barb_101_x1"
+      "internalName": "Helm_Unique_Barb_101_x1",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Blue Glaive",
       "snoId": "0x001bc9f1",
-      "internalName": "X1_2HGlaive_Unique_Spiritborn_02"
+      "internalName": "X1_2HGlaive_Unique_Spiritborn_02",
+      "isMythic": false
     },
     {
       "displayName": "Snake Glaive",
       "snoId": "0x001bca0d",
-      "internalName": "X1_2HGlaive_Unique_Spiritborn_03"
+      "internalName": "X1_2HGlaive_Unique_Spiritborn_03",
+      "isMythic": false
     },
     {
       "displayName": "Yen\u0027s Blessing",
       "snoId": "0x001c5cb4",
-      "internalName": "Boots_Unique_Generic_003"
+      "internalName": "Boots_Unique_Generic_003",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x001c6c65",
-      "internalName": "Amulet_Unique_Sorc_101"
+      "internalName": "Amulet_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x001cb4c4",
-      "internalName": "Ring_Unique_Druid_101"
+      "internalName": "Ring_Unique_Druid_101",
+      "isMythic": false
     },
     {
       "displayName": "Flameweaver",
       "snoId": "0x001ced1f",
-      "internalName": "Gloves_Unique_Sorc_101"
+      "internalName": "Gloves_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "Tyrael\u0027s Might",
       "snoId": "0x001d03ac",
-      "internalName": "Chest_Unique_Generic_127"
+      "internalName": "Chest_Unique_Generic_127",
+      "isMythic": true
     },
     {
       "displayName": "Arreat\u0027s Bearing",
       "snoId": "0x001d04ac",
-      "internalName": "Pants_Unique_Barb_100"
+      "internalName": "Pants_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Twin Strikes",
       "snoId": "0x001d04b2",
-      "internalName": "Gloves_Unique_Barb_100"
+      "internalName": "Gloves_Unique_Barb_100",
+      "isMythic": false
     },
     {
       "displayName": "Wildheart Hunger",
       "snoId": "0x001d063b",
-      "internalName": "Boots_Unique_Druid_100"
+      "internalName": "Boots_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "Cruor\u0027s Embrace",
       "snoId": "0x001d064b",
-      "internalName": "Gloves_Unique_Necro_101"
+      "internalName": "Gloves_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x001d06e9",
-      "internalName": "Ring_Unique_Rogue_101"
+      "internalName": "Ring_Unique_Rogue_101",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x001d0785",
-      "internalName": "Amulet_Unique_Necro_101"
+      "internalName": "Amulet_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x001d0a18",
-      "internalName": "Ring_Unique_Rogue_102"
+      "internalName": "Ring_Unique_Rogue_102",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Unique Necro 98",
       "snoId": "0x001d6ed3",
-      "internalName": "Helm_Unique_Necro_98"
+      "internalName": "Helm_Unique_Necro_98",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x001d8448",
-      "internalName": "Amulet_Unique_Barb_101"
+      "internalName": "Amulet_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Shroud of Khanduras",
       "snoId": "0x001d8465",
-      "internalName": "Chest_Unique_Rogue_101"
+      "internalName": "Chest_Unique_Rogue_101",
+      "isMythic": false
     },
     {
       "displayName": "Path of Trag\u0027Oul",
       "snoId": "0x001d8469",
-      "internalName": "Boots_Unique_Necro_101"
+      "internalName": "Boots_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Axial Conduit",
       "snoId": "0x001d846d",
-      "internalName": "Pants_Unique_Sorc_101"
+      "internalName": "Pants_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x001d8da2",
-      "internalName": "Helm_Unique_Druid_95"
+      "internalName": "Helm_Unique_Druid_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Unique Helm 95",
       "snoId": "0x001d9edf",
-      "internalName": "Helm_Unique_Rogue_95"
+      "internalName": "Helm_Unique_Rogue_95",
+      "isMythic": false
     },
     {
       "displayName": "Endurant Faith",
       "snoId": "0x001dab42",
-      "internalName": "S05_BSK_Gloves_Unique_Generic_001"
+      "internalName": "S05_BSK_Gloves_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Crown of Lucion",
       "snoId": "0x001dab9b",
-      "internalName": "S05_BSK_Helm_Unique_Generic_001"
+      "internalName": "S05_BSK_Helm_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Shard of Verathiel",
       "snoId": "0x001dabab",
-      "internalName": "S05_BSK_1HSword_Unique_Generic_001"
+      "internalName": "S05_BSK_1HSword_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Rakanoth\u0027s Wake",
       "snoId": "0x001dabb8",
-      "internalName": "S05_BSK_Boots_Unique_Generic_001"
+      "internalName": "S05_BSK_Boots_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x001dabbc",
-      "internalName": "S05_BSK_Amulet_Unique_Generic_001"
+      "internalName": "S05_BSK_Amulet_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x001dabc1",
-      "internalName": "S05_BSK_2HStaff_Unique_Sorcerer_001"
+      "internalName": "S05_BSK_2HStaff_Unique_Sorcerer_001",
+      "isMythic": false
     },
     {
       "displayName": "The Third Blade",
       "snoId": "0x001dabd2",
-      "internalName": "S05_BSK_1HSword_Unique_Barbarian_001"
+      "internalName": "S05_BSK_1HSword_Unique_Barbarian_001",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x001dabe0",
-      "internalName": "S05_BSK_2HStaff_Unique_Druid_001"
+      "internalName": "S05_BSK_2HStaff_Unique_Druid_001",
+      "isMythic": false
     },
     {
       "displayName": "The Umbracrux",
       "snoId": "0x001dabeb",
-      "internalName": "S05_BSK_1HDagger_Unique_Rogue_001"
+      "internalName": "S05_BSK_1HDagger_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x001dabfe",
-      "internalName": "S05_BSK_1HDagger_Unique_Necro_001"
+      "internalName": "S05_BSK_1HDagger_Unique_Necro_001",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Grab Bag Variant Helm1",
       "snoId": "0x001db9a1",
-      "internalName": "Helm_Unique_Barbarian_95"
+      "internalName": "Helm_Unique_Barbarian_95",
+      "isMythic": false
     },
     {
       "displayName": "New Item [PH]",
       "snoId": "0x001dc9da",
-      "internalName": "Gloves_Unique_Druid_95"
+      "internalName": "Gloves_Unique_Druid_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH] ",
       "snoId": "0x001dd6af",
-      "internalName": "Helm_Unique_Necro_95"
+      "internalName": "Helm_Unique_Necro_95",
+      "isMythic": false
     },
     {
       "displayName": "(PH) Template Unique",
       "snoId": "0x001df74b",
-      "internalName": "Template_Unique_Spiritborn_000_x1"
+      "internalName": "Template_Unique_Spiritborn_000_x1",
+      "isMythic": false
     },
     {
       "displayName": "Wound Drinker",
       "snoId": "0x001e0147",
-      "internalName": "Ring_Unique_Spiritborn_001_x1"
+      "internalName": "Ring_Unique_Spiritborn_001_x1",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Writhing Moon",
       "snoId": "0x001e014b",
-      "internalName": "Ring_Unique_Spiritborn_002_x1"
+      "internalName": "Ring_Unique_Spiritborn_002_x1",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x001e014e",
-      "internalName": "Ring_Unique_Spiritborn_003_x1"
+      "internalName": "Ring_Unique_Spiritborn_003_x1",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x001e0179",
-      "internalName": "Ring_Unique_Spiritborn_004_x1"
+      "internalName": "Ring_Unique_Spiritborn_004_x1",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x001e017b",
-      "internalName": "Ring_Unique_Spiritborn_005_x1"
+      "internalName": "Ring_Unique_Spiritborn_005_x1",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midnight Sun",
       "snoId": "0x001e017d",
-      "internalName": "Ring_Unique_Spiritborn_006_x1"
+      "internalName": "Ring_Unique_Spiritborn_006_x1",
+      "isMythic": false
     },
     {
       "displayName": "Scorn of the Earth",
       "snoId": "0x001e08be",
-      "internalName": "Boots_Unique_Spiritborn_008_x1"
+      "internalName": "Boots_Unique_Spiritborn_008_x1",
+      "isMythic": false
     },
     {
       "displayName": "Craze of the Dead God",
       "snoId": "0x001e092e",
-      "internalName": "Gloves_Unique_Spiritborn_007_x1"
+      "internalName": "Gloves_Unique_Spiritborn_007_x1",
+      "isMythic": false
     },
     {
       "displayName": "Jacinth Shell",
       "snoId": "0x001e0e7b",
-      "internalName": "Chest_Unique_Spiritborn_013_x1"
+      "internalName": "Chest_Unique_Spiritborn_013_x1",
+      "isMythic": false
     },
     {
       "displayName": "Nesekem, the Herald",
       "snoId": "0x001e3f21",
-      "internalName": "Glaive_Unique_Spiritborn_014_x1"
+      "internalName": "Glaive_Unique_Spiritborn_014_x1",
+      "isMythic": true
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x001e52f0",
-      "internalName": "Quarterstaff_Unique_Spiritborn_012_x1"
+      "internalName": "Quarterstaff_Unique_Spiritborn_012_x1",
+      "isMythic": false
     },
     {
       "displayName": "Harmony of Ebewaka",
       "snoId": "0x001e53da",
-      "internalName": "Helm_Unique_Spiritborn_009_x1"
+      "internalName": "Helm_Unique_Spiritborn_009_x1",
+      "isMythic": false
     },
     {
       "displayName": "Loyalty\u0027s Mantle",
       "snoId": "0x001e5eee",
-      "internalName": "Helm_Unique_Spiritborn_011_x1"
+      "internalName": "Helm_Unique_Spiritborn_011_x1",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x001eb551",
-      "internalName": "Glaive_Unique_Spiritborn_010_x1"
+      "internalName": "Glaive_Unique_Spiritborn_010_x1",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x001ec38b",
-      "internalName": "Ring_Unique_Druid_102"
+      "internalName": "Ring_Unique_Druid_102",
+      "isMythic": false
     },
     {
       "displayName": "Protection of the Prime",
       "snoId": "0x001ed343",
-      "internalName": "Pants_Unique_Spiritborn_015_x1"
+      "internalName": "Pants_Unique_Spiritborn_015_x1",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x001ee2b3",
-      "internalName": "Quarterstaff_Unique_Spiritborn_001"
+      "internalName": "Quarterstaff_Unique_Spiritborn_001",
+      "isMythic": false
     },
     {
       "displayName": "Stone of Vehemen",
       "snoId": "0x001f2ea3",
-      "internalName": "Totem_Unique_Druid_101_x1"
+      "internalName": "Totem_Unique_Druid_101_x1",
+      "isMythic": false
     },
     {
       "displayName": "Bucrani\u0027s Tread",
       "snoId": "0x001f342e",
-      "internalName": "Boots_Unique_Sorc_96"
+      "internalName": "Boots_Unique_Sorc_96",
+      "isMythic": false
     },
     {
       "displayName": "Bucrani\u0027s Will",
       "snoId": "0x001f3430",
-      "internalName": "Chest_Unique_Sorc_96"
+      "internalName": "Chest_Unique_Sorc_96",
+      "isMythic": false
     },
     {
       "displayName": "Bucrani\u0027s Grip",
       "snoId": "0x001f3432",
-      "internalName": "Gloves_Unique_Sorc_96"
+      "internalName": "Gloves_Unique_Sorc_96",
+      "isMythic": false
     },
     {
       "displayName": "Bucrani\u0027s Visage",
       "snoId": "0x001f3434",
-      "internalName": "Helm_Unique_Sorc_96"
+      "internalName": "Helm_Unique_Sorc_96",
+      "isMythic": false
     },
     {
       "displayName": "Bucrani\u0027s Resolve",
       "snoId": "0x001f3436",
-      "internalName": "Pants_Unique_Sorc_96"
+      "internalName": "Pants_Unique_Sorc_96",
+      "isMythic": false
     },
     {
       "displayName": "Sidhe Bindings",
       "snoId": "0x001f4737",
-      "internalName": "Gloves_Unique_Sorc_143_x1"
+      "internalName": "Gloves_Unique_Sorc_143_x1",
+      "isMythic": false
     },
     {
       "displayName": "The Unmaker",
       "snoId": "0x001f5442",
-      "internalName": "Helm_Unique_Necro_101_x1"
+      "internalName": "Helm_Unique_Necro_101_x1",
+      "isMythic": false
     },
     {
       "displayName": "Heir of Perdition",
       "snoId": "0x001f6e17",
-      "internalName": "Helm_Unique_Generic_004"
+      "internalName": "Helm_Unique_Generic_004",
+      "isMythic": true
     },
     {
       "displayName": "Shroud of False Death",
       "snoId": "0x001f6e1b",
-      "internalName": "Chest_Unique_Generic_103"
+      "internalName": "Chest_Unique_Generic_103",
+      "isMythic": true
     },
     {
       "displayName": "Hooves of the Mountain God",
       "snoId": "0x001f6e1d",
-      "internalName": "Boots_Unique_Barb_101"
+      "internalName": "Boots_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Wilted Potential",
       "snoId": "0x001f6e20",
-      "internalName": "Gloves_Unique_Rogue_101"
+      "internalName": "Gloves_Unique_Rogue_101",
+      "isMythic": false
     },
     {
       "displayName": "Shattered Vow",
       "snoId": "0x001f6e25",
-      "internalName": "2HPolearm_Unique_Generic_001"
+      "internalName": "2HPolearm_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "Bane of\u00A0Ahjad-Den",
       "snoId": "0x001fc162",
-      "internalName": "Gloves_Unique_Barb_101"
+      "internalName": "Gloves_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Gathlen\u0027s Birthright",
       "snoId": "0x001fc169",
-      "internalName": "Helm_Unique_Druid_102"
+      "internalName": "Helm_Unique_Druid_102",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of Mountain\u0027s Fury",
       "snoId": "0x001fc16b",
-      "internalName": "Chest_Unique_Barb_101"
+      "internalName": "Chest_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x001fc16f",
-      "internalName": "Amulet_Unique_Druid_101"
+      "internalName": "Amulet_Unique_Druid_101",
+      "isMythic": false
     },
     {
       "displayName": "Strike of Stormhorn",
       "snoId": "0x001fc175",
-      "internalName": "1HFocus_Unique_Sorc_100"
+      "internalName": "1HFocus_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Hail of Verglas",
       "snoId": "0x001fc177",
-      "internalName": "Helm_Unique_Sorc_101"
+      "internalName": "Helm_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "Kessime\u0027s Legacy",
       "snoId": "0x001fc181",
-      "internalName": "Pants_Unique_Necro_101"
+      "internalName": "Pants_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Sanguivor, Blade of Zir",
       "snoId": "0x001fc187",
-      "internalName": "2HSword_Unique_Necro_100"
+      "internalName": "2HSword_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Assassin\u0027s Stride",
       "snoId": "0x001fc18a",
-      "internalName": "Boots_Unique_Rogue_101"
+      "internalName": "Boots_Unique_Rogue_101",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x001fc1a9",
-      "internalName": "Amulet_Unique_Spiritborn_100"
+      "internalName": "Amulet_Unique_Spiritborn_100",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x001ff06e",
-      "internalName": "Quarterstaff_Unique_Spiritborn_016_x1"
+      "internalName": "Quarterstaff_Unique_Spiritborn_016_x1",
+      "isMythic": false
     },
     {
       "displayName": "Harriers of War",
       "snoId": "0x00205bca",
-      "internalName": "Boots_Unique_Barbarian_98"
+      "internalName": "Boots_Unique_Barbarian_98",
+      "isMythic": false
     },
     {
       "displayName": "Heart of War",
       "snoId": "0x00205bcc",
-      "internalName": "Chest_Unique_Barbarian_98"
+      "internalName": "Chest_Unique_Barbarian_98",
+      "isMythic": false
     },
     {
       "displayName": "Fists of War",
       "snoId": "0x00205bce",
-      "internalName": "Gloves_Unique_Barbarian_98"
+      "internalName": "Gloves_Unique_Barbarian_98",
+      "isMythic": false
     },
     {
       "displayName": "Guise of War",
       "snoId": "0x00205bd0",
-      "internalName": "Helm_Unique_Barbarian_98"
+      "internalName": "Helm_Unique_Barbarian_98",
+      "isMythic": false
     },
     {
       "displayName": "Strides of War",
       "snoId": "0x00205bd2",
-      "internalName": "Pants_Unique_Barbarian_98"
+      "internalName": "Pants_Unique_Barbarian_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00205c12",
-      "internalName": "Helm_Unique_Rogue_99"
+      "internalName": "Helm_Unique_Rogue_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00205c14",
-      "internalName": "Pants_Unique_Rogue_99"
+      "internalName": "Pants_Unique_Rogue_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00205c17",
-      "internalName": "Glove_Unique_Rogue_99"
+      "internalName": "Glove_Unique_Rogue_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00205c19",
-      "internalName": "Chest_Unique_Rogue_99"
+      "internalName": "Chest_Unique_Rogue_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00205c1b",
-      "internalName": "Boots_Unique_Rogue_99"
+      "internalName": "Boots_Unique_Rogue_99",
+      "isMythic": false
     },
     {
       "displayName": "Indira\u0027s Memory",
       "snoId": "0x00206636",
-      "internalName": "Pants_Unique_Necro_102"
+      "internalName": "Pants_Unique_Necro_102",
+      "isMythic": false
     },
     {
       "displayName": "[ph_Hope\u0027s Respite]",
       "snoId": "0x0020665c",
-      "internalName": "Boots_Unique_Sorc_98"
+      "internalName": "Boots_Unique_Sorc_98",
+      "isMythic": false
     },
     {
       "displayName": "[ph_Hope\u0027s Respite]",
       "snoId": "0x00206660",
-      "internalName": "Chest_Unique_Sorc_98"
+      "internalName": "Chest_Unique_Sorc_98",
+      "isMythic": false
     },
     {
       "displayName": "[ph_Hope\u0027s Respite]",
       "snoId": "0x00206662",
-      "internalName": "Gloves_Unique_Sorc_98"
+      "internalName": "Gloves_Unique_Sorc_98",
+      "isMythic": false
     },
     {
       "displayName": "[ph_Hope\u0027s Respite]",
       "snoId": "0x00206666",
-      "internalName": "Helm_Unique_Sorc_98"
+      "internalName": "Helm_Unique_Sorc_98",
+      "isMythic": false
     },
     {
       "displayName": "[ph_Hope\u0027s Respite]",
       "snoId": "0x00206668",
-      "internalName": "Pants_Unique_Sorc_98"
+      "internalName": "Pants_Unique_Sorc_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Chest Unique Druid 98",
       "snoId": "0x002066af",
-      "internalName": "Chest_Unique_Druid_98"
+      "internalName": "Chest_Unique_Druid_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Gloves Unique Druid 98",
       "snoId": "0x002066b2",
-      "internalName": "Gloves_Unique_Druid_98"
+      "internalName": "Gloves_Unique_Druid_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Helm Unique Druid 98",
       "snoId": "0x002066b5",
-      "internalName": "Helm_Unique_Druid_98"
+      "internalName": "Helm_Unique_Druid_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Boots Unique Druid 98",
       "snoId": "0x002066b7",
-      "internalName": "Boots_Unique_Druid_98"
+      "internalName": "Boots_Unique_Druid_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Pants Unique Druid 98",
       "snoId": "0x002066b9",
-      "internalName": "Pants_Unique_Druid_98"
+      "internalName": "Pants_Unique_Druid_98",
+      "isMythic": false
     },
     {
       "displayName": "Okun\u0027s Catalyst",
       "snoId": "0x002092dc",
-      "internalName": "1HFocus_Unique_Sorc_101"
+      "internalName": "1HFocus_Unique_Sorc_101",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0021435a",
-      "internalName": "Boots_Unique_Druid_99"
+      "internalName": "Boots_Unique_Druid_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0021435e",
-      "internalName": "Chest_Unique_Druid_99"
+      "internalName": "Chest_Unique_Druid_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00214360",
-      "internalName": "Glove_Unique_Druid_99"
+      "internalName": "Glove_Unique_Druid_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00214362",
-      "internalName": "Helm_Unique_Druid_99"
+      "internalName": "Helm_Unique_Druid_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00214376",
-      "internalName": "Pants_Unique_Druid_99"
+      "internalName": "Pants_Unique_Druid_99",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00215752",
-      "internalName": "Boots_Unique_Rogue_98"
+      "internalName": "Boots_Unique_Rogue_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00215754",
-      "internalName": "Chest_Unique_Rogue_98"
+      "internalName": "Chest_Unique_Rogue_98",
+      "isMythic": false
     },
     {
       "displayName": "Gladiator\u0027s Triumph",
       "snoId": "0x00215756",
-      "internalName": "Gloves_Unique_Rogue_98"
+      "internalName": "Gloves_Unique_Rogue_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00215758",
-      "internalName": "Helm_Unique_Rogue_98"
+      "internalName": "Helm_Unique_Rogue_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0021575a",
-      "internalName": "Pants_Unique_Rogue_98"
+      "internalName": "Pants_Unique_Rogue_98",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00216d5d",
-      "internalName": "Chest_Unique_Druid_97"
+      "internalName": "Chest_Unique_Druid_97",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00216d60",
-      "internalName": "Helm_Unique_Druid_97"
+      "internalName": "Helm_Unique_Druid_97",
+      "isMythic": false
     },
     {
       "displayName": "[PH] Pants Unique Druid 97",
       "snoId": "0x00216d62",
-      "internalName": "Pants_Unique_Druid_97"
+      "internalName": "Pants_Unique_Druid_97",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00216d64",
-      "internalName": "Boots_Unique_Druid_97"
+      "internalName": "Boots_Unique_Druid_97",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002236ee",
-      "internalName": "2HMace_Unique_Druid_100"
+      "internalName": "2HMace_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "The Hand of Naz",
       "snoId": "0x002236fd",
-      "internalName": "Gloves_Unique_Necro_102"
+      "internalName": "Gloves_Unique_Necro_102",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x00223700",
-      "internalName": "Amulet_Unique_Sorc_102"
+      "internalName": "Amulet_Unique_Sorc_102",
+      "isMythic": false
     },
     {
       "displayName": "Balazan\u0027s Maxtlatl",
       "snoId": "0x00223703",
-      "internalName": "Pants_Unique_Spiritborn_100"
+      "internalName": "Pants_Unique_Spiritborn_100",
+      "isMythic": false
     },
     {
       "displayName": "Bands of Ichorous Rose",
       "snoId": "0x00224737",
-      "internalName": "Gloves_Unique_Rogue_102"
+      "internalName": "Gloves_Unique_Rogue_102",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00230fa4",
-      "internalName": "Pants_Unique_Rogue_96"
+      "internalName": "Pants_Unique_Rogue_96",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00230fa6",
-      "internalName": "Helm_Unique_Rogue_96"
+      "internalName": "Helm_Unique_Rogue_96",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00230fa8",
-      "internalName": "Glove_Unique_Rogue_96"
+      "internalName": "Glove_Unique_Rogue_96",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00230faa",
-      "internalName": "Chest_Unique_Rogue_96"
+      "internalName": "Chest_Unique_Rogue_96",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x00230fac",
-      "internalName": "Boots_Unique_Rogue_96"
+      "internalName": "Boots_Unique_Rogue_96",
+      "isMythic": false
     },
     {
       "displayName": "Lightburst Hammer",
       "snoId": "0x002311b7",
-      "internalName": "X2_1HMace_Unique_Paladin_uniq14"
+      "internalName": "X2_1HMace_Unique_Paladin_uniq14",
+      "isMythic": false
     },
     {
       "displayName": "Tempest Roar",
       "snoId": "0x00234be6",
-      "internalName": "S10_Helm_Unique_Druid_100_Chest"
+      "internalName": "S10_Helm_Unique_Druid_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Vasily\u0027s Prayer",
       "snoId": "0x00235ce8",
-      "internalName": "S10_Helm_Unique_Druid_101_Chest"
+      "internalName": "S10_Helm_Unique_Druid_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x002410af",
-      "internalName": "1HFocus_Unique_Necro_100"
+      "internalName": "1HFocus_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x002410b4",
-      "internalName": "1HSword_Unique_Barb_103"
+      "internalName": "1HSword_Unique_Barb_103",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002410d6",
-      "internalName": "Gloves_Unique_Spiritborn_100"
+      "internalName": "Gloves_Unique_Spiritborn_100",
+      "isMythic": false
     },
     {
       "displayName": "Kilt of\u00A0Blackwing",
       "snoId": "0x002410e1",
-      "internalName": "Pants_Unique_Druid_002"
+      "internalName": "Pants_Unique_Druid_002",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x002410ed",
-      "internalName": "Ring_Unique_Sorc_102"
+      "internalName": "Ring_Unique_Sorc_102",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x00244ee9",
-      "internalName": "S10_Ring_Unique_Druid_100_Chest"
+      "internalName": "S10_Ring_Unique_Druid_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Tempest Roar",
       "snoId": "0x00244f9d",
-      "internalName": "S10_Helm_Unique_Druid_100_Gloves"
+      "internalName": "S10_Helm_Unique_Druid_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Tempest Roar",
       "snoId": "0x00244fd1",
-      "internalName": "S10_Helm_Unique_Druid_100_Boots"
+      "internalName": "S10_Helm_Unique_Druid_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Tempest Roar",
       "snoId": "0x00244fd3",
-      "internalName": "S10_Helm_Unique_Druid_100_Legs"
+      "internalName": "S10_Helm_Unique_Druid_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Vasily\u0027s Prayer",
       "snoId": "0x00245342",
-      "internalName": "S10_Helm_Unique_Druid_101_Boots"
+      "internalName": "S10_Helm_Unique_Druid_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Vasily\u0027s Prayer",
       "snoId": "0x00245344",
-      "internalName": "S10_Helm_Unique_Druid_101_Gloves"
+      "internalName": "S10_Helm_Unique_Druid_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Vasily\u0027s Prayer",
       "snoId": "0x00245348",
-      "internalName": "S10_Helm_Unique_Druid_101_Legs"
+      "internalName": "S10_Helm_Unique_Druid_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x0024541c",
-      "internalName": "S10_Ring_Unique_Druid_100_Boots"
+      "internalName": "S10_Ring_Unique_Druid_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x00245457",
-      "internalName": "S10_Ring_Unique_Druid_100_Gloves"
+      "internalName": "S10_Ring_Unique_Druid_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x002459b4",
-      "internalName": "S10_Ring_Unique_Druid_101_Chest"
+      "internalName": "S10_Ring_Unique_Druid_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x002459c7",
-      "internalName": "S10_Ring_Unique_Druid_101_Helm"
+      "internalName": "S10_Ring_Unique_Druid_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x002470fd",
-      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Helm"
+      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x0024710f",
-      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Boots"
+      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x0024711f",
-      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Chest"
+      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x00247123",
-      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Gloves"
+      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Band of First Breath",
       "snoId": "0x00247125",
-      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Legs"
+      "internalName": "S10_Ring_Unique_Spiritborn_003_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Harmony of Ebewaka",
       "snoId": "0x00247136",
-      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Gloves"
+      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Harmony of Ebewaka",
       "snoId": "0x0024716f",
-      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Boots"
+      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Harmony of Ebewaka",
       "snoId": "0x00247177",
-      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Chest"
+      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Harmony of Ebewaka",
       "snoId": "0x0024717a",
-      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Legs"
+      "internalName": "S10_Helm_Unique_Spiritborn_009_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Jacinth Shell",
       "snoId": "0x00247186",
-      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Helm"
+      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Jacinth Shell",
       "snoId": "0x002471c1",
-      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Boots"
+      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Jacinth Shell",
       "snoId": "0x002471c3",
-      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Gloves"
+      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Jacinth Shell",
       "snoId": "0x002471c5",
-      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Legs"
+      "internalName": "S10_Chest_Unique_Spiritborn_013_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Loyalty\u0027s Mantle",
       "snoId": "0x002471c8",
-      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Chest"
+      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Loyalty\u0027s Mantle",
       "snoId": "0x002471dc",
-      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Boots"
+      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Loyalty\u0027s Mantle",
       "snoId": "0x002471df",
-      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Gloves"
+      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Loyalty\u0027s Mantle",
       "snoId": "0x002471e1",
-      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Legs"
+      "internalName": "S10_Helm_Unique_Spiritborn_011_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x00247483",
-      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Helm"
+      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x0024748a",
-      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Boots"
+      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x0024748d",
-      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Chest"
+      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x0024748f",
-      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Gloves"
+      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Peacemonger\u0027s Signet",
       "snoId": "0x00247491",
-      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Legs"
+      "internalName": "S10_Ring_Unique_Spiritborn_004_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x00247498",
-      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Boots"
+      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x002474c2",
-      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Chest"
+      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x002474c4",
-      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Gloves"
+      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x002474c6",
-      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Helm"
+      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Midday Hunt",
       "snoId": "0x002474c8",
-      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Legs"
+      "internalName": "S10_Ring_Unique_Spiritborn_005_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x002475a1",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Boots"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x002475ab",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Chest"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x002475ad",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Gloves"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x002475af",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Helm"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Rod of Kepeleke",
       "snoId": "0x002475b1",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Legs"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_016_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x002475b6",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Boots"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x002475c5",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Chest"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x002475c8",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Gloves"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x002475ca",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Helm"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Sepazontec",
       "snoId": "0x002475cc",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Legs"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_012_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x002475cf",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Boots"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x002475d8",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Chest"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x002475da",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Gloves"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x002475dc",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Helm"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Sunstained\u00A0War-Crozier",
       "snoId": "0x002475de",
-      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Legs"
+      "internalName": "S10_Quarterstaff_Unique_Spiritborn_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x002475e0",
-      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Boots"
+      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x002475f0",
-      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Chest"
+      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x002475f2",
-      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Gloves"
+      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x002475f4",
-      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Helm"
+      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Wushe Nak Pa",
       "snoId": "0x002475f6",
-      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Legs"
+      "internalName": "S10_Glaive_Unique_Spiritborn_010_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Balazan\u0027s Maxtlatl",
       "snoId": "0x002475f9",
-      "internalName": "S10_Pants_Unique_Spiritborn_100_Boots"
+      "internalName": "S10_Pants_Unique_Spiritborn_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Balazan\u0027s Maxtlatl",
       "snoId": "0x00247602",
-      "internalName": "S10_Pants_Unique_Spiritborn_100_Chest"
+      "internalName": "S10_Pants_Unique_Spiritborn_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Balazan\u0027s Maxtlatl",
       "snoId": "0x00247604",
-      "internalName": "S10_Pants_Unique_Spiritborn_100_Gloves"
+      "internalName": "S10_Pants_Unique_Spiritborn_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Balazan\u0027s Maxtlatl",
       "snoId": "0x00247606",
-      "internalName": "S10_Pants_Unique_Spiritborn_100_Helm"
+      "internalName": "S10_Pants_Unique_Spiritborn_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x0024791d",
-      "internalName": "S10_Ring_Unique_Sorc_100_Boots"
+      "internalName": "S10_Ring_Unique_Sorc_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x0024797e",
-      "internalName": "S10_Ring_Unique_Sorc_100_Chest"
+      "internalName": "S10_Ring_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x00247983",
-      "internalName": "S10_Ring_Unique_Sorc_100_Gloves"
+      "internalName": "S10_Ring_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x00247988",
-      "internalName": "S10_Ring_Unique_Sorc_100_Helm"
+      "internalName": "S10_Ring_Unique_Sorc_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Blue Rose",
       "snoId": "0x0024798b",
-      "internalName": "S10_Ring_Unique_Sorc_100_Legs"
+      "internalName": "S10_Ring_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00247994",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Boots"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x00247e3b",
-      "internalName": "S10_Ring_Unique_Druid_100_Helm"
+      "internalName": "S10_Ring_Unique_Druid_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Airidah\u0027s Inexorable Will",
       "snoId": "0x00247e51",
-      "internalName": "S10_Ring_Unique_Druid_100_Legs"
+      "internalName": "S10_Ring_Unique_Druid_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x00247e65",
-      "internalName": "S10_Ring_Unique_Druid_101_Boots"
+      "internalName": "S10_Ring_Unique_Druid_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x00247e6e",
-      "internalName": "S10_Ring_Unique_Druid_101_Gloves"
+      "internalName": "S10_Ring_Unique_Druid_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Earthbreaker",
       "snoId": "0x00247e78",
-      "internalName": "S10_Ring_Unique_Druid_101_Legs"
+      "internalName": "S10_Ring_Unique_Druid_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00247f66",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Chest"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00247f68",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00247f6a",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Helm"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00247f6c",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Legs"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x002488c2",
-      "internalName": "S10_Amulet_Unique_Generic_101_Boots"
+      "internalName": "S10_Amulet_Unique_Generic_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x00248936",
-      "internalName": "S10_Amulet_Unique_Generic_101_Chest"
+      "internalName": "S10_Amulet_Unique_Generic_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x00248938",
-      "internalName": "S10_Amulet_Unique_Generic_101_Gloves"
+      "internalName": "S10_Amulet_Unique_Generic_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x0024893b",
-      "internalName": "S10_Amulet_Unique_Generic_101_Helm"
+      "internalName": "S10_Amulet_Unique_Generic_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Banished Lord\u0027s Talisman",
       "snoId": "0x0024893f",
-      "internalName": "S10_Amulet_Unique_Generic_101_Legs"
+      "internalName": "S10_Amulet_Unique_Generic_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Crown of Lucion",
       "snoId": "0x00248993",
-      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Boots"
+      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Crown of Lucion",
       "snoId": "0x002489af",
-      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Chest"
+      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Crown of Lucion",
       "snoId": "0x002489b1",
-      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Gloves"
+      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Crown of Lucion",
       "snoId": "0x002489b5",
-      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Legs"
+      "internalName": "S10_S05_BSK_Helm_Unique_Generic_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Endurant Faith",
       "snoId": "0x00248a32",
-      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Boots"
+      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Endurant Faith",
       "snoId": "0x00248a4d",
-      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Chest"
+      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Endurant Faith",
       "snoId": "0x00248a4f",
-      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Helm"
+      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Endurant Faith",
       "snoId": "0x00248a52",
-      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Legs"
+      "internalName": "S10_S05_BSK_Gloves_Unique_Generic_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Fists of Fate",
       "snoId": "0x00248a67",
-      "internalName": "S10_Gloves_Unique_Generic_002_Boots"
+      "internalName": "S10_Gloves_Unique_Generic_002_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Fists of Fate",
       "snoId": "0x00248a75",
-      "internalName": "S10_Gloves_Unique_Generic_002_Chest"
+      "internalName": "S10_Gloves_Unique_Generic_002_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Fists of Fate",
       "snoId": "0x00248a77",
-      "internalName": "S10_Gloves_Unique_Generic_002_Helm"
+      "internalName": "S10_Gloves_Unique_Generic_002_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Fists of Fate",
       "snoId": "0x00248a79",
-      "internalName": "S10_Gloves_Unique_Generic_002_Legs"
+      "internalName": "S10_Gloves_Unique_Generic_002_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Flickerstep",
       "snoId": "0x00248a95",
-      "internalName": "S10_Boots_Unique_Generic_002_Chest"
+      "internalName": "S10_Boots_Unique_Generic_002_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Flickerstep",
       "snoId": "0x00248ab3",
-      "internalName": "S10_Boots_Unique_Generic_002_Gloves"
+      "internalName": "S10_Boots_Unique_Generic_002_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Flickerstep",
       "snoId": "0x00248ab9",
-      "internalName": "S10_Boots_Unique_Generic_002_Helm"
+      "internalName": "S10_Boots_Unique_Generic_002_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Flickerstep",
       "snoId": "0x00248abd",
-      "internalName": "S10_Boots_Unique_Generic_002_Legs"
+      "internalName": "S10_Boots_Unique_Generic_002_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Godslayer Crown",
       "snoId": "0x00248ae8",
-      "internalName": "S10_Helm_Unique_Generic_003_Boots"
+      "internalName": "S10_Helm_Unique_Generic_003_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Godslayer Crown",
       "snoId": "0x00248b13",
-      "internalName": "S10_Helm_Unique_Generic_003_Chest"
+      "internalName": "S10_Helm_Unique_Generic_003_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Godslayer Crown",
       "snoId": "0x00248b15",
-      "internalName": "S10_Helm_Unique_Generic_003_Gloves"
+      "internalName": "S10_Helm_Unique_Generic_003_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Godslayer Crown",
       "snoId": "0x00248b43",
-      "internalName": "S10_Helm_Unique_Generic_003_Legs"
+      "internalName": "S10_Helm_Unique_Generic_003_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x0024a47e",
-      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Boots"
+      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x0024a489",
-      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Chest"
+      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x0024a48b",
-      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Gloves"
+      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x0024a48d",
-      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Helm"
+      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Locran\u0027s Talisman",
       "snoId": "0x0024a48f",
-      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Legs"
+      "internalName": "S10_S05_BSK_Amulet_Unique_Generic_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Paingorger\u0027s Gauntlets",
       "snoId": "0x0024a494",
-      "internalName": "S10_Gloves_Unique_Generic_004_Boots"
+      "internalName": "S10_Gloves_Unique_Generic_004_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Paingorger\u0027s Gauntlets",
       "snoId": "0x0024a4da",
-      "internalName": "S10_Gloves_Unique_Generic_004_Chest"
+      "internalName": "S10_Gloves_Unique_Generic_004_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Paingorger\u0027s Gauntlets",
       "snoId": "0x0024a4dc",
-      "internalName": "S10_Gloves_Unique_Generic_004_Helm"
+      "internalName": "S10_Gloves_Unique_Generic_004_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Paingorger\u0027s Gauntlets",
       "snoId": "0x0024a4e0",
-      "internalName": "S10_Gloves_Unique_Generic_004_Legs"
+      "internalName": "S10_Gloves_Unique_Generic_004_Legs",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0024a61d",
-      "internalName": "S10_Ring_Unique_Generic_102_Boots"
+      "internalName": "S10_Ring_Unique_Generic_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0024a671",
-      "internalName": "S10_Ring_Unique_Generic_102_Chest"
+      "internalName": "S10_Ring_Unique_Generic_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0024a67b",
-      "internalName": "S10_Ring_Unique_Generic_102_Gloves"
+      "internalName": "S10_Ring_Unique_Generic_102_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0024a67f",
-      "internalName": "S10_Ring_Unique_Generic_102_Helm"
+      "internalName": "S10_Ring_Unique_Generic_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "X\u0027Fal\u0027s Corroded Signet",
       "snoId": "0x0024a68e",
-      "internalName": "S10_Ring_Unique_Generic_102_Legs"
+      "internalName": "S10_Ring_Unique_Generic_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x0024ad44",
-      "internalName": "S10_1HWand_Unique_Sorc_100_Boots"
+      "internalName": "S10_1HWand_Unique_Sorc_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x0024ad61",
-      "internalName": "S10_1HWand_Unique_Sorc_100_Chest"
+      "internalName": "S10_1HWand_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x0024ad63",
-      "internalName": "S10_1HWand_Unique_Sorc_100_Gloves"
+      "internalName": "S10_1HWand_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x0024ad65",
-      "internalName": "S10_1HWand_Unique_Sorc_100_Helm"
+      "internalName": "S10_1HWand_Unique_Sorc_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Flamescar",
       "snoId": "0x0024ad67",
-      "internalName": "S10_1HWand_Unique_Sorc_100_Legs"
+      "internalName": "S10_1HWand_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x0024ad7a",
-      "internalName": "S10_Amulet_Unique_Sorc_101_Boots"
+      "internalName": "S10_Amulet_Unique_Sorc_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x0024adad",
-      "internalName": "S10_Amulet_Unique_Sorc_101_Chest"
+      "internalName": "S10_Amulet_Unique_Sorc_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x0024adaf",
-      "internalName": "S10_Amulet_Unique_Sorc_101_Gloves"
+      "internalName": "S10_Amulet_Unique_Sorc_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x0024adb3",
-      "internalName": "S10_Amulet_Unique_Sorc_101_Helm"
+      "internalName": "S10_Amulet_Unique_Sorc_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Winterglass",
       "snoId": "0x0024adb8",
-      "internalName": "S10_Amulet_Unique_Sorc_101_Legs"
+      "internalName": "S10_Amulet_Unique_Sorc_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x0024af21",
-      "internalName": "S10_Ring_Unique_Generic_100_Boots"
+      "internalName": "S10_Ring_Unique_Generic_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x0024af5f",
-      "internalName": "S10_Ring_Unique_Generic_100_Chest"
+      "internalName": "S10_Ring_Unique_Generic_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x0024af67",
-      "internalName": "S10_Ring_Unique_Generic_100_Gloves"
+      "internalName": "S10_Ring_Unique_Generic_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x0024af6b",
-      "internalName": "S10_Ring_Unique_Generic_100_Helm"
+      "internalName": "S10_Ring_Unique_Generic_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Mother\u0027s Embrace",
       "snoId": "0x0024af70",
-      "internalName": "S10_Ring_Unique_Generic_100_Legs"
+      "internalName": "S10_Ring_Unique_Generic_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Infinite",
       "snoId": "0x0024af91",
-      "internalName": "S10_Chest_Unique_Sorc_002_Boots"
+      "internalName": "S10_Chest_Unique_Sorc_002_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Infinite",
       "snoId": "0x0024afc6",
-      "internalName": "S10_Chest_Unique_Sorc_002_Gloves"
+      "internalName": "S10_Chest_Unique_Sorc_002_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Infinite",
       "snoId": "0x0024afcb",
-      "internalName": "S10_Chest_Unique_Sorc_002_Helm"
+      "internalName": "S10_Chest_Unique_Sorc_002_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Infinite",
       "snoId": "0x0024afce",
-      "internalName": "S10_Chest_Unique_Sorc_002_Legs"
+      "internalName": "S10_Chest_Unique_Sorc_002_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0024bc4b",
-      "internalName": "S10_2HStaff_Unique_Sorc_100_Boots"
+      "internalName": "S10_2HStaff_Unique_Sorc_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0024bc61",
-      "internalName": "S10_2HStaff_Unique_Sorc_100_Chest"
+      "internalName": "S10_2HStaff_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0024bc63",
-      "internalName": "S10_2HStaff_Unique_Sorc_100_Gloves"
+      "internalName": "S10_2HStaff_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0024bc66",
-      "internalName": "S10_2HStaff_Unique_Sorc_100_Helm"
+      "internalName": "S10_2HStaff_Unique_Sorc_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Lam Esen",
       "snoId": "0x0024bc68",
-      "internalName": "S10_2HStaff_Unique_Sorc_100_Legs"
+      "internalName": "S10_2HStaff_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Starfall Coronet",
       "snoId": "0x0024bccd",
-      "internalName": "S10_Helm_Unique_Sorc_100_Boots"
+      "internalName": "S10_Helm_Unique_Sorc_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Starfall Coronet",
       "snoId": "0x0024bcf1",
-      "internalName": "S10_Helm_Unique_Sorc_100_Chest"
+      "internalName": "S10_Helm_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Starfall Coronet",
       "snoId": "0x0024bcf6",
-      "internalName": "S10_Helm_Unique_Sorc_100_Gloves"
+      "internalName": "S10_Helm_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Starfall Coronet",
       "snoId": "0x0024bcff",
-      "internalName": "S10_Helm_Unique_Sorc_100_Legs"
+      "internalName": "S10_Helm_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x0024bd68",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Boots"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x0024bed9",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Chest"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x0024bedc",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Gloves"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x0024bedf",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Helm"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Vox Omnium",
       "snoId": "0x0024bee1",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Legs"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Sorcerer_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x0024c404",
-      "internalName": "S10_Amulet_Unique_Sorc_102_Boots"
+      "internalName": "S10_Amulet_Unique_Sorc_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0024c432",
-      "internalName": "S10_Amulet_Unique_Barb_100_Boots"
+      "internalName": "S10_Amulet_Unique_Barb_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0024c48c",
-      "internalName": "S10_Amulet_Unique_Barb_100_Chest"
+      "internalName": "S10_Amulet_Unique_Barb_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0024c490",
-      "internalName": "S10_Amulet_Unique_Barb_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Barb_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0024c496",
-      "internalName": "S10_Amulet_Unique_Barb_100_Helm"
+      "internalName": "S10_Amulet_Unique_Barb_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Battle Trance",
       "snoId": "0x0024c498",
-      "internalName": "S10_Amulet_Unique_Barb_100_Legs"
+      "internalName": "S10_Amulet_Unique_Barb_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x0024c49d",
-      "internalName": "S10_Amulet_Unique_Sorc_102_Chest"
+      "internalName": "S10_Amulet_Unique_Sorc_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x0024c4a0",
-      "internalName": "S10_Amulet_Unique_Sorc_102_Gloves"
+      "internalName": "S10_Amulet_Unique_Sorc_102_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x0024c4a2",
-      "internalName": "S10_Amulet_Unique_Sorc_102_Helm"
+      "internalName": "S10_Amulet_Unique_Sorc_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Ophidian Iris",
       "snoId": "0x0024c4a4",
-      "internalName": "S10_Amulet_Unique_Sorc_102_Legs"
+      "internalName": "S10_Amulet_Unique_Sorc_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Gohr\u0027s Devastating Grips",
       "snoId": "0x0024c5a5",
-      "internalName": "S10_Gloves_Unique_Barb_001_Boots"
+      "internalName": "S10_Gloves_Unique_Barb_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Gohr\u0027s Devastating Grips",
       "snoId": "0x0024c5af",
-      "internalName": "S10_Gloves_Unique_Barb_001_Chest"
+      "internalName": "S10_Gloves_Unique_Barb_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Gohr\u0027s Devastating Grips",
       "snoId": "0x0024c5b2",
-      "internalName": "S10_Gloves_Unique_Barb_001_Helm"
+      "internalName": "S10_Gloves_Unique_Barb_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Gohr\u0027s Devastating Grips",
       "snoId": "0x0024c5b4",
-      "internalName": "S10_Gloves_Unique_Barb_001_Legs"
+      "internalName": "S10_Gloves_Unique_Barb_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Beastfall Boots",
       "snoId": "0x0024c6ee",
-      "internalName": "S10_Boots_Unique_Rogue_100_Chest"
+      "internalName": "S10_Boots_Unique_Rogue_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Beastfall Boots",
       "snoId": "0x0024c6fc",
-      "internalName": "S10_Boots_Unique_Rogue_100_Gloves"
+      "internalName": "S10_Boots_Unique_Rogue_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Beastfall Boots",
       "snoId": "0x0024c6fe",
-      "internalName": "S10_Boots_Unique_Rogue_100_Helm"
+      "internalName": "S10_Boots_Unique_Rogue_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Beastfall Boots",
       "snoId": "0x0024c702",
-      "internalName": "S10_Boots_Unique_Rogue_100_Legs"
+      "internalName": "S10_Boots_Unique_Rogue_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0024c70a",
-      "internalName": "S10_1HDagger_Unique_Rogue_001_Boots"
+      "internalName": "S10_1HDagger_Unique_Rogue_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0024c76f",
-      "internalName": "S10_1HDagger_Unique_Rogue_001_Chest"
+      "internalName": "S10_1HDagger_Unique_Rogue_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0024c775",
-      "internalName": "S10_1HDagger_Unique_Rogue_001_Gloves"
+      "internalName": "S10_1HDagger_Unique_Rogue_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0024c779",
-      "internalName": "S10_1HDagger_Unique_Rogue_001_Helm"
+      "internalName": "S10_1HDagger_Unique_Rogue_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation",
       "snoId": "0x0024c77e",
-      "internalName": "S10_1HDagger_Unique_Rogue_001_Legs"
+      "internalName": "S10_1HDagger_Unique_Rogue_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of the Nameless",
       "snoId": "0x0024cbeb",
-      "internalName": "S10_Helm_Unique_Rogue_001_Boots"
+      "internalName": "S10_Helm_Unique_Rogue_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of the Nameless",
       "snoId": "0x0024cbf8",
-      "internalName": "S10_Helm_Unique_Rogue_001_Chest"
+      "internalName": "S10_Helm_Unique_Rogue_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of the Nameless",
       "snoId": "0x0024cbfb",
-      "internalName": "S10_Helm_Unique_Rogue_001_Gloves"
+      "internalName": "S10_Helm_Unique_Rogue_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of the Nameless",
       "snoId": "0x0024cbfe",
-      "internalName": "S10_Helm_Unique_Rogue_001_Legs"
+      "internalName": "S10_Helm_Unique_Rogue_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Grasp of Shadow",
       "snoId": "0x0024cc22",
-      "internalName": "S10_Gloves_Unique_Rogue_100_Boots"
+      "internalName": "S10_Gloves_Unique_Rogue_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Grasp of Shadow",
       "snoId": "0x0024cc2d",
-      "internalName": "S10_Gloves_Unique_Rogue_100_Chest"
+      "internalName": "S10_Gloves_Unique_Rogue_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Grasp of Shadow",
       "snoId": "0x0024cc36",
-      "internalName": "S10_Gloves_Unique_Rogue_100_Helm"
+      "internalName": "S10_Gloves_Unique_Rogue_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Grasp of Shadow",
       "snoId": "0x0024cc3a",
-      "internalName": "S10_Gloves_Unique_Rogue_100_Legs"
+      "internalName": "S10_Gloves_Unique_Rogue_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x0024cc84",
-      "internalName": "S10_x1_Ring_Unique_Rogue_128_Boots"
+      "internalName": "S10_x1_Ring_Unique_Rogue_128_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x0024cc9f",
-      "internalName": "S10_x1_Ring_Unique_Rogue_128_Chest"
+      "internalName": "S10_x1_Ring_Unique_Rogue_128_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x0024cca4",
-      "internalName": "S10_x1_Ring_Unique_Rogue_128_Gloves"
+      "internalName": "S10_x1_Ring_Unique_Rogue_128_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x0024cca8",
-      "internalName": "S10_x1_Ring_Unique_Rogue_128_Helm"
+      "internalName": "S10_x1_Ring_Unique_Rogue_128_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x0024ccaa",
-      "internalName": "S10_x1_Ring_Unique_Rogue_128_Legs"
+      "internalName": "S10_x1_Ring_Unique_Rogue_128_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x0024ccd2",
-      "internalName": "S10_Ring_Unique_Rogue_102_Boots"
+      "internalName": "S10_Ring_Unique_Rogue_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x0024ccf2",
-      "internalName": "S10_Ring_Unique_Rogue_102_Chest"
+      "internalName": "S10_Ring_Unique_Rogue_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x0024ccf4",
-      "internalName": "S10_Ring_Unique_Rogue_102_Gloves"
+      "internalName": "S10_Ring_Unique_Rogue_102_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x0024ccf6",
-      "internalName": "S10_Ring_Unique_Rogue_102_Helm"
+      "internalName": "S10_Ring_Unique_Rogue_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Saboteur\u0027s Signet",
       "snoId": "0x0024ccfa",
-      "internalName": "S10_Ring_Unique_Rogue_102_Legs"
+      "internalName": "S10_Ring_Unique_Rogue_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of Mountain\u0027s Fury",
       "snoId": "0x0024d434",
-      "internalName": "S10_Chest_Unique_Barb_101_Helm"
+      "internalName": "S10_Chest_Unique_Barb_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of Mountain\u0027s Fury",
       "snoId": "0x0024d43c",
-      "internalName": "S10_Chest_Unique_Barb_101_Legs"
+      "internalName": "S10_Chest_Unique_Barb_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of Mountain\u0027s Fury",
       "snoId": "0x0024d43e",
-      "internalName": "S10_Chest_Unique_Barb_101_Boots"
+      "internalName": "S10_Chest_Unique_Barb_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of Mountain\u0027s Fury",
       "snoId": "0x0024d440",
-      "internalName": "S10_Chest_Unique_Barb_101_Gloves"
+      "internalName": "S10_Chest_Unique_Barb_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Leathers",
       "snoId": "0x0024d45f",
-      "internalName": "S10_Chest_Unique_Rogue_100_Boots"
+      "internalName": "S10_Chest_Unique_Rogue_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0024d4ac",
-      "internalName": "S10_2HMace_Unique_Barb_100_Helm"
+      "internalName": "S10_2HMace_Unique_Barb_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0024d4b1",
-      "internalName": "S10_2HMace_Unique_Barb_100_Chest"
+      "internalName": "S10_2HMace_Unique_Barb_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0024d4b3",
-      "internalName": "S10_2HMace_Unique_Barb_100_Gloves"
+      "internalName": "S10_2HMace_Unique_Barb_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0024d4b5",
-      "internalName": "S10_2HMace_Unique_Barb_100_Boots"
+      "internalName": "S10_2HMace_Unique_Barb_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Overkill",
       "snoId": "0x0024d4b7",
-      "internalName": "S10_2HMace_Unique_Barb_100_Legs"
+      "internalName": "S10_2HMace_Unique_Barb_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Rage of Harrogath",
       "snoId": "0x0024d5a3",
-      "internalName": "S10_Chest_Unique_Barb_100_Helm"
+      "internalName": "S10_Chest_Unique_Barb_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Rage of Harrogath",
       "snoId": "0x0024d5a7",
-      "internalName": "S10_Chest_Unique_Barb_100_Gloves"
+      "internalName": "S10_Chest_Unique_Barb_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Rage of Harrogath",
       "snoId": "0x0024d5a9",
-      "internalName": "S10_Chest_Unique_Barb_100_Legs"
+      "internalName": "S10_Chest_Unique_Barb_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Rage of Harrogath",
       "snoId": "0x0024d5ac",
-      "internalName": "S10_Chest_Unique_Barb_100_Boots"
+      "internalName": "S10_Chest_Unique_Barb_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x0024d5d1",
-      "internalName": "S10_Ring_Unique_Barb_100_Helm"
+      "internalName": "S10_Ring_Unique_Barb_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Leathers",
       "snoId": "0x0024d742",
-      "internalName": "S10_Chest_Unique_Rogue_100_Gloves"
+      "internalName": "S10_Chest_Unique_Rogue_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Leathers",
       "snoId": "0x0024d744",
-      "internalName": "S10_Chest_Unique_Rogue_100_Helm"
+      "internalName": "S10_Chest_Unique_Rogue_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Leathers",
       "snoId": "0x0024d746",
-      "internalName": "S10_Chest_Unique_Rogue_100_Legs"
+      "internalName": "S10_Chest_Unique_Rogue_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x0024d756",
-      "internalName": "S10_Ring_Unique_Barb_100_Chest"
+      "internalName": "S10_Ring_Unique_Barb_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x0024d758",
-      "internalName": "S10_Ring_Unique_Barb_100_Gloves"
+      "internalName": "S10_Ring_Unique_Barb_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x0024d75a",
-      "internalName": "S10_Ring_Unique_Barb_100_Legs"
+      "internalName": "S10_Ring_Unique_Barb_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Red Furor",
       "snoId": "0x0024d75f",
-      "internalName": "S10_Ring_Unique_Barb_100_Boots"
+      "internalName": "S10_Ring_Unique_Barb_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x0024d76b",
-      "internalName": "S10_Ring_Unique_Barb_101_Helm"
+      "internalName": "S10_Ring_Unique_Barb_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x0024d77b",
-      "internalName": "S10_Ring_Unique_Barb_101_Chest"
+      "internalName": "S10_Ring_Unique_Barb_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x0024d77e",
-      "internalName": "S10_Ring_Unique_Barb_101_Gloves"
+      "internalName": "S10_Ring_Unique_Barb_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x0024d783",
-      "internalName": "S10_Ring_Unique_Barb_101_Legs"
+      "internalName": "S10_Ring_Unique_Barb_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Ravenous",
       "snoId": "0x0024d785",
-      "internalName": "S10_Ring_Unique_Barb_101_Boots"
+      "internalName": "S10_Ring_Unique_Barb_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Tuskhelm of Joritz the Mighty",
       "snoId": "0x0024d790",
-      "internalName": "S10_Helm_Unique_Barb_100_Chest"
+      "internalName": "S10_Helm_Unique_Barb_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Tuskhelm of Joritz the Mighty",
       "snoId": "0x0024d7a0",
-      "internalName": "S10_Helm_Unique_Barb_100_Gloves"
+      "internalName": "S10_Helm_Unique_Barb_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Tuskhelm of Joritz the Mighty",
       "snoId": "0x0024d7a3",
-      "internalName": "S10_Helm_Unique_Barb_100_Legs"
+      "internalName": "S10_Helm_Unique_Barb_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Tuskhelm of Joritz the Mighty",
       "snoId": "0x0024d7a5",
-      "internalName": "S10_Helm_Unique_Barb_100_Boots"
+      "internalName": "S10_Helm_Unique_Barb_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x0024d7d8",
-      "internalName": "S10_Helm_Unique_Barb_101_x1_Chest"
+      "internalName": "S10_Helm_Unique_Barb_101_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x0024d826",
-      "internalName": "S10_Helm_Unique_Barb_101_x1_Gloves"
+      "internalName": "S10_Helm_Unique_Barb_101_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x0024d828",
-      "internalName": "S10_Helm_Unique_Barb_101_x1_Legs"
+      "internalName": "S10_Helm_Unique_Barb_101_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x0024d82a",
-      "internalName": "S10_Helm_Unique_Barb_101_x1_Boots"
+      "internalName": "S10_Helm_Unique_Barb_101_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x0024d83c",
-      "internalName": "S10_Amulet_Unique_Barb_101_Helm"
+      "internalName": "S10_Amulet_Unique_Barb_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x0024d846",
-      "internalName": "S10_Amulet_Unique_Barb_101_Chest"
+      "internalName": "S10_Amulet_Unique_Barb_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x0024d848",
-      "internalName": "S10_Amulet_Unique_Barb_101_Gloves"
+      "internalName": "S10_Amulet_Unique_Barb_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x0024d84a",
-      "internalName": "S10_Amulet_Unique_Barb_101_Legs"
+      "internalName": "S10_Amulet_Unique_Barb_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Unbroken Chain",
       "snoId": "0x0024d84c",
-      "internalName": "S10_Amulet_Unique_Barb_101_Boots"
+      "internalName": "S10_Amulet_Unique_Barb_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Hooves of the Mountain God",
       "snoId": "0x0024d874",
-      "internalName": "S10_Boots_Unique_Barb_101_Helm"
+      "internalName": "S10_Boots_Unique_Barb_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Hooves of the Mountain God",
       "snoId": "0x0024d88a",
-      "internalName": "S10_Boots_Unique_Barb_101_Chest"
+      "internalName": "S10_Boots_Unique_Barb_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Hooves of the Mountain God",
       "snoId": "0x0024d88c",
-      "internalName": "S10_Boots_Unique_Barb_101_Gloves"
+      "internalName": "S10_Boots_Unique_Barb_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Hooves of the Mountain God",
       "snoId": "0x0024d88e",
-      "internalName": "S10_Boots_Unique_Barb_101_Legs"
+      "internalName": "S10_Boots_Unique_Barb_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Shroud of Khanduras",
       "snoId": "0x0024dc51",
-      "internalName": "S10_Chest_Unique_Rogue_101_Boots"
+      "internalName": "S10_Chest_Unique_Rogue_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Shroud of Khanduras",
       "snoId": "0x0024dc7f",
-      "internalName": "S10_Chest_Unique_Rogue_101_Gloves"
+      "internalName": "S10_Chest_Unique_Rogue_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Shroud of Khanduras",
       "snoId": "0x0024dc91",
-      "internalName": "S10_Chest_Unique_Rogue_101_Helm"
+      "internalName": "S10_Chest_Unique_Rogue_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Shroud of Khanduras",
       "snoId": "0x0024dc93",
-      "internalName": "S10_Chest_Unique_Rogue_101_Legs"
+      "internalName": "S10_Chest_Unique_Rogue_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x0024dd73",
-      "internalName": "S10_2HBow_Unique_Rogue_001_Boots"
+      "internalName": "S10_2HBow_Unique_Rogue_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x0024dd79",
-      "internalName": "S10_2HBow_Unique_Rogue_001_Chest"
+      "internalName": "S10_2HBow_Unique_Rogue_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x0024dd7d",
-      "internalName": "S10_2HBow_Unique_Rogue_001_Gloves"
+      "internalName": "S10_2HBow_Unique_Rogue_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x0024dd87",
-      "internalName": "S10_2HBow_Unique_Rogue_001_Helm"
+      "internalName": "S10_2HBow_Unique_Rogue_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Skyhunter",
       "snoId": "0x0024dd95",
-      "internalName": "S10_2HBow_Unique_Rogue_001_Legs"
+      "internalName": "S10_2HBow_Unique_Rogue_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0024dfb3",
-      "internalName": "S10_Amulet_Unique_Rogue_100_Boots"
+      "internalName": "S10_Amulet_Unique_Rogue_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0024dfbf",
-      "internalName": "S10_Amulet_Unique_Rogue_100_Chest"
+      "internalName": "S10_Amulet_Unique_Rogue_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0024dfc1",
-      "internalName": "S10_Amulet_Unique_Rogue_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Rogue_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0024dfc3",
-      "internalName": "S10_Amulet_Unique_Rogue_100_Helm"
+      "internalName": "S10_Amulet_Unique_Rogue_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Word of Hakan",
       "snoId": "0x0024dfc5",
-      "internalName": "S10_Amulet_Unique_Rogue_100_Legs"
+      "internalName": "S10_Amulet_Unique_Rogue_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0024e243",
-      "internalName": "S10_1HScythe_Unique_Necro_100_Helm"
+      "internalName": "S10_1HScythe_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0024e24d",
-      "internalName": "S10_1HScythe_Unique_Necro_100_Chest"
+      "internalName": "S10_1HScythe_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0024e24f",
-      "internalName": "S10_1HScythe_Unique_Necro_100_Gloves"
+      "internalName": "S10_1HScythe_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0024e252",
-      "internalName": "S10_1HScythe_Unique_Necro_100_Legs"
+      "internalName": "S10_1HScythe_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Black River",
       "snoId": "0x0024e254",
-      "internalName": "S10_1HScythe_Unique_Necro_100_Boots"
+      "internalName": "S10_1HScythe_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Deathmask of Nirmitruq",
       "snoId": "0x0024e26d",
-      "internalName": "S10_Helm_Unique_Rogue_002_Boots"
+      "internalName": "S10_Helm_Unique_Rogue_002_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Deathmask of Nirmitruq",
       "snoId": "0x0024e317",
-      "internalName": "S10_Helm_Unique_Rogue_002_Chest"
+      "internalName": "S10_Helm_Unique_Rogue_002_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Deathmask of Nirmitruq",
       "snoId": "0x0024e319",
-      "internalName": "S10_Helm_Unique_Rogue_002_Gloves"
+      "internalName": "S10_Helm_Unique_Rogue_002_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Deathmask of Nirmitruq",
       "snoId": "0x0024e31c",
-      "internalName": "S10_Helm_Unique_Rogue_002_Legs"
+      "internalName": "S10_Helm_Unique_Rogue_002_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x0024e331",
-      "internalName": "S10_2HScythe_Unique_Necro_100_Helm"
+      "internalName": "S10_2HScythe_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x0024e33d",
-      "internalName": "S10_2HScythe_Unique_Necro_100_Chest"
+      "internalName": "S10_2HScythe_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x0024e342",
-      "internalName": "S10_2HScythe_Unique_Necro_100_Gloves"
+      "internalName": "S10_2HScythe_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x0024e344",
-      "internalName": "S10_2HScythe_Unique_Necro_100_Legs"
+      "internalName": "S10_2HScythe_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Bloodless Scream",
       "snoId": "0x0024e347",
-      "internalName": "S10_2HScythe_Unique_Necro_100_Boots"
+      "internalName": "S10_2HScythe_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Deathless Visage",
       "snoId": "0x0024e360",
-      "internalName": "S10_Helm_Unique_Necro_100_Chest"
+      "internalName": "S10_Helm_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Deathless Visage",
       "snoId": "0x0024e368",
-      "internalName": "S10_Helm_Unique_Necro_100_Gloves"
+      "internalName": "S10_Helm_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Deathless Visage",
       "snoId": "0x0024e36a",
-      "internalName": "S10_Helm_Unique_Necro_100_Legs"
+      "internalName": "S10_Helm_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Deathless Visage",
       "snoId": "0x0024e36c",
-      "internalName": "S10_Helm_Unique_Necro_100_Boots"
+      "internalName": "S10_Helm_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0024e429",
-      "internalName": "S10_Amulet_Unique_Necro_100_Helm"
+      "internalName": "S10_Amulet_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0024e444",
-      "internalName": "S10_Amulet_Unique_Necro_100_Chest"
+      "internalName": "S10_Amulet_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0024e446",
-      "internalName": "S10_Amulet_Unique_Necro_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0024e449",
-      "internalName": "S10_Amulet_Unique_Necro_100_Legs"
+      "internalName": "S10_Amulet_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Deathspeaker\u0027s Pendant",
       "snoId": "0x0024e44b",
-      "internalName": "S10_Amulet_Unique_Necro_100_Boots"
+      "internalName": "S10_Amulet_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x0024e44e",
-      "internalName": "S10_1HMace_Unique_Druid_001_Boots"
+      "internalName": "S10_1HMace_Unique_Druid_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x0024e4aa",
-      "internalName": "S10_1HMace_Unique_Druid_001_Chest"
+      "internalName": "S10_1HMace_Unique_Druid_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x0024e4ae",
-      "internalName": "S10_1HMace_Unique_Druid_001_Gloves"
+      "internalName": "S10_1HMace_Unique_Druid_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x0024e4b0",
-      "internalName": "S10_1HMace_Unique_Druid_001_Helm"
+      "internalName": "S10_1HMace_Unique_Druid_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Fleshrender",
       "snoId": "0x0024e4b3",
-      "internalName": "S10_1HMace_Unique_Druid_001_Legs"
+      "internalName": "S10_1HMace_Unique_Druid_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x0024e4f2",
-      "internalName": "S10_Amulet_Unique_Necro_101_Helm"
+      "internalName": "S10_Amulet_Unique_Necro_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0024e50c",
-      "internalName": "S10_2HStaff_Unique_Druid_001_Boots"
+      "internalName": "S10_2HStaff_Unique_Druid_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x0024e516",
-      "internalName": "S10_Amulet_Unique_Necro_101_Chest"
+      "internalName": "S10_Amulet_Unique_Necro_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x0024e518",
-      "internalName": "S10_Amulet_Unique_Necro_101_Gloves"
+      "internalName": "S10_Amulet_Unique_Necro_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x0024e51c",
-      "internalName": "S10_Amulet_Unique_Necro_101_Legs"
+      "internalName": "S10_Amulet_Unique_Necro_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ebonpiercer",
       "snoId": "0x0024e51e",
-      "internalName": "S10_Amulet_Unique_Necro_101_Boots"
+      "internalName": "S10_Amulet_Unique_Necro_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0024e52b",
-      "internalName": "S10_2HStaff_Unique_Druid_001_Chest"
+      "internalName": "S10_2HStaff_Unique_Druid_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0024e52f",
-      "internalName": "S10_2HStaff_Unique_Druid_001_Gloves"
+      "internalName": "S10_2HStaff_Unique_Druid_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0024e531",
-      "internalName": "S10_2HStaff_Unique_Druid_001_Helm"
+      "internalName": "S10_2HStaff_Unique_Druid_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Greatstaff of the Crone",
       "snoId": "0x0024e535",
-      "internalName": "S10_2HStaff_Unique_Druid_001_Legs"
+      "internalName": "S10_2HStaff_Unique_Druid_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0024e55f",
-      "internalName": "S10_1HShield_Unique_Necro_100_Helm"
+      "internalName": "S10_1HShield_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x0024e579",
-      "internalName": "S10_Ring_Unique_Druid_003_Boots"
+      "internalName": "S10_Ring_Unique_Druid_003_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x0024e57e",
-      "internalName": "S10_Ring_Unique_Druid_003_Chest"
+      "internalName": "S10_Ring_Unique_Druid_003_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x0024e581",
-      "internalName": "S10_Ring_Unique_Druid_003_Gloves"
+      "internalName": "S10_Ring_Unique_Druid_003_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x0024e584",
-      "internalName": "S10_Ring_Unique_Druid_003_Helm"
+      "internalName": "S10_Ring_Unique_Druid_003_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x0024e587",
-      "internalName": "S10_Ring_Unique_Druid_003_Legs"
+      "internalName": "S10_Ring_Unique_Druid_003_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x0024e5a2",
-      "internalName": "S10_Amulet_Unique_Druid_101_Boots"
+      "internalName": "S10_Amulet_Unique_Druid_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0024e61b",
-      "internalName": "S10_1HShield_Unique_Necro_100_Chest"
+      "internalName": "S10_1HShield_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0024e61e",
-      "internalName": "S10_1HShield_Unique_Necro_100_Gloves"
+      "internalName": "S10_1HShield_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0024e622",
-      "internalName": "S10_1HShield_Unique_Necro_100_Legs"
+      "internalName": "S10_1HShield_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Lidless Wall",
       "snoId": "0x0024e624",
-      "internalName": "S10_1HShield_Unique_Necro_100_Boots"
+      "internalName": "S10_1HShield_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x0024e638",
-      "internalName": "S10_Amulet_Unique_Druid_101_Chest"
+      "internalName": "S10_Amulet_Unique_Druid_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x0024e63a",
-      "internalName": "S10_Amulet_Unique_Druid_101_Gloves"
+      "internalName": "S10_Amulet_Unique_Druid_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x0024e63d",
-      "internalName": "S10_Amulet_Unique_Druid_101_Helm"
+      "internalName": "S10_Amulet_Unique_Druid_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Malefic Crescent",
       "snoId": "0x0024e63f",
-      "internalName": "S10_Amulet_Unique_Druid_101_Legs"
+      "internalName": "S10_Amulet_Unique_Druid_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0024e7d0",
-      "internalName": "S10_Ring_Unique_Necro_100_Helm"
+      "internalName": "S10_Ring_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0024e7de",
-      "internalName": "S10_Ring_Unique_Necro_100_Chest"
+      "internalName": "S10_Ring_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0024e7e2",
-      "internalName": "S10_Ring_Unique_Necro_100_Gloves"
+      "internalName": "S10_Ring_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0024e7e4",
-      "internalName": "S10_Ring_Unique_Necro_100_Legs"
+      "internalName": "S10_Ring_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of Mendeln",
       "snoId": "0x0024e7e6",
-      "internalName": "S10_Ring_Unique_Necro_100_Boots"
+      "internalName": "S10_Ring_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x0024e7f2",
-      "internalName": "S10_Ring_Unique_Druid_102_Boots"
+      "internalName": "S10_Ring_Unique_Druid_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x0024e803",
-      "internalName": "S10_Ring_Unique_Necro_101_Helm"
+      "internalName": "S10_Ring_Unique_Necro_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x0024e80f",
-      "internalName": "S10_Ring_Unique_Druid_102_Chest"
+      "internalName": "S10_Ring_Unique_Druid_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x0024e815",
-      "internalName": "S10_Ring_Unique_Druid_102_Gloves"
+      "internalName": "S10_Ring_Unique_Druid_102_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x0024e819",
-      "internalName": "S10_Ring_Unique_Druid_102_Helm"
+      "internalName": "S10_Ring_Unique_Druid_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Mj\u00F6lnic Ryng",
       "snoId": "0x0024e81b",
-      "internalName": "S10_Ring_Unique_Druid_102_Legs"
+      "internalName": "S10_Ring_Unique_Druid_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x0024e81d",
-      "internalName": "S10_Ring_Unique_Necro_101_Chest"
+      "internalName": "S10_Ring_Unique_Necro_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x0024e81f",
-      "internalName": "S10_Ring_Unique_Necro_101_Gloves"
+      "internalName": "S10_Ring_Unique_Necro_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x0024e821",
-      "internalName": "S10_Ring_Unique_Necro_101_Legs"
+      "internalName": "S10_Ring_Unique_Necro_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ring of the Sacrilegious Soul",
       "snoId": "0x0024e823",
-      "internalName": "S10_Ring_Unique_Necro_101_Boots"
+      "internalName": "S10_Ring_Unique_Necro_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x0024e836",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Boots"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x0024e83e",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Chest"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x0024e844",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Gloves"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x0024e846",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Helm"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "The Basilisk",
       "snoId": "0x0024e849",
-      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Legs"
+      "internalName": "S10_S05_BSK_2HStaff_Unique_Druid_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x0024e855",
-      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Helm"
+      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Helm",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x0024e8d3",
-      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Chest"
+      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Chest",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x0024e8d7",
-      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Gloves"
+      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x0024e8da",
-      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Legs"
+      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Legs",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux",
       "snoId": "0x0024e8dc",
-      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Boots"
+      "internalName": "S10_S05_BSK_1HDagger_Unique_Necro_001_Boots",
+      "isMythic": false
     },
     {
       "displayName": "The Unmaker",
       "snoId": "0x0024e8eb",
-      "internalName": "S10_Helm_Unique_Necro_101_x1_Chest"
+      "internalName": "S10_Helm_Unique_Necro_101_x1_Chest",
+      "isMythic": false
     },
     {
       "displayName": "The Unmaker",
       "snoId": "0x0024e9bf",
-      "internalName": "S10_Helm_Unique_Necro_101_x1_Gloves"
+      "internalName": "S10_Helm_Unique_Necro_101_x1_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "The Unmaker",
       "snoId": "0x0024e9c6",
-      "internalName": "S10_Helm_Unique_Necro_101_x1_Legs"
+      "internalName": "S10_Helm_Unique_Necro_101_x1_Legs",
+      "isMythic": false
     },
     {
       "displayName": "The Unmaker",
       "snoId": "0x0024e9c8",
-      "internalName": "S10_Helm_Unique_Necro_101_x1_Boots"
+      "internalName": "S10_Helm_Unique_Necro_101_x1_Boots",
+      "isMythic": false
     },
     {
       "displayName": "The Hand of Naz",
       "snoId": "0x0024e9cb",
-      "internalName": "S10_Gloves_Unique_Necro_102_Helm"
+      "internalName": "S10_Gloves_Unique_Necro_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "The Hand of Naz",
       "snoId": "0x0024e9e5",
-      "internalName": "S10_Gloves_Unique_Necro_102_Chest"
+      "internalName": "S10_Gloves_Unique_Necro_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "The Hand of Naz",
       "snoId": "0x0024e9eb",
-      "internalName": "S10_Gloves_Unique_Necro_102_Legs"
+      "internalName": "S10_Gloves_Unique_Necro_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "The Hand of Naz",
       "snoId": "0x0024e9ed",
-      "internalName": "S10_Gloves_Unique_Necro_102_Boots"
+      "internalName": "S10_Gloves_Unique_Necro_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Herald\u0027s Morningstar",
       "snoId": "0x0024f031",
-      "internalName": "1HMace_Unique_Paladin_001"
+      "internalName": "1HMace_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Gate of the Red Dawn",
       "snoId": "0x0024f0cc",
-      "internalName": "1HShield_Unique_Paladin_001"
+      "internalName": "1HShield_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Rustbitten Dirk",
       "snoId": "0x0024fe35",
-      "internalName": "1HDagger_Unique_Generic_001"
+      "internalName": "1HDagger_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Axial Conduit",
       "snoId": "0x002501bd",
-      "internalName": "S10_Pants_Unique_Sorc_101_Boots"
+      "internalName": "S10_Pants_Unique_Sorc_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Axial Conduit",
       "snoId": "0x002501c6",
-      "internalName": "S10_Pants_Unique_Sorc_101_Chest"
+      "internalName": "S10_Pants_Unique_Sorc_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Axial Conduit",
       "snoId": "0x002501c8",
-      "internalName": "S10_Pants_Unique_Sorc_101_Gloves"
+      "internalName": "S10_Pants_Unique_Sorc_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Axial Conduit",
       "snoId": "0x002501ca",
-      "internalName": "S10_Pants_Unique_Sorc_101_Helm"
+      "internalName": "S10_Pants_Unique_Sorc_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x00250229",
-      "internalName": "S10_1HSword_Unique_Barb_103_Boots"
+      "internalName": "S10_1HSword_Unique_Barb_103_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x00250258",
-      "internalName": "S10_1HSword_Unique_Barb_103_Chest"
+      "internalName": "S10_1HSword_Unique_Barb_103_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x0025025e",
-      "internalName": "S10_1HSword_Unique_Barb_103_Gloves"
+      "internalName": "S10_1HSword_Unique_Barb_103_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x00250261",
-      "internalName": "S10_1HSword_Unique_Barb_103_Helm"
+      "internalName": "S10_1HSword_Unique_Barb_103_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal",
       "snoId": "0x00250263",
-      "internalName": "S10_1HSword_Unique_Barb_103_Legs"
+      "internalName": "S10_1HSword_Unique_Barb_103_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Kilt of\u00A0Blackwing",
       "snoId": "0x0025026b",
-      "internalName": "S10_Pants_Unique_Druid_002_Boots"
+      "internalName": "S10_Pants_Unique_Druid_002_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Kilt of\u00A0Blackwing",
       "snoId": "0x0025027d",
-      "internalName": "S10_Pants_Unique_Druid_002_Chest"
+      "internalName": "S10_Pants_Unique_Druid_002_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Kilt of\u00A0Blackwing",
       "snoId": "0x00250284",
-      "internalName": "S10_Pants_Unique_Druid_002_Gloves"
+      "internalName": "S10_Pants_Unique_Druid_002_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Kilt of\u00A0Blackwing",
       "snoId": "0x00250286",
-      "internalName": "S10_Pants_Unique_Druid_002_Helm"
+      "internalName": "S10_Pants_Unique_Druid_002_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x00250296",
-      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Boots"
+      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x0025032b",
-      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Chest"
+      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x0025032f",
-      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Gloves"
+      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x00250333",
-      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Helm"
+      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Orphan Maker",
       "snoId": "0x0025033a",
-      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Legs"
+      "internalName": "S10_2HCrossbow_Unique_Rogue_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x00250341",
-      "internalName": "S10_1HFocus_Unique_Necro_100_Boots"
+      "internalName": "S10_1HFocus_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x00250379",
-      "internalName": "S10_1HFocus_Unique_Necro_100_Chest"
+      "internalName": "S10_1HFocus_Unique_Necro_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x0025037f",
-      "internalName": "S10_1HFocus_Unique_Necro_100_Gloves"
+      "internalName": "S10_1HFocus_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x00250383",
-      "internalName": "S10_1HFocus_Unique_Necro_100_Helm"
+      "internalName": "S10_1HFocus_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Gospel of the Devotee",
       "snoId": "0x00250386",
-      "internalName": "S10_1HFocus_Unique_Necro_100_Legs"
+      "internalName": "S10_1HFocus_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x00250396",
-      "internalName": "S10_Ring_Unique_Sorc_102_Boots"
+      "internalName": "S10_Ring_Unique_Sorc_102_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x002503c4",
-      "internalName": "S10_Ring_Unique_Sorc_102_Chest"
+      "internalName": "S10_Ring_Unique_Sorc_102_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x002503c7",
-      "internalName": "S10_Ring_Unique_Sorc_102_Gloves"
+      "internalName": "S10_Ring_Unique_Sorc_102_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x002503c9",
-      "internalName": "S10_Ring_Unique_Sorc_102_Helm"
+      "internalName": "S10_Ring_Unique_Sorc_102_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Galvanic\u00A0Azurite",
       "snoId": "0x002503cb",
-      "internalName": "S10_Ring_Unique_Sorc_102_Legs"
+      "internalName": "S10_Ring_Unique_Sorc_102_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002503cf",
-      "internalName": "S10_Gloves_Unique_Spiritborn_100_Boots"
+      "internalName": "S10_Gloves_Unique_Spiritborn_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002503db",
-      "internalName": "S10_Gloves_Unique_Spiritborn_100_Chests"
+      "internalName": "S10_Gloves_Unique_Spiritborn_100_Chests",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002503e0",
-      "internalName": "S10_Gloves_Unique_Spiritborn_100_Gloves"
+      "internalName": "S10_Gloves_Unique_Spiritborn_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002503e2",
-      "internalName": "S10_Gloves_Unique_Spiritborn_100_Helm"
+      "internalName": "S10_Gloves_Unique_Spiritborn_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Hesha e Kesungi",
       "snoId": "0x002503e5",
-      "internalName": "S10_Gloves_Unique_Spiritborn_100_Legs"
+      "internalName": "S10_Gloves_Unique_Spiritborn_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Bastion of Sir Matthias",
       "snoId": "0x0025122a",
-      "internalName": "1HShield_Unique_Paladin_002"
+      "internalName": "1HShield_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Argent Veil",
       "snoId": "0x0025127b",
-      "internalName": "Ring_Unique_Paladin_001"
+      "internalName": "Ring_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Ward of the White Dove",
       "snoId": "0x002516de",
-      "internalName": "1HShield_Unique_Paladin_003"
+      "internalName": "1HShield_Unique_Paladin_003",
+      "isMythic": false
     },
     {
       "displayName": "March of the Stalwart Soul",
       "snoId": "0x002539a2",
-      "internalName": "Boots_Unique_Paladin_001"
+      "internalName": "Boots_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Supplication",
       "snoId": "0x00253a6a",
-      "internalName": "1HSword_Unique_Paladin_001"
+      "internalName": "1HSword_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Red Sermon",
       "snoId": "0x0025527e",
-      "internalName": "2HSword_Unique_Paladin_002"
+      "internalName": "2HSword_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Judicant\u0027s Glaivehelm",
       "snoId": "0x002554d9",
-      "internalName": "Helm_Unique_Paladin_002"
+      "internalName": "Helm_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x00256991",
-      "internalName": "S10_Amulet_Unique_Druid_100_Boots"
+      "internalName": "S10_Amulet_Unique_Druid_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x002569a5",
-      "internalName": "S10_Amulet_Unique_Druid_100_Chest"
+      "internalName": "S10_Amulet_Unique_Druid_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x002569a7",
-      "internalName": "S10_Amulet_Unique_Druid_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Druid_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x002569a9",
-      "internalName": "S10_Amulet_Unique_Druid_100_Helm"
+      "internalName": "S10_Amulet_Unique_Druid_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Dolmen Stone",
       "snoId": "0x002569ab",
-      "internalName": "S10_Amulet_Unique_Druid_100_Legs"
+      "internalName": "S10_Amulet_Unique_Druid_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Mutilator Plate",
       "snoId": "0x002569ba",
-      "internalName": "S10_Chest_Unique_Necro_100_Boots"
+      "internalName": "S10_Chest_Unique_Necro_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Mutilator Plate",
       "snoId": "0x002569c0",
-      "internalName": "S10_Chest_Unique_Necro_100_Gloves"
+      "internalName": "S10_Chest_Unique_Necro_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Mutilator Plate",
       "snoId": "0x002569c2",
-      "internalName": "S10_Chest_Unique_Necro_100_Helm"
+      "internalName": "S10_Chest_Unique_Necro_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Mutilator Plate",
       "snoId": "0x00256ce3",
-      "internalName": "S10_Chest_Unique_Necro_100_Legs"
+      "internalName": "S10_Chest_Unique_Necro_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x00256d03",
-      "internalName": "S10_Ring_Unique_Rogue_101_Boots"
+      "internalName": "S10_Ring_Unique_Rogue_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x00256d84",
-      "internalName": "S10_Ring_Unique_Rogue_101_Chest"
+      "internalName": "S10_Ring_Unique_Rogue_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x00256d88",
-      "internalName": "S10_Ring_Unique_Rogue_101_Gloves"
+      "internalName": "S10_Ring_Unique_Rogue_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x00256d90",
-      "internalName": "S10_Ring_Unique_Rogue_101_Helm"
+      "internalName": "S10_Ring_Unique_Rogue_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Scoundrel\u0027s Kiss",
       "snoId": "0x00256d92",
-      "internalName": "S10_Ring_Unique_Rogue_101_Legs"
+      "internalName": "S10_Ring_Unique_Rogue_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Esu\u0027s Heirloom",
       "snoId": "0x00256ded",
-      "internalName": "S10_Boots_Unique_Sorc_100_Chest"
+      "internalName": "S10_Boots_Unique_Sorc_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Esu\u0027s Heirloom",
       "snoId": "0x002570b2",
-      "internalName": "S10_Boots_Unique_Sorc_100_Gloves"
+      "internalName": "S10_Boots_Unique_Sorc_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Esu\u0027s Heirloom",
       "snoId": "0x002570b4",
-      "internalName": "S10_Boots_Unique_Sorc_100_Helm"
+      "internalName": "S10_Boots_Unique_Sorc_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Esu\u0027s Heirloom",
       "snoId": "0x002570b8",
-      "internalName": "S10_Boots_Unique_Sorc_100_Legs"
+      "internalName": "S10_Boots_Unique_Sorc_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x002570de",
-      "internalName": "S10_Amulet_Unique_Spiritborn_100_Boots"
+      "internalName": "S10_Amulet_Unique_Spiritborn_100_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x0025724c",
-      "internalName": "S10_Amulet_Unique_Spiritborn_100_Chest"
+      "internalName": "S10_Amulet_Unique_Spiritborn_100_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x00257251",
-      "internalName": "S10_Amulet_Unique_Spiritborn_100_Gloves"
+      "internalName": "S10_Amulet_Unique_Spiritborn_100_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x00257255",
-      "internalName": "S10_Amulet_Unique_Spiritborn_100_Helm"
+      "internalName": "S10_Amulet_Unique_Spiritborn_100_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Sunbird\u0027s Gorget",
       "snoId": "0x0025725b",
-      "internalName": "S10_Amulet_Unique_Spiritborn_100_Legs"
+      "internalName": "S10_Amulet_Unique_Spiritborn_100_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x002580f2",
-      "internalName": "S10_1HSword_Unique_Barb_101_Boots"
+      "internalName": "S10_1HSword_Unique_Barb_101_Boots",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x002581f8",
-      "internalName": "S10_1HSword_Unique_Barb_101_Chest"
+      "internalName": "S10_1HSword_Unique_Barb_101_Chest",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x0025823e",
-      "internalName": "S10_1HSword_Unique_Barb_101_Gloves"
+      "internalName": "S10_1HSword_Unique_Barb_101_Gloves",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x00258240",
-      "internalName": "S10_1HSword_Unique_Barb_101_Helm"
+      "internalName": "S10_1HSword_Unique_Barb_101_Helm",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus",
       "snoId": "0x00258243",
-      "internalName": "S10_1HSword_Unique_Barb_101_Legs"
+      "internalName": "S10_1HSword_Unique_Barb_101_Legs",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x0025827c",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Boots_V2"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Boots_V2",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00258283",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Chest_V2"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Chest_V2",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x00258289",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Gloves_V2"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Gloves_V2",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x0025828b",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Helm_V2"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Helm_V2",
+      "isMythic": false
     },
     {
       "displayName": "Esadora\u0027s Overflowing Cameo",
       "snoId": "0x0025828d",
-      "internalName": "S10_Amulet_Unique_Sorc_100_Legs_V2"
+      "internalName": "S10_Amulet_Unique_Sorc_100_Legs_V2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x002582af",
-      "internalName": "S10_2HStaff_Unique_Sorc_002_Boots_V2"
+      "internalName": "S10_2HStaff_Unique_Sorc_002_Boots_V2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x002582b1",
-      "internalName": "S10_2HStaff_Unique_Sorc_002_Chest_V2"
+      "internalName": "S10_2HStaff_Unique_Sorc_002_Chest_V2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x002582b4",
-      "internalName": "S10_2HStaff_Unique_Sorc_002_Gloves_V2"
+      "internalName": "S10_2HStaff_Unique_Sorc_002_Gloves_V2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x002582b6",
-      "internalName": "S10_2HStaff_Unique_Sorc_002_Helm_V2"
+      "internalName": "S10_2HStaff_Unique_Sorc_002_Helm_V2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Endless Rage",
       "snoId": "0x002582b8",
-      "internalName": "S10_2HStaff_Unique_Sorc_002_Legs_V2"
+      "internalName": "S10_2HStaff_Unique_Sorc_002_Legs_V2",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002582d2",
-      "internalName": "S10_2HMace_Unique_Druid_100_Boots_V2"
+      "internalName": "S10_2HMace_Unique_Druid_100_Boots_V2",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002582d4",
-      "internalName": "S10_2HMace_Unique_Druid_100_Chest_V2"
+      "internalName": "S10_2HMace_Unique_Druid_100_Chest_V2",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002582d6",
-      "internalName": "S10_2HMace_Unique_Druid_100_Gloves_V2"
+      "internalName": "S10_2HMace_Unique_Druid_100_Gloves_V2",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002582d8",
-      "internalName": "S10_2HMace_Unique_Druid_100_Helm_V2"
+      "internalName": "S10_2HMace_Unique_Druid_100_Helm_V2",
+      "isMythic": false
     },
     {
       "displayName": "Rotting Lightbringer",
       "snoId": "0x002582da",
-      "internalName": "S10_2HMace_Unique_Druid_100_Legs_V2"
+      "internalName": "S10_2HMace_Unique_Druid_100_Legs_V2",
+      "isMythic": false
     },
     {
       "displayName": "Path of the Emissary",
       "snoId": "0x0025914e",
-      "internalName": "Boots_Unique_Spiritborn_001"
+      "internalName": "Boots_Unique_Spiritborn_001",
+      "isMythic": false
     },
     {
       "displayName": "Orsivane",
       "snoId": "0x00259790",
-      "internalName": "1HMace_Unique_Sorc_100"
+      "internalName": "1HMace_Unique_Sorc_100",
+      "isMythic": false
     },
     {
       "displayName": "Khamsin Steppewalkers",
       "snoId": "0x00259fe1",
-      "internalName": "Boots_Unique_Druid_101"
+      "internalName": "Boots_Unique_Druid_101",
+      "isMythic": false
     },
     {
       "displayName": "Mace of King Leoric",
       "snoId": "0x0025aff6",
-      "internalName": "1HMace_Unique_Necro_100"
+      "internalName": "1HMace_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Light\u0027s Rebuke",
       "snoId": "0x0025b0d6",
-      "internalName": "1HFlail_Unique_Paladin_003"
+      "internalName": "1HFlail_Unique_Paladin_003",
+      "isMythic": false
     },
     {
       "displayName": "Herald of Zakarum",
       "snoId": "0x0025bb4b",
-      "internalName": "1HShield_Unique_Paladin_004"
+      "internalName": "1HShield_Unique_Paladin_004",
+      "isMythic": false
     },
     {
       "displayName": "Cathedral\u0027s Song",
       "snoId": "0x0025bfc9",
-      "internalName": "1HShield_Unique_Paladin_005"
+      "internalName": "1HShield_Unique_Paladin_005",
+      "isMythic": false
     },
     {
       "displayName": "Dawnfire",
       "snoId": "0x0025c1da",
-      "internalName": "Gloves_Unique_Paladin_003"
+      "internalName": "Gloves_Unique_Paladin_003",
+      "isMythic": false
     },
     {
       "displayName": "Sanctis of Kethamar",
       "snoId": "0x0025c7c1",
-      "internalName": "Amulet_Unique_Paladin_002"
+      "internalName": "Amulet_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Griswold\u0027s Opus",
       "snoId": "0x0025cbb1",
-      "internalName": "1HSword_Unique_Paladin_002"
+      "internalName": "1HSword_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "(DNS)",
       "snoId": "0x0025cee2",
-      "internalName": "Boots_Unique_Paladin_95"
+      "internalName": "Boots_Unique_Paladin_95",
+      "isMythic": false
     },
     {
       "displayName": "(DNS)",
       "snoId": "0x0025cee5",
-      "internalName": "Chest_Unique_Paladin_95"
+      "internalName": "Chest_Unique_Paladin_95",
+      "isMythic": false
     },
     {
       "displayName": "(DNS)",
       "snoId": "0x0025cee8",
-      "internalName": "Glove_Unique_Paladin_95"
+      "internalName": "Glove_Unique_Paladin_95",
+      "isMythic": false
     },
     {
       "displayName": "(DNS)",
       "snoId": "0x0025ceec",
-      "internalName": "Helm_Unique_Paladin_95"
+      "internalName": "Helm_Unique_Paladin_95",
+      "isMythic": false
     },
     {
       "displayName": "(DNS)",
       "snoId": "0x0025ceef",
-      "internalName": "Pants_Unique_Paladin_95"
+      "internalName": "Pants_Unique_Paladin_95",
+      "isMythic": false
     },
     {
       "displayName": "Sundered Night",
       "snoId": "0x0025d064",
-      "internalName": "2HAxe_Unique_Paladin_001"
+      "internalName": "2HAxe_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0025d1b4",
-      "internalName": "Boots_Unique_Warlock_95"
+      "internalName": "Boots_Unique_Warlock_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0025d1b6",
-      "internalName": "Chest_Unique_Warlock_95"
+      "internalName": "Chest_Unique_Warlock_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0025d1b8",
-      "internalName": "Glove_Unique_Warlock_95"
+      "internalName": "Glove_Unique_Warlock_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0025d1ba",
-      "internalName": "Helm_Unique_Warlock_95"
+      "internalName": "Helm_Unique_Warlock_95",
+      "isMythic": false
     },
     {
       "displayName": "[PH]",
       "snoId": "0x0025d1bc",
-      "internalName": "Pants_Unique_Warlock_95"
+      "internalName": "Pants_Unique_Warlock_95",
+      "isMythic": false
     },
     {
       "displayName": "Chainscourged Mail",
       "snoId": "0x0025d35d",
-      "internalName": "Pants_Unique_Barb_101"
+      "internalName": "Pants_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Mantle of the Grey",
       "snoId": "0x0025d428",
-      "internalName": "Chest_Unique_Paladin_001"
+      "internalName": "Chest_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Seal of the Second Trumpet",
       "snoId": "0x0025d677",
-      "internalName": "Ring_Unique_Paladin_002"
+      "internalName": "Ring_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Arcadia",
       "snoId": "0x0025d6f8",
-      "internalName": "Pants_Unique_Paladin_002"
+      "internalName": "Pants_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Judgment of Auriel",
       "snoId": "0x00264faa",
-      "internalName": "Amulet_Unique_Paladin_003"
+      "internalName": "Amulet_Unique_Paladin_003",
+      "isMythic": false
     },
     {
       "displayName": "Wreath of Auric Laurel",
       "snoId": "0x002654b3",
-      "internalName": "Ring_Unique_Paladin_003"
+      "internalName": "Ring_Unique_Paladin_003",
+      "isMythic": false
     },
     {
       "displayName": "Sunbrand",
       "snoId": "0x00265a83",
-      "internalName": "1HFlail_Unique_Paladin_004"
+      "internalName": "1HFlail_Unique_Paladin_004",
+      "isMythic": false
     },
     {
       "displayName": "Wendigo Brand",
       "snoId": "0x0026bc52",
-      "internalName": "Ring_Unique_Generic_103"
+      "internalName": "Ring_Unique_Generic_103",
+      "isMythic": false
     },
     {
       "displayName": "Wyrdskin",
       "snoId": "0x0026bd89",
-      "internalName": "Gloves_Unique_Generic_005"
+      "internalName": "Gloves_Unique_Generic_005",
+      "isMythic": false
     },
     {
       "displayName": "Thousand-Eye Reaver",
       "snoId": "0x0026bd93",
-      "internalName": "1HAxe_Unique_Generic_003"
+      "internalName": "1HAxe_Unique_Generic_003",
+      "isMythic": false
     },
     {
       "displayName": "Lurid Pact",
       "snoId": "0x0026e047",
-      "internalName": "Ring_Unique_Warlock_001"
+      "internalName": "Ring_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Elegy",
       "snoId": "0x0026e38c",
-      "internalName": "1HSword_Unique_Warlock_001"
+      "internalName": "1HSword_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Anathema of the Primes",
       "snoId": "0x0026e38e",
-      "internalName": "2HSword_Unique_Warlock_001"
+      "internalName": "2HSword_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Dirge of Odium",
       "snoId": "0x0026e392",
-      "internalName": "2HAxe_Unique_Warlock_001"
+      "internalName": "2HAxe_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Spine of Tathamet",
       "snoId": "0x0026e397",
-      "internalName": "1HMace_Unique_Warlock_001"
+      "internalName": "1HMace_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Scepter of the Three",
       "snoId": "0x0026e399",
-      "internalName": "2HMace_Unique_Warlock_001"
+      "internalName": "2HMace_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Litany of Sable",
       "snoId": "0x0026e39b",
-      "internalName": "1HDagger_Unique_Warlock_001"
+      "internalName": "1HDagger_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Infernal Homunculus",
       "snoId": "0x0026e39e",
-      "internalName": "1HFocus_Unique_Warlock_001"
+      "internalName": "1HFocus_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Scourge of Duriel",
       "snoId": "0x0026e3a0",
-      "internalName": "1HFlail_Unique_Warlock_001"
+      "internalName": "1HFlail_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Cluckonomicon",
       "snoId": "0x0026e4b6",
-      "internalName": "2HStaff_Unique_AF_001"
+      "internalName": "2HStaff_Unique_AF_001",
+      "isMythic": false
     },
     {
       "displayName": "Cluckeye",
       "snoId": "0x0026e4bb",
-      "internalName": "2HBow_Unique_AF_001"
+      "internalName": "2HBow_Unique_AF_001",
+      "isMythic": false
     },
     {
       "displayName": "Sire of Sin",
       "snoId": "0x0026e590",
-      "internalName": "Ring_Unique_Warlock_002"
+      "internalName": "Ring_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Hecaton Chasm",
       "snoId": "0x0026e597",
-      "internalName": "Ring_Unique_Warlock_003"
+      "internalName": "Ring_Unique_Warlock_003",
+      "isMythic": false
     },
     {
       "displayName": "Seal of the Ophanim",
       "snoId": "0x0026e59b",
-      "internalName": "Ring_Unique_Warlock_004"
+      "internalName": "Ring_Unique_Warlock_004",
+      "isMythic": false
     },
     {
       "displayName": "The Fecund Seal",
       "snoId": "0x0026e59d",
-      "internalName": "Ring_Unique_Warlock_005"
+      "internalName": "Ring_Unique_Warlock_005",
+      "isMythic": false
     },
     {
       "displayName": "Hellbrand Signet",
       "snoId": "0x0026e5a1",
-      "internalName": "Ring_Unique_Warlock_006"
+      "internalName": "Ring_Unique_Warlock_006",
+      "isMythic": false
     },
     {
       "displayName": "The Eightfold Idol",
       "snoId": "0x0026e5a3",
-      "internalName": "Ring_Unique_Warlock_007"
+      "internalName": "Ring_Unique_Warlock_007",
+      "isMythic": false
     },
     {
       "displayName": "Seed of Horazon",
       "snoId": "0x0026e5a7",
-      "internalName": "Amulet_Unique_Warlock_001"
+      "internalName": "Amulet_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Nails of the Gore-Crowned",
       "snoId": "0x0026e5aa",
-      "internalName": "Helm_Unique_Warlock_001"
+      "internalName": "Helm_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Fleshwrit Carapace",
       "snoId": "0x0026e5ac",
-      "internalName": "Chest_Unique_Warlock_001"
+      "internalName": "Chest_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Gauntlets of Sheol",
       "snoId": "0x0026e5ae",
-      "internalName": "Gloves_Unique_Warlock_001"
+      "internalName": "Gloves_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Kabraxis\u0027 Will",
       "snoId": "0x0026e5b0",
-      "internalName": "Pants_Unique_Warlock_001"
+      "internalName": "Pants_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Footfalls of the Waning World",
       "snoId": "0x0026e5b2",
-      "internalName": "Boots_Unique_Warlock_001"
+      "internalName": "Boots_Unique_Warlock_001",
+      "isMythic": false
     },
     {
       "displayName": "Hellhound\u0027s Sabatons",
       "snoId": "0x0026e5d0",
-      "internalName": "Boots_Unique_Warlock_002"
+      "internalName": "Boots_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Ae\u0027grom\u0027s Schism",
       "snoId": "0x0026e5d3",
-      "internalName": "Chest_Unique_Warlock_002"
+      "internalName": "Chest_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Hand of Apotheosis",
       "snoId": "0x0026e5d5",
-      "internalName": "Gloves_Unique_Warlock_002"
+      "internalName": "Gloves_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Thrice-Woven Nightmare",
       "snoId": "0x0026e5d8",
-      "internalName": "Gloves_Unique_Warlock_003"
+      "internalName": "Gloves_Unique_Warlock_003",
+      "isMythic": false
     },
     {
       "displayName": "Hands of the Worldbreaker",
       "snoId": "0x0026e5da",
-      "internalName": "Gloves_Unique_Warlock_004"
+      "internalName": "Gloves_Unique_Warlock_004",
+      "isMythic": false
     },
     {
       "displayName": "Cowl of Malefic Torment",
       "snoId": "0x0026e5dc",
-      "internalName": "Helm_Unique_Warlock_002"
+      "internalName": "Helm_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Cage of Madness",
       "snoId": "0x0026e5de",
-      "internalName": "Helm_Unique_Warlock_003"
+      "internalName": "Helm_Unique_Warlock_003",
+      "isMythic": false
     },
     {
       "displayName": "Rictus of Terror",
       "snoId": "0x0026e5e0",
-      "internalName": "Helm_Unique_Warlock_004"
+      "internalName": "Helm_Unique_Warlock_004",
+      "isMythic": false
     },
     {
       "displayName": "Bridle of Tor\u0027Baalos",
       "snoId": "0x0026e5e2",
-      "internalName": "Helm_Unique_Warlock_005"
+      "internalName": "Helm_Unique_Warlock_005",
+      "isMythic": false
     },
     {
       "displayName": "Sashes of the Wretched",
       "snoId": "0x0026e5e4",
-      "internalName": "Pants_Unique_Warlock_002"
+      "internalName": "Pants_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Bindings of Attrition",
       "snoId": "0x0026e5e6",
-      "internalName": "Pants_Unique_Warlock_003"
+      "internalName": "Pants_Unique_Warlock_003",
+      "isMythic": false
     },
     {
       "displayName": "Morlu Fleshward",
       "snoId": "0x0026e5e8",
-      "internalName": "Pants_Unique_Warlock_004"
+      "internalName": "Pants_Unique_Warlock_004",
+      "isMythic": false
     },
     {
       "displayName": "Moloch\u0027s Beating Flame",
       "snoId": "0x0026e5ea",
-      "internalName": "Amulet_Unique_Warlock_002"
+      "internalName": "Amulet_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Night Terror",
       "snoId": "0x0026e5ec",
-      "internalName": "Amulet_Unique_Warlock_003"
+      "internalName": "Amulet_Unique_Warlock_003",
+      "isMythic": false
     },
     {
       "displayName": "The Hemat Stone",
       "snoId": "0x0026e5ee",
-      "internalName": "Amulet_Unique_Warlock_004"
+      "internalName": "Amulet_Unique_Warlock_004",
+      "isMythic": false
     },
     {
       "displayName": "Eye of Baal",
       "snoId": "0x0026e5f0",
-      "internalName": "1HFocus_Unique_Warlock_002"
+      "internalName": "1HFocus_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Will of Stone",
       "snoId": "0x00270f30",
-      "internalName": "Helm_Unique_Druid_100_x2"
+      "internalName": "Helm_Unique_Druid_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "The Blade of Sight Aflame",
       "snoId": "0x00270f45",
-      "internalName": "1HSword_Unique_Warlock_002"
+      "internalName": "1HSword_Unique_Warlock_002",
+      "isMythic": false
     },
     {
       "displayName": "Autumnal Crown",
       "snoId": "0x00270f70",
-      "internalName": "Helm_Unique_Druid_101_x2"
+      "internalName": "Helm_Unique_Druid_101_x2",
+      "isMythic": false
     },
     {
       "displayName": "Echo of Kwatli",
       "snoId": "0x00272ed0",
-      "internalName": "Amulet_Unique_Spiritborn_101"
+      "internalName": "Amulet_Unique_Spiritborn_101",
+      "isMythic": false
     },
     {
       "displayName": "Protean Heart",
       "snoId": "0x00272ed2",
-      "internalName": "Amulet_Unique_Spiritborn_102"
+      "internalName": "Amulet_Unique_Spiritborn_102",
+      "isMythic": false
     },
     {
       "displayName": "Widow\u0027s Web",
       "snoId": "0x00272efb",
-      "internalName": "Amulet_Unique_Spiritborn_103"
+      "internalName": "Amulet_Unique_Spiritborn_103",
+      "isMythic": false
     },
     {
       "displayName": "Dark Howl",
       "snoId": "0x00273986",
-      "internalName": "Gloves_Unique_Druid_01_x2"
+      "internalName": "Gloves_Unique_Druid_01_x2",
+      "isMythic": false
     },
     {
       "displayName": "Greenwalker\u0027s Oath",
       "snoId": "0x00273ab7",
-      "internalName": "Boots_Unique_Druid_01_x2"
+      "internalName": "Boots_Unique_Druid_01_x2",
+      "isMythic": false
     },
     {
       "displayName": "Ifeh\u0027s Dire Totem",
       "snoId": "0x00273c36",
-      "internalName": "1HTotem_Unique_Druid_01_x2"
+      "internalName": "1HTotem_Unique_Druid_01_x2",
+      "isMythic": false
     },
     {
       "displayName": "Eggcecutioner",
       "snoId": "0x00273c44",
-      "internalName": "2HScythe_Unique_AF_001"
+      "internalName": "2HScythe_Unique_AF_001",
+      "isMythic": false
     },
     {
       "displayName": "Heart of Azgar",
       "snoId": "0x00273c57",
-      "internalName": "Chest_Unique_Druid_97_x2"
+      "internalName": "Chest_Unique_Druid_97_x2",
+      "isMythic": false
     },
     {
       "displayName": "Dirge of Airidah",
       "snoId": "0x00273e5d",
-      "internalName": "Ring_Unique_Druid_01_x2"
+      "internalName": "Ring_Unique_Druid_01_x2",
+      "isMythic": false
     },
     {
       "displayName": "Greenwalker\u0027s Signet",
       "snoId": "0x00273ec7",
-      "internalName": "Ring_Unique_Druid_02_x2"
+      "internalName": "Ring_Unique_Druid_02_x2",
+      "isMythic": false
     },
     {
       "displayName": "Coop de Gr\u00E2ce",
       "snoId": "0x00274088",
-      "internalName": "2HPolearm_Unique_AF_001"
+      "internalName": "2HPolearm_Unique_AF_001",
+      "isMythic": false
     },
     {
       "displayName": "Fractured Runestone",
       "snoId": "0x00274230",
-      "internalName": "Ring_Unique_Druid_03_x2"
+      "internalName": "Ring_Unique_Druid_03_x2",
+      "isMythic": false
     },
     {
       "displayName": "Accord of the Wilds",
       "snoId": "0x002742f2",
-      "internalName": "Ring_Unique_Druid_04_x2"
+      "internalName": "Ring_Unique_Druid_04_x2",
+      "isMythic": false
     },
     {
       "displayName": "Eggis",
       "snoId": "0x00274308",
-      "internalName": "1HShield_Unique_AF_001"
+      "internalName": "1HShield_Unique_AF_001",
+      "isMythic": false
     },
     {
       "displayName": "Mark of the Old Wolf",
       "snoId": "0x00274332",
-      "internalName": "Ring_Unique_Druid_05_x2"
+      "internalName": "Ring_Unique_Druid_05_x2",
+      "isMythic": false
     },
     {
       "displayName": "Fury of the Wilds",
       "snoId": "0x0027484e",
-      "internalName": "Ring_Unique_Druid_06_x2"
+      "internalName": "Ring_Unique_Druid_06_x2",
+      "isMythic": false
     },
     {
       "displayName": "Might of the Ursine",
       "snoId": "0x0027485a",
-      "internalName": "Ring_Unique_Druid_07_x2"
+      "internalName": "Ring_Unique_Druid_07_x2",
+      "isMythic": false
     },
     {
       "displayName": "Purified Lightbringer",
       "snoId": "0x00274862",
-      "internalName": "2HMace_Unique_Druid_100_x2"
+      "internalName": "2HMace_Unique_Druid_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "Cassia\u0027s Grace",
       "snoId": "0x002760bc",
-      "internalName": "2HBow_Unique_Rogue_002_x2"
+      "internalName": "2HBow_Unique_Rogue_002_x2",
+      "isMythic": false
     },
     {
       "displayName": "Fist of the Iron Rose",
       "snoId": "0x002760eb",
-      "internalName": "Gloves_Unique_Rogue_001_x2"
+      "internalName": "Gloves_Unique_Rogue_001_x2",
+      "isMythic": false
     },
     {
       "displayName": "Sea Lord\u0027s Fine Gloves",
       "snoId": "0x0027616e",
-      "internalName": "Gloves_Unique_Rogue_002_x2"
+      "internalName": "Gloves_Unique_Rogue_002_x2",
+      "isMythic": false
     },
     {
       "displayName": "Etna\u0027s Lost Dagger",
       "snoId": "0x00276181",
-      "internalName": "1HDagger_Unique_Rogue_003_x2"
+      "internalName": "1HDagger_Unique_Rogue_003_x2",
+      "isMythic": false
     },
     {
       "displayName": "Misericorde",
       "snoId": "0x002761a2",
-      "internalName": "1HSword_Unique_Rogue_001_x2"
+      "internalName": "1HSword_Unique_Rogue_001_x2",
+      "isMythic": false
     },
     {
       "displayName": "Desperate March",
       "snoId": "0x002764db",
-      "internalName": "Boots_Unique_Rogue_001_x2"
+      "internalName": "Boots_Unique_Rogue_001_x2",
+      "isMythic": false
     },
     {
       "displayName": "Emblem of Staalbreak",
       "snoId": "0x00276526",
-      "internalName": "Amulet_Unique_Barb_102_x2"
+      "internalName": "Amulet_Unique_Barb_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Dark Stalker\u0027s Medallion",
       "snoId": "0x00276531",
-      "internalName": "Amulet_Unique_Barb_103_x2"
+      "internalName": "Amulet_Unique_Barb_103_x2",
+      "isMythic": false
     },
     {
       "displayName": "Nomad\u0027s Longing Heart",
       "snoId": "0x00276534",
-      "internalName": "Amulet_Unique_Barb_104_x2"
+      "internalName": "Amulet_Unique_Barb_104_x2",
+      "isMythic": false
     },
     {
       "displayName": "The Open Eye of Gorgorra",
       "snoId": "0x00276536",
-      "internalName": "Amulet_Unique_Barb_105_x2"
+      "internalName": "Amulet_Unique_Barb_105_x2",
+      "isMythic": false
     },
     {
       "displayName": "Shrouded Gift",
       "snoId": "0x0027665b",
-      "internalName": "Pants_Unique_Rogue_001_x2"
+      "internalName": "Pants_Unique_Rogue_001_x2",
+      "isMythic": false
     },
     {
       "displayName": "The Maestro",
       "snoId": "0x002767f3",
-      "internalName": "1HDagger_Unique_Rogue_004_x2"
+      "internalName": "1HDagger_Unique_Rogue_004_x2",
+      "isMythic": false
     },
     {
       "displayName": "The Relentless Heart",
       "snoId": "0x00276c39",
-      "internalName": "Chest_Unique_Barb_102_x2"
+      "internalName": "Chest_Unique_Barb_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Might of Qual-Kehk",
       "snoId": "0x00276c3d",
-      "internalName": "Gloves_Unique_Barb_102_x2"
+      "internalName": "Gloves_Unique_Barb_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Fang of the Vipermagi",
       "snoId": "0x002770df",
-      "internalName": "1HDagger_Unique_Sorc_100_x2"
+      "internalName": "1HDagger_Unique_Sorc_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "Shanar\u0027s Resonance",
       "snoId": "0x00277124",
-      "internalName": "1HFocus_Unique_Sorc_102_x2"
+      "internalName": "1HFocus_Unique_Sorc_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Thundergod\u0027s Blessing",
       "snoId": "0x00277143",
-      "internalName": "Ring_Unique_Generic_104_x2"
+      "internalName": "Ring_Unique_Generic_104_x2",
+      "isMythic": false
     },
     {
       "displayName": "Vision of the Firestorm",
       "snoId": "0x0027714f",
-      "internalName": "Helm_Unique_Sorc_102_x2"
+      "internalName": "Helm_Unique_Sorc_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Staff of Zerae",
       "snoId": "0x00277549",
-      "internalName": "2HStaff_Unique_Sorc_101_x2"
+      "internalName": "2HStaff_Unique_Sorc_101_x2",
+      "isMythic": false
     },
     {
       "displayName": "Onyx Soul",
       "snoId": "0x00277592",
-      "internalName": "1HFocus_Unique_Sorc_103_x2"
+      "internalName": "1HFocus_Unique_Sorc_103_x2",
+      "isMythic": false
     },
     {
       "displayName": "Molten Band",
       "snoId": "0x00277679",
-      "internalName": "Ring_Unique_Sorc_103_x2"
+      "internalName": "Ring_Unique_Sorc_103_x2",
+      "isMythic": false
     },
     {
       "displayName": "Signet of Pelghain",
       "snoId": "0x002776f6",
-      "internalName": "Ring_Unique_Generic_105_x2"
+      "internalName": "Ring_Unique_Generic_105_x2",
+      "isMythic": false
     },
     {
       "displayName": "Emberfury",
       "snoId": "0x00277719",
-      "internalName": "Amulet_Unique_Sorc_103_x2"
+      "internalName": "Amulet_Unique_Sorc_103_x2",
+      "isMythic": false
     },
     {
       "displayName": "Drognan\u0027s Anguish",
       "snoId": "0x00277736",
-      "internalName": "Ring_Unique_Sorc_104_x2"
+      "internalName": "Ring_Unique_Sorc_104_x2",
+      "isMythic": false
     },
     {
       "displayName": "Rimeblood",
       "snoId": "0x00277a7d",
-      "internalName": "Gloves_Unique_Sorc_103_x2"
+      "internalName": "Gloves_Unique_Sorc_103_x2",
+      "isMythic": false
     },
     {
       "displayName": "Levin Grasp",
       "snoId": "0x00277a9d",
-      "internalName": "Gloves_Unique_Sorc_102_x2"
+      "internalName": "Gloves_Unique_Sorc_102_x2",
+      "isMythic": false
     },
     {
       "displayName": "Hangman\u0027s Hand",
       "snoId": "0x00277c1c",
-      "internalName": "Gloves_Unique_Necro_103"
+      "internalName": "Gloves_Unique_Necro_103",
+      "isMythic": false
     },
     {
       "displayName": "Raiment of the Sea",
       "snoId": "0x00277ccf",
-      "internalName": "Chest_Unique_Sorc_100_x2"
+      "internalName": "Chest_Unique_Sorc_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "Deathgrip",
       "snoId": "0x00277cf2",
-      "internalName": "Gloves_Unique_Necro_104"
+      "internalName": "Gloves_Unique_Necro_104",
+      "isMythic": false
     },
     {
       "displayName": "The Undercrown",
       "snoId": "0x00277d3d",
-      "internalName": "Helm_Unique_Necro_101"
+      "internalName": "Helm_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Pact of Bone",
       "snoId": "0x00277d58",
-      "internalName": "Ring_Unique_Necro_100_x2"
+      "internalName": "Ring_Unique_Necro_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "Gift of Frost",
       "snoId": "0x00277dc7",
-      "internalName": "Boots_Unique_Sorc_101_x2"
+      "internalName": "Boots_Unique_Sorc_101_x2",
+      "isMythic": false
     },
     {
       "displayName": "Vengeful Sinew",
       "snoId": "0x0027805d",
-      "internalName": "Chest_Unique_Necro_101_x2"
+      "internalName": "Chest_Unique_Necro_101_x2",
+      "isMythic": false
     },
     {
       "displayName": "Blood Wake",
       "snoId": "0x0027828f",
-      "internalName": "Boots_Unique_Necro_102"
+      "internalName": "Boots_Unique_Necro_102",
+      "isMythic": false
     },
     {
       "displayName": "Red Blessing",
       "snoId": "0x002782a7",
-      "internalName": "Amulet_Unique_Necro_100_x2"
+      "internalName": "Amulet_Unique_Necro_100_x2",
+      "isMythic": false
     },
     {
       "displayName": "The Gloom Ward",
       "snoId": "0x002782c1",
-      "internalName": "1HShield_Unique_Necro_101"
+      "internalName": "1HShield_Unique_Necro_101",
+      "isMythic": false
     },
     {
       "displayName": "Will of Rathma",
       "snoId": "0x002782cb",
-      "internalName": "Amulet_Unique_Necro_102"
+      "internalName": "Amulet_Unique_Necro_102",
+      "isMythic": false
     },
     {
       "displayName": "Omen of Pain",
       "snoId": "0x00278d92",
-      "internalName": "Ring_Unique_Necro_102"
+      "internalName": "Ring_Unique_Necro_102",
+      "isMythic": false
     },
     {
       "displayName": "Gravewalker\u0027s Hand",
       "snoId": "0x00279d1f",
-      "internalName": "Gloves_Unique_Necro_105"
+      "internalName": "Gloves_Unique_Necro_105",
+      "isMythic": false
     },
     {
       "displayName": "Ramaladni\u0027s Magnum Opus (Crucible)",
       "snoId": "0x0027b52b",
-      "internalName": "S12_1HSword_Unique_Barb_101"
+      "internalName": "S12_1HSword_Unique_Barb_101",
+      "isMythic": false
     },
     {
       "displayName": "Sabre of Tsasgal (Crucible)",
       "snoId": "0x0027b52d",
-      "internalName": "S12_1HSword_Unique_Barb_103"
+      "internalName": "S12_1HSword_Unique_Barb_103",
+      "isMythic": false
     },
     {
       "displayName": "Doombringer (Crucible)",
       "snoId": "0x0027b52f",
-      "internalName": "S12_1HSword_Unique_Generic_001"
+      "internalName": "S12_1HSword_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "Azurewrath (Crucible)",
       "snoId": "0x0027b531",
-      "internalName": "S12_1HSword_Unique_Generic_100"
+      "internalName": "S12_1HSword_Unique_Generic_100",
+      "isMythic": false
     },
     {
       "displayName": "Supplication (Crucible)",
       "snoId": "0x0027b533",
-      "internalName": "S12_1HSword_Unique_Paladin_001"
+      "internalName": "S12_1HSword_Unique_Paladin_001",
+      "isMythic": false
     },
     {
       "displayName": "Griswold\u0027s Opus (Crucible)",
       "snoId": "0x0027b535",
-      "internalName": "S12_1HSword_Unique_Paladin_002"
+      "internalName": "S12_1HSword_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "The Third Blade (Crucible)",
       "snoId": "0x0027b53b",
-      "internalName": "S12_BSK_1HSword_Unique_Barbarian_001"
+      "internalName": "S12_BSK_1HSword_Unique_Barbarian_001",
+      "isMythic": false
     },
     {
       "displayName": "Shard of Verathiel (Crucible)",
       "snoId": "0x0027b53d",
-      "internalName": "S12_BSK_1HSword_Unique_Generic_001"
+      "internalName": "S12_BSK_1HSword_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Waxing Gibbous (Crucible)",
       "snoId": "0x0027b53f",
-      "internalName": "S12_1HAxe_Unique_Druid_100"
+      "internalName": "S12_1HAxe_Unique_Druid_100",
+      "isMythic": false
     },
     {
       "displayName": "The Butcher\u0027s Cleaver (Crucible)",
       "snoId": "0x0027b541",
-      "internalName": "S12_1HAxe_Unique_Generic_001"
+      "internalName": "S12_1HAxe_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Thousand-Eye Reaver (Crucible)",
       "snoId": "0x0027b543",
-      "internalName": "S12_1HAxe_Unique_Generic_003"
+      "internalName": "S12_1HAxe_Unique_Generic_003",
+      "isMythic": false
     },
     {
       "displayName": "Fields of Crimson (Crucible)",
       "snoId": "0x0027b545",
-      "internalName": "S12_2HSword_Unique_Barb_002"
+      "internalName": "S12_2HSword_Unique_Barb_002",
+      "isMythic": false
     },
     {
       "displayName": "The Grandfather (Crucible)",
       "snoId": "0x0027b547",
-      "internalName": "S12_2HSword_Unique_Generic_001"
+      "internalName": "S12_2HSword_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "Sanguivor, Blade of Zir (Crucible)",
       "snoId": "0x0027b549",
-      "internalName": "S12_2HSword_Unique_Necro_100"
+      "internalName": "S12_2HSword_Unique_Necro_100",
+      "isMythic": false
     },
     {
       "displayName": "Red Sermon (Crucible)",
       "snoId": "0x0027b54b",
-      "internalName": "S12_2HSword_Unique_Paladin_002"
+      "internalName": "S12_2HSword_Unique_Paladin_002",
+      "isMythic": false
     },
     {
       "displayName": "Shattered Vow (Crucible)",
       "snoId": "0x0027b54d",
-      "internalName": "S12_2HPolearm_Unique_Generic_001"
+      "internalName": "S12_2HPolearm_Unique_Generic_001",
+      "isMythic": true
     },
     {
       "displayName": "Rustbitten Dirk (Crucible)",
       "snoId": "0x0027b54f",
-      "internalName": "S12_1HDagger_Unique_Generic_001"
+      "internalName": "S12_1HDagger_Unique_Generic_001",
+      "isMythic": false
     },
     {
       "displayName": "Condemnation (Crucible)",
       "snoId": "0x0027b551",
-      "internalName": "S12_1HDagger_Unique_Rogue_001"
+      "internalName": "S12_1HDagger_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "Asheara\u0027s Khanjar (Crucible)",
       "snoId": "0x0027b553",
-      "internalName": "S12_1HDagger_Unique_Rogue_002"
+      "internalName": "S12_1HDagger_Unique_Rogue_002",
+      "isMythic": false
     },
     {
       "displayName": "The Mortacrux (Crucible)",
       "snoId": "0x0027b555",
-      "internalName": "S12_BSK_1HDagger_Unique_Necro_001"
+      "internalName": "S12_BSK_1HDagger_Unique_Necro_001",
+      "isMythic": false
     },
     {
       "displayName": "The Umbracrux (Crucible)",
       "snoId": "0x0027b557",
-      "internalName": "S12_BSK_1HDagger_Unique_Rogue_001"
+      "internalName": "S12_BSK_1HDagger_Unique_Rogue_001",
+      "isMythic": false
     },
     {
       "displayName": "El\u0027Druin, Sword of Justice",
       "snoId": "0x0027bad5",
-      "internalName": "1HSword_Unique_Generic_002"
+      "internalName": "1HSword_Unique_Generic_002",
+      "isMythic": true
     },
     {
       "displayName": "Sliver of Hate",
       "snoId": "0x002806e1",
-      "internalName": "Ring_Unique_Generic_106_x2"
+      "internalName": "Ring_Unique_Generic_106_x2",
+      "isMythic": false
     }
   ],
   "talismanSets": [
