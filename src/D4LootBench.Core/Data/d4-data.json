@@ -1,6 +1,6 @@
 {
-  "formatVersion": 3,
-  "source": "LootBenchDataExtract build 3.0.3.72031",
+  "formatVersion": 4,
+  "source": "LootBenchDataExtract build 3.1.0.72592",
   "affixes": [
     {
       "displayName": "\u002BArmor",
@@ -79,7 +79,7 @@
       "snoName": "S04_CritChance"
     },
     {
-      "displayName": "Critical Strike Damage Multiplier",
+      "displayName": "Critical Strike Damage",
       "hash": "0x001BEAD2",
       "classes": [
         "All"
@@ -87,7 +87,7 @@
       "snoName": "S04_CritDamage"
     },
     {
-      "displayName": "All Damage Multiplier",
+      "displayName": "Vulnerable Damage Multiplier",
       "hash": "0x001BEAD4",
       "classes": [
         "All"
@@ -215,7 +215,7 @@
       "snoName": "S04_Resource_Max_AllClasses"
     },
     {
-      "displayName": "Vulnerable Damage Multiplier",
+      "displayName": "Critical Strike Damage Multiplier",
       "hash": "0x001BFC80",
       "classes": [
         "All"
@@ -1181,7 +1181,8 @@
         "Sorcerer",
         "Druid",
         "Barbarian",
-        "Spiritborn"
+        "Spiritborn",
+        "Warlock"
       ],
       "snoName": "S04_SkillRankBonus_Generic_Category_Defensive"
     },
@@ -1485,7 +1486,7 @@
       "snoName": "X1_SkillRankBonus_Spiritborn_Special_ArmoredHide"
     },
     {
-      "displayName": "\u002BConcussive Stomp",
+      "displayName": "ConcussiveStormp Skills (Spiritborn)",
       "hash": "0x001ED05A",
       "classes": [
         "Spiritborn"
@@ -1691,7 +1692,7 @@
       "snoName": "X2_SkillRankBonus_Paladin_Category_Valor"
     },
     {
-      "displayName": "Justice Skills (Paladin)",
+      "displayName": "\u002BArbiter of Justice",
       "hash": "0x00261ACC",
       "classes": [
         "Paladin"
@@ -1707,7 +1708,7 @@
       "snoName": "X2_SkillRankBonus_Paladin_Valor_Aegis"
     },
     {
-      "displayName": "\u002B{c_red}[WIP] Shield Charge{/c}",
+      "displayName": "\u002BShield Charge",
       "hash": "0x00261AD8",
       "classes": [
         "Paladin"
@@ -1763,7 +1764,7 @@
       "snoName": "X2_SkillRankBonus_Paladin_Justice_SpearOfTheHeavens"
     },
     {
-      "displayName": "\u002BFortify Generation",
+      "displayName": "\u002BDamage while Fortified",
       "hash": "0x00266B1E",
       "classes": [
         "Druid",
@@ -1805,7 +1806,7 @@
       "snoName": "S04_Resource_On_Kill_Faith"
     },
     {
-      "displayName": "Wrath every 10 Kills",
+      "displayName": "Wrath On Kill",
       "hash": "0x0026A374",
       "classes": [
         "Warlock"
@@ -2037,7 +2038,7 @@
       "snoName": "X2_Evade_MovementSpeed"
     },
     {
-      "displayName": "Physical Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AD0",
       "classes": [
         "Druid",
@@ -2051,7 +2052,7 @@
       "snoName": "X2_DamageType_Physical"
     },
     {
-      "displayName": "Cold Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AF5",
       "classes": [
         "Sorcerer",
@@ -2061,7 +2062,7 @@
       "snoName": "X2_DamageType_Cold"
     },
     {
-      "displayName": "Fire Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AF7",
       "classes": [
         "Sorcerer",
@@ -2072,7 +2073,7 @@
       "snoName": "X2_DamageType_Fire"
     },
     {
-      "displayName": "Shadow Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AF9",
       "classes": [
         "Rogue",
@@ -2082,7 +2083,7 @@
       "snoName": "X2_DamageType_Shadow"
     },
     {
-      "displayName": "Poison Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AFB",
       "classes": [
         "Druid",
@@ -2092,7 +2093,7 @@
       "snoName": "X2_DamageType_Poison"
     },
     {
-      "displayName": "Lightning Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AFD",
       "classes": [
         "Sorcerer",
@@ -2102,7 +2103,7 @@
       "snoName": "X2_DamageType_Lightning"
     },
     {
-      "displayName": "Holy Damage Multiplier",
+      "displayName": "All Damage Multiplier",
       "hash": "0x00270AFF",
       "classes": [
         "Paladin"
@@ -2126,7 +2127,7 @@
       "snoName": "X2_SkillRankBonus_Barb_Special_Ancients"
     },
     {
-      "displayName": "DustDevils Skills (Barbarian)",
+      "displayName": "\u002BDust Devil",
       "hash": "0x002782A9",
       "classes": [
         "Barbarian"
@@ -2134,7 +2135,7 @@
       "snoName": "X2_SkillRankBonus_Barb_Special_DustDevils"
     },
     {
-      "displayName": "Earthquake Skills (Barbarian)",
+      "displayName": "\u002BEarthquake",
       "hash": "0x002782AB",
       "classes": [
         "Barbarian"
@@ -2142,7 +2143,7 @@
       "snoName": "X2_SkillRankBonus_Barb_Special_Earthquake"
     },
     {
-      "displayName": "IronShrapnel Skills (Barbarian)",
+      "displayName": "\u002BIron Shrapnel",
       "hash": "0x002782AF",
       "classes": [
         "Barbarian"
@@ -2166,7 +2167,7 @@
       "snoName": "X2_SkillRankBonus_Rogue_Special_Shade"
     },
     {
-      "displayName": "ArrowStorm Skills (Rogue)",
+      "displayName": "\u002BArrow Storm",
       "hash": "0x002782B5",
       "classes": [
         "Rogue"
@@ -3618,7 +3619,7 @@
       ]
     },
     {
-      "displayName": "Concussive Stomp",
+      "displayName": "ConcussiveStormp Skills (Spiritborn)",
       "hash": "0x001ED05A",
       "classes": [
         "Spiritborn"
@@ -3737,7 +3738,7 @@
       ]
     },
     {
-      "displayName": "(PH) Zeal",
+      "displayName": "Zeal",
       "hash": "0x00261AB7",
       "classes": [
         "Paladin"
@@ -3779,7 +3780,7 @@
       ]
     },
     {
-      "displayName": "Justice Skills (Paladin)",
+      "displayName": "Arbiter of Justice",
       "hash": "0x00261ACC",
       "classes": [
         "Paladin"
@@ -3793,7 +3794,7 @@
       ]
     },
     {
-      "displayName": "{c_red}[WIP] Shield Charge{/c}",
+      "displayName": "Shield Charge",
       "hash": "0x00261AD8",
       "classes": [
         "Paladin"
@@ -4024,31 +4025,24 @@
       ]
     },
     {
-      "displayName": "DustDevils Skills (Barbarian)",
+      "displayName": "Dust Devil",
       "hash": "0x002782A9",
       "classes": [
         "Barbarian"
       ]
     },
     {
-      "displayName": "Earthquake Skills (Barbarian)",
+      "displayName": "Earthquake",
       "hash": "0x002782AB",
       "classes": [
         "Barbarian"
       ]
     },
     {
-      "displayName": "IronShrapnel Skills (Barbarian)",
+      "displayName": "Iron Shrapnel",
       "hash": "0x002782AF",
       "classes": [
         "Barbarian"
-      ]
-    },
-    {
-      "displayName": "Grenade Skills (Rogue)",
-      "hash": "0x002782B1",
-      "classes": [
-        "Rogue"
       ]
     },
     {
@@ -4059,7 +4053,7 @@
       ]
     },
     {
-      "displayName": "ArrowStorm Skills (Rogue)",
+      "displayName": "Arrow Storm",
       "hash": "0x002782B5",
       "classes": [
         "Rogue"
@@ -4467,24 +4461,6 @@
       "isMythic": false
     },
     {
-      "displayName": "(PH) Performance Test Ring - Rogue Poison Imbue",
-      "snoId": "0x000ee796",
-      "internalName": "performance_test_unique_ring_rogue_imbue_poison",
-      "isMythic": false
-    },
-    {
-      "displayName": "(PH) Performance Test Ring - Rogue Cold Imbue",
-      "snoId": "0x000ee7cf",
-      "internalName": "performance_test_unique_ring_rogue_imbue_cold",
-      "isMythic": false
-    },
-    {
-      "displayName": "(PH) Performance Test Ring - Rogue Shadow Imbue",
-      "snoId": "0x000ee7d1",
-      "internalName": "performance_test_unique_ring_rogue_imbue_shadow",
-      "isMythic": false
-    },
-    {
       "displayName": "Hunter\u0027s Zenith",
       "snoId": "0x000f19ee",
       "internalName": "Ring_Unique_Druid_003",
@@ -4797,12 +4773,6 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH] Thorn Pulse",
-      "snoId": "0x001900e9",
-      "internalName": "x1_Ring_Unique_Generic_104",
-      "isMythic": false
-    },
-    {
       "displayName": "Beastfall Boots",
       "snoId": "0x001a0351",
       "internalName": "Boots_Unique_Rogue_100",
@@ -4851,12 +4821,6 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH]",
-      "snoId": "0x001acd0a",
-      "internalName": "Gloves_Unique_Druid_97",
-      "isMythic": false
-    },
-    {
       "displayName": "Pitfighter\u0027s Gull",
       "snoId": "0x001ad4fb",
       "internalName": "x1_Ring_Unique_Rogue_128",
@@ -4866,12 +4830,6 @@
       "displayName": "Ugly Bastard Helm",
       "snoId": "0x001b4be5",
       "internalName": "Helm_Unique_Barb_101_x1",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Blue Glaive",
-      "snoId": "0x001bc9f1",
-      "internalName": "X1_2HGlaive_Unique_Spiritborn_02",
       "isMythic": false
     },
     {
@@ -4953,12 +4911,6 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH] Unique Necro 98",
-      "snoId": "0x001d6ed3",
-      "internalName": "Helm_Unique_Necro_98",
-      "isMythic": false
-    },
-    {
       "displayName": "Unbroken Chain",
       "snoId": "0x001d8448",
       "internalName": "Amulet_Unique_Barb_101",
@@ -4980,18 +4932,6 @@
       "displayName": "Axial Conduit",
       "snoId": "0x001d846d",
       "internalName": "Pants_Unique_Sorc_101",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x001d8da2",
-      "internalName": "Helm_Unique_Druid_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Unique Helm 95",
-      "snoId": "0x001d9edf",
-      "internalName": "Helm_Unique_Rogue_95",
       "isMythic": false
     },
     {
@@ -5052,30 +4992,6 @@
       "displayName": "The Mortacrux",
       "snoId": "0x001dabfe",
       "internalName": "S05_BSK_1HDagger_Unique_Necro_001",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Grab Bag Variant Helm1",
-      "snoId": "0x001db9a1",
-      "internalName": "Helm_Unique_Barbarian_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "New Item [PH]",
-      "snoId": "0x001dc9da",
-      "internalName": "Gloves_Unique_Druid_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] ",
-      "snoId": "0x001dd6af",
-      "internalName": "Helm_Unique_Necro_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "(PH) Template Unique",
-      "snoId": "0x001df74b",
-      "internalName": "Template_Unique_Spiritborn_000_x1",
       "isMythic": false
     },
     {
@@ -5202,12 +5118,6 @@
       "displayName": "Bucrani\u0027s Grip",
       "snoId": "0x001f3432",
       "internalName": "Gloves_Unique_Sorc_96",
-      "isMythic": false
-    },
-    {
-      "displayName": "Bucrani\u0027s Visage",
-      "snoId": "0x001f3434",
-      "internalName": "Helm_Unique_Sorc_96",
       "isMythic": false
     },
     {
@@ -5355,36 +5265,6 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH]",
-      "snoId": "0x00205c12",
-      "internalName": "Helm_Unique_Rogue_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00205c14",
-      "internalName": "Pants_Unique_Rogue_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00205c17",
-      "internalName": "Glove_Unique_Rogue_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00205c19",
-      "internalName": "Chest_Unique_Rogue_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00205c1b",
-      "internalName": "Boots_Unique_Rogue_99",
-      "isMythic": false
-    },
-    {
       "displayName": "Indira\u0027s Memory",
       "snoId": "0x00206636",
       "internalName": "Pants_Unique_Necro_102",
@@ -5421,123 +5301,15 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH] Chest Unique Druid 98",
-      "snoId": "0x002066af",
-      "internalName": "Chest_Unique_Druid_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Gloves Unique Druid 98",
-      "snoId": "0x002066b2",
-      "internalName": "Gloves_Unique_Druid_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Helm Unique Druid 98",
-      "snoId": "0x002066b5",
-      "internalName": "Helm_Unique_Druid_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Boots Unique Druid 98",
-      "snoId": "0x002066b7",
-      "internalName": "Boots_Unique_Druid_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Pants Unique Druid 98",
-      "snoId": "0x002066b9",
-      "internalName": "Pants_Unique_Druid_98",
-      "isMythic": false
-    },
-    {
       "displayName": "Okun\u0027s Catalyst",
       "snoId": "0x002092dc",
       "internalName": "1HFocus_Unique_Sorc_101",
       "isMythic": false
     },
     {
-      "displayName": "[PH]",
-      "snoId": "0x0021435a",
-      "internalName": "Boots_Unique_Druid_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0021435e",
-      "internalName": "Chest_Unique_Druid_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00214360",
-      "internalName": "Glove_Unique_Druid_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00214362",
-      "internalName": "Helm_Unique_Druid_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00214376",
-      "internalName": "Pants_Unique_Druid_99",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00215752",
-      "internalName": "Boots_Unique_Rogue_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00215754",
-      "internalName": "Chest_Unique_Rogue_98",
-      "isMythic": false
-    },
-    {
       "displayName": "Gladiator\u0027s Triumph",
       "snoId": "0x00215756",
       "internalName": "Gloves_Unique_Rogue_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00215758",
-      "internalName": "Helm_Unique_Rogue_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0021575a",
-      "internalName": "Pants_Unique_Rogue_98",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00216d5d",
-      "internalName": "Chest_Unique_Druid_97",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00216d60",
-      "internalName": "Helm_Unique_Druid_97",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH] Pants Unique Druid 97",
-      "snoId": "0x00216d62",
-      "internalName": "Pants_Unique_Druid_97",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00216d64",
-      "internalName": "Boots_Unique_Druid_97",
       "isMythic": false
     },
     {
@@ -5568,36 +5340,6 @@
       "displayName": "Bands of Ichorous Rose",
       "snoId": "0x00224737",
       "internalName": "Gloves_Unique_Rogue_102",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00230fa4",
-      "internalName": "Pants_Unique_Rogue_96",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00230fa6",
-      "internalName": "Helm_Unique_Rogue_96",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00230fa8",
-      "internalName": "Glove_Unique_Rogue_96",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00230faa",
-      "internalName": "Chest_Unique_Rogue_96",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x00230fac",
-      "internalName": "Boots_Unique_Rogue_96",
       "isMythic": false
     },
     {
@@ -8265,36 +8007,6 @@
       "isMythic": false
     },
     {
-      "displayName": "[PH]",
-      "snoId": "0x0025d1b4",
-      "internalName": "Boots_Unique_Warlock_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0025d1b6",
-      "internalName": "Chest_Unique_Warlock_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0025d1b8",
-      "internalName": "Glove_Unique_Warlock_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0025d1ba",
-      "internalName": "Helm_Unique_Warlock_95",
-      "isMythic": false
-    },
-    {
-      "displayName": "[PH]",
-      "snoId": "0x0025d1bc",
-      "internalName": "Pants_Unique_Warlock_95",
-      "isMythic": false
-    },
-    {
       "displayName": "Chainscourged Mail",
       "snoId": "0x0025d35d",
       "internalName": "Pants_Unique_Barb_101",
@@ -9084,6 +8796,84 @@
       "displayName": "Sliver of Hate",
       "snoId": "0x002806e1",
       "internalName": "Ring_Unique_Generic_106_x2",
+      "isMythic": false
+    },
+    {
+      "displayName": "Ring of Starless Skies",
+      "snoId": "0x00281fcd",
+      "internalName": "S14_Ring_Unique_Generic_104",
+      "isMythic": false
+    },
+    {
+      "displayName": "Doombringer",
+      "snoId": "0x002860ff",
+      "internalName": "S14_1HSword_Unique_Generic_001",
+      "isMythic": false
+    },
+    {
+      "displayName": "El\u0027Druin, Sword of Justice",
+      "snoId": "0x00286101",
+      "internalName": "S14_1HSword_Unique_Generic_002",
+      "isMythic": false
+    },
+    {
+      "displayName": "Shattered Vow",
+      "snoId": "0x00286103",
+      "internalName": "S14_2HPolearm_Unique_Generic_001",
+      "isMythic": false
+    },
+    {
+      "displayName": "Ahavarion, Spear of Lycander",
+      "snoId": "0x00286105",
+      "internalName": "S14_2HStaff_Unique_Generic_100",
+      "isMythic": false
+    },
+    {
+      "displayName": "The Grandfather",
+      "snoId": "0x00286107",
+      "internalName": "S14_2HSword_Unique_Generic_001",
+      "isMythic": false
+    },
+    {
+      "displayName": "Melted Heart of Selig",
+      "snoId": "0x00286109",
+      "internalName": "S14_Amulet_Unique_Generic_100",
+      "isMythic": false
+    },
+    {
+      "displayName": "Shroud of False Death",
+      "snoId": "0x0028610b",
+      "internalName": "S14_Chest_Unique_Generic_103",
+      "isMythic": false
+    },
+    {
+      "displayName": "Tyrael\u0027s Might",
+      "snoId": "0x0028610d",
+      "internalName": "S14_Chest_Unique_Generic_127",
+      "isMythic": false
+    },
+    {
+      "displayName": "Nesekem, the Herald",
+      "snoId": "0x0028610f",
+      "internalName": "S14_Glaive_Unique_Spiritborn_014_x1",
+      "isMythic": false
+    },
+    {
+      "displayName": "Andariel\u0027s Visage",
+      "snoId": "0x00286111",
+      "internalName": "S14_Helm_Unique_Generic_001",
+      "isMythic": false
+    },
+    {
+      "displayName": "Harlequin Crest",
+      "snoId": "0x00286113",
+      "internalName": "S14_Helm_Unique_Generic_002",
+      "isMythic": false
+    },
+    {
+      "displayName": "Heir of Perdition",
+      "snoId": "0x00286115",
+      "internalName": "S14_Helm_Unique_Generic_004",
       "isMythic": false
     }
   ],
