@@ -392,7 +392,7 @@ public sealed class FilterCodecTests
         uint[] coreIds =
         [
             AffixDatabase.ByName["+Critical Strike Chance"].Hash,
-            AffixDatabase.ByName["Critical Strike Damage Multiplier"].Hash,
+            AffixDatabase.ByName["Critical Strike Damage"].Hash,
             AffixDatabase.ByName["+Attack Speed"].Hash,
             AffixDatabase.ByName["All Damage Multiplier"].Hash,
             AffixDatabase.ByName["Vulnerable Damage Multiplier"].Hash,
